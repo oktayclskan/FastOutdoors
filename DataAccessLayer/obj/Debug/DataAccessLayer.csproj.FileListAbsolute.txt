@@ -1,0 +1,6 @@
+C:\Users\rampa\OneDrive\Belgeler\GitHub\FastOutdoors\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\rampa\OneDrive\Belgeler\GitHub\FastOutdoors\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\rampa\OneDrive\Belgeler\GitHub\FastOutdoors\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\rampa\OneDrive\Belgeler\GitHub\FastOutdoors\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\rampa\OneDrive\Belgeler\GitHub\FastOutdoors\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\rampa\OneDrive\Belgeler\GitHub\FastOutdoors\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

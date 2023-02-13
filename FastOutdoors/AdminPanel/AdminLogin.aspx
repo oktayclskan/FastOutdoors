@@ -25,6 +25,11 @@
         </div>
         <div class="container">
             <div>
+                <div class="row">
+                    <asp:Panel ID="pnl_eror" runat="server" CssClass="erorBox" Visible="false">
+                        <asp:Label ID="lbl_eror" runat="server">deneme</asp:Label>
+                    </asp:Panel>
+                </div>
                 <div class="row" style="margin-top: 25px;">
                     <h4>Mail</h4>
                     <asp:TextBox ID="tb_mail" runat="server" CssClass="inputBox"></asp:TextBox>
@@ -34,7 +39,7 @@
                     <asp:TextBox ID="tb_password" runat="server" TextMode="Password" CssClass="inputBox"></asp:TextBox>
                 </div>
                 <div class="row">
-                    <asp:LinkButton ID="lbtn_singIn" runat="server" CssClass="singInBtn">Oturum Aç</asp:LinkButton>
+                    <asp:LinkButton ID="lbtn_singIn" runat="server" CssClass="singInBtn" OnClick="lbtn_singIn_Click">Oturum Aç</asp:LinkButton>
                 </div>
                 <div class="row">
                 </div>

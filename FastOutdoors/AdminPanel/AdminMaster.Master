@@ -5,14 +5,40 @@
 <html>
 <head runat="server">
     <title></title>
+    <link href="Assets/Css/AdminPages.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Gruppo&family=PT+Sans+Narrow&display=swap" rel="stylesheet" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="header">
+            <h1>Fast Outdoors</h1>
+        </div>
+        <div class="TopMenu">
+
+            <div class="loginDesc">
+                <asp:Label ID="lb_loginName" runat="server" CssClass="LoginName"></asp:Label>
+                <asp:LinkButton ID="lbtn_exit" runat="server" Text="Çıkış" CssClass="exitBtn" OnClick="lbtn_exit_Click"></asp:LinkButton>
+            </div>
+                <ul class="menuList">
+                    <li style="margin-left: 25px;"><a href="#">content</a></li>
+                    <li><a href="#">content</a></li>
+                    <li><a href="#">content</a></li>
+                    <li><a href="#">content</a></li>
+                </ul>
+        </div>
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <div class="contentContainer">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
     </form>
 </body>

@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="AdminPanel\AdminLogin.aspx" />
     <Content Include="AdminPanel\Assets\Css\AdminLogin.css" />
+    <Content Include="AdminPanel\Assets\Css\AdminPages.css" />
+    <Content Include="AdminPanel\Default.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +87,13 @@
     </Compile>
     <Compile Include="AdminPanel\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

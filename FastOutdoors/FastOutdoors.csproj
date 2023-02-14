@@ -70,6 +70,7 @@
     <Content Include="AdminPanel\AdminLogin.aspx" />
     <Content Include="AdminPanel\Assets\Css\AdminLogin.css" />
     <Content Include="AdminPanel\Assets\Css\AdminPages.css" />
+    <Content Include="AdminPanel\Assets\Css\Animation.css" />
     <Content Include="AdminPanel\Default.aspx" />
     <Content Include="AdminPanel\MemberAdd.aspx" />
     <Content Include="AdminPanel\MemberList.aspx" />

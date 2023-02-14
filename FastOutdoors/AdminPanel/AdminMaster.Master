@@ -19,7 +19,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-            <a href="Default.aspx"><h1>Fast Outdoors</h1></a>
+            <a href="Default.aspx"><h1>Fast Outdoor</h1></a>
         </div>
         <div class="TopMenu">
 

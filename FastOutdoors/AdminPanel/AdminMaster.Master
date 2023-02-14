@@ -19,7 +19,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-            <h1>Fast Outdoors</h1>
+            <a href="Default.aspx"><h1>Fast Outdoors</h1></a>
         </div>
         <div class="TopMenu">
 
@@ -28,8 +28,8 @@
                 <asp:LinkButton ID="lbtn_exit" runat="server" Text="Çıkış" CssClass="exitBtn" OnClick="lbtn_exit_Click"></asp:LinkButton>
             </div>
                 <ul class="menuList">
-                    <li style="margin-left: 25px;"><a href="#">content</a></li>
-                    <li><a href="#">content</a></li>
+                    <li style="margin-left: 45px;"><a href="MemberList.aspx">Üye Listele</a></li>
+                    <li><a href="MemberAdd.aspx">Üye Ekle</a></li>
                     <li><a href="#">content</a></li>
                     <li><a href="#">content</a></li>
                 </ul>

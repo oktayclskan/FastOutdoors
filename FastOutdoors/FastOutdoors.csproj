@@ -71,6 +71,8 @@
     <Content Include="AdminPanel\Assets\Css\AdminLogin.css" />
     <Content Include="AdminPanel\Assets\Css\AdminPages.css" />
     <Content Include="AdminPanel\Default.aspx" />
+    <Content Include="AdminPanel\MemberAdd.aspx" />
+    <Content Include="AdminPanel\MemberList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +96,20 @@
     </Compile>
     <Compile Include="AdminPanel\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MemberAdd.aspx.cs">
+      <DependentUpon>MemberAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MemberAdd.aspx.designer.cs">
+      <DependentUpon>MemberAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MemberList.aspx.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MemberList.aspx.designer.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

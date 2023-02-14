@@ -8,7 +8,6 @@
     width: 1150px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
 }
 
 .header {
@@ -22,6 +21,10 @@
         text-align: center;
         color: whitesmoke;
         font-family: 'Gruppo', cursive;
+    }
+
+    .header a {
+        text-decoration: none;
     }
 
 .TopMenu {
@@ -56,7 +59,7 @@
     padding: 6px;
     text-decoration: none;
     margin-right: 25px;
-    margin-top:-5px;
+    margin-top: -5px;
     background-color: #1370C4;
     border-radius: 5px;
     width: 50px;
@@ -64,16 +67,86 @@
     font-weight: 900;
     color: white;
 }
+
     .exitBtn:hover {
         opacity: 0.7;
     }
 
 .LoginName {
-    padding-right:20px;
+    padding-right: 20px;
     color: white;
-    
 }
+
 .loginDesc {
-    margin-top:15px;
+    margin-top: 15px;
     float: right;
 }
+
+.memberTable {
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+}
+
+    .memberTable td {
+        color: black;
+    }
+
+    .memberTable thead tr {
+        background-color: #4d4949;
+    }
+
+        .memberTable thead tr th {
+            padding: 5px;
+        }
+
+    .memberTable tbody tr {
+        background-color: #d1d1d1;
+    }
+
+    .memberTable tbody td {
+        padding: 5px;
+        border-bottom: 1px solid red;
+    }
+
+    .memberTable .banBTN {
+        text-decoration: none;
+        background-color: red;
+        color: whitesmoke;
+        padding: 5px;
+        border-radius: 10px 0px 0px 10px;
+        -moz-border-radius: 10px 0px 0px 10px;
+        -webkit-border-radius: 10px 0px 0px 10px;
+        border: 0px solid #000000;
+    }
+
+    .memberTable .unbanBTN {
+        text-decoration: none;
+        background-color: #1370C4;
+        color: whitesmoke;
+        padding: 5px;
+        border-radius: 0px 10px 10px 0px;
+        -moz-border-radius: 0px 10px 10px 0px;
+        -webkit-border-radius: 0px 10px 10px 0px;
+        border: 0px solid #000000;
+    }
+
+    .memberTable .dltBTN {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #111111;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+        .memberTable .dltBTN:hover {
+            opacity: 0.7;
+        }
+
+    .memberTable .unbanBTN:hover {
+        opacity: 0.7;
+    }
+
+    .memberTable .banBTN:hover {
+        opacity: 0.7;
+    }

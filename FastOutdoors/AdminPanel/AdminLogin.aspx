@@ -27,7 +27,7 @@
             <div>
                 <div class="row">
                     <asp:Panel ID="pnl_eror" runat="server" CssClass="erorBox" Visible="false">
-                        <asp:Label ID="lbl_eror" runat="server">deneme</asp:Label>
+                        <asp:Label ID="lbl_eror" runat="server"></asp:Label>
                     </asp:Panel>
                 </div>
                 <div class="row" style="margin-top: 25px;">

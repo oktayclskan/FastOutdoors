@@ -30,7 +30,7 @@
             </div>
                 <ul class="menuList">
                     <li style="margin-left: 45px;"><a href="MemberList.aspx">Üye İşlemleri</a></li>
-                    <li><a href="AdminAdd.aspx"s>Admin İşlemleri</a></li>
+                    <li><a href="AdminAdd.aspx"s>Admin Ekle</a></li>
                     <li><a href="#">content</a></li>
                     <li><a href="#">content</a></li>
                 </ul>

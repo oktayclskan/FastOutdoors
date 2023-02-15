@@ -164,7 +164,6 @@ body {
     }
 
 .AdminAddContainer {
-
     border-right: 1px solid red;
     border-left: 1px solid red;
     border-radius: 7px;
@@ -178,10 +177,52 @@ body {
 
     .AdminAddContainer .row {
         padding: 5px;
+        margin-left: 50px;
     }
 
-    .AdminAddContainer .inputBox {
+    .AdminAddContainer .textBox {
         margin-top: 5px;
         width: 250px;
         height: 25px;
+        border-radius: 5px;
+        background-color: #d1d1d1;
+        border: none;
+        font-family: Calibri;
+    }
+
+    .AdminAddContainer .AddBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1370C4;
+        padding: 5px;
+        border-radius: 5px;
+        display: block;
+        width: 100px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+        .AdminAddContainer .AddBtn:hover {
+            opacity: 0.7;
+        }
+
+    .AdminAddContainer .pnlSuccessful {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid red;
+        display: block;
+        background-color: #0D0D0D;
+    }
+    .AdminAddContainer .pnlEror {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid red;
+        display: block;
+        background-color: #0D0D0D;
+        color:red;
     }

@@ -5,30 +5,41 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="AdminAddContainer">
 
+        <asp:Panel ID="pnl_successful" runat="server" CssClass="pnlSuccessful" Visible="false">
+            Admin Ekleme Başarılı
+        </asp:Panel>
+
+        <asp:Panel ID="pnl_eror" runat="server" CssClass="pnlEror" Visible="false">
+            <asp:Label ID="lbl_eror" runat="server"></asp:Label>
+        </asp:Panel>
+
         <div class="row">
-            <h6>İsim Giriniz</h6>
-            <asp:TextBox ID="ID_name" runat="server" CssClass="inputBox"></asp:TextBox>
+            <h6 style="margin-top:15px;">İsim Giriniz</h6>
+            <asp:TextBox ID="tb_name" runat="server" CssClass="textBox"></asp:TextBox>
         </div>
         <div class="row">
             <h6>Soyisim Giriniz</h6>
-            <asp:TextBox ID="ID_surname" runat="server" CssClass="inputBox"></asp:TextBox>
+            <asp:TextBox ID="tb_surname" runat="server" CssClass="textBox"></asp:TextBox>
         </div>
         <div class="row">
             <h6>Kullanıcı Adı Giriniz</h6>
-            <asp:TextBox ID="ID_username" runat="server" CssClass="inputBox"></asp:TextBox>
+            <asp:TextBox ID="tb_username" runat="server" CssClass="textBox"></asp:TextBox>
         </div>
         <div class="row">
             <h6>Telefon NO Giriniz</h6>
-            <asp:TextBox ID="ID_phone" runat="server" CssClass="inputBox"></asp:TextBox>
+            <asp:TextBox ID="tb_phone" runat="server" CssClass="textBox"></asp:TextBox>
         </div>
         <div class="row">
             <h6>E-Posta Giriniz</h6>
-            <asp:TextBox ID="ID_mail" runat="server" CssClass="inputBox"></asp:TextBox>
+            <asp:TextBox ID="tb_mail" runat="server" CssClass="textBox"></asp:TextBox>
         </div>
         <div class="row">
             <h6>Sifre Giriniz</h6>
-            <asp:TextBox ID="ID_sifre" runat="server" CssClass="inputBox"></asp:TextBox>
+            <asp:TextBox ID="tb_AdminPassword" runat="server" TextMode="Password" CssClass="textBox"></asp:TextBox>
         </div>
-
+        <div class="row">
+            <asp:LinkButton ID="lb_Add" runat="server" CssClass="AddBtn" OnClick="lb_Add_Click">Ekle</asp:LinkButton>
+        </div>
     </div>
+
 </asp:Content>

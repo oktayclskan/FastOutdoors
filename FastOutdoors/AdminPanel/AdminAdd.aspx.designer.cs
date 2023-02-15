@@ -15,57 +15,93 @@ namespace FastOutdoors.AdminPanel
     {
 
         /// <summary>
-        /// ID_name control.
+        /// pnl_successful control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ID_name;
+        protected global::System.Web.UI.WebControls.Panel pnl_successful;
 
         /// <summary>
-        /// ID_surname control.
+        /// pnl_eror control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ID_surname;
+        protected global::System.Web.UI.WebControls.Panel pnl_eror;
 
         /// <summary>
-        /// ID_username control.
+        /// lbl_eror control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ID_username;
+        protected global::System.Web.UI.WebControls.Label lbl_eror;
 
         /// <summary>
-        /// ID_phone control.
+        /// tb_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ID_phone;
+        protected global::System.Web.UI.WebControls.TextBox tb_name;
 
         /// <summary>
-        /// ID_mail control.
+        /// tb_surname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ID_mail;
+        protected global::System.Web.UI.WebControls.TextBox tb_surname;
 
         /// <summary>
-        /// ID_sifre control.
+        /// tb_username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ID_sifre;
+        protected global::System.Web.UI.WebControls.TextBox tb_username;
+
+        /// <summary>
+        /// tb_phone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_phone;
+
+        /// <summary>
+        /// tb_mail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_mail;
+
+        /// <summary>
+        /// tb_AdminPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_AdminPassword;
+
+        /// <summary>
+        /// lb_Add control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lb_Add;
     }
 }

@@ -20,7 +20,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "SELECT COUNT(*) FROM Admins WHERE Mail=@mail AND Sifre=@sifre";
+                cmd.CommandText = "SELECT COUNT(*) FROM Admins WHERE Mail=@mail AND AdminPassword=@sifre";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@mail",mail);
                 cmd.Parameters.AddWithValue("@sifre",sifre);
@@ -28,7 +28,7 @@ namespace DataAccessLayer
                 int sayi = Convert.ToInt32(cmd.ExecuteScalar());
                 if (sayi > 0)
                 {
-                    cmd.CommandText = "SELECT * FROM Admins WHERE Mail=@mail AND Sifre=@sifre";
+                    cmd.CommandText = "SELECT * FROM Admins WHERE Mail=@mail AND AdminPassword=@sifre";
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@mail", mail);
                     cmd.Parameters.AddWithValue("@sifre", sifre);
@@ -55,6 +55,28 @@ namespace DataAccessLayer
             catch
             {
                 return null;
+            }
+            finally { con.Close(); }
+        }
+        public bool AdminAdd(Admin adm)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Admins(Name,SurName,UserName,Phone,Mail,AdminPassword) VALUES(@name,@surName,@userName,@phone,@mail,@adminPassword)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@name", adm.Name);
+                cmd.Parameters.AddWithValue("@surName", adm.SurName);
+                cmd.Parameters.AddWithValue("@userName", adm.UserName);
+                cmd.Parameters.AddWithValue("@phone", adm.Phone);
+                cmd.Parameters.AddWithValue("@mail", adm.Mail);
+                cmd.Parameters.AddWithValue("@adminPassword", adm.AdminPassword);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
             }
             finally { con.Close(); }
         }
@@ -155,29 +177,6 @@ namespace DataAccessLayer
             finally { con.Close(); }
         }
         #endregion
-        #region AdminMetots
-        public bool AdminAdd(Admin adm)
-        {
-            try
-            {
-                cmd.CommandText = "INSERT INTO Admins((Name,SurName,UserName,Phone,Mail,AdminPassword) VALUES(@name,@surName,@userName,@phone,@mail,@adminPassword)";
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@name", adm.Name);
-                cmd.Parameters.AddWithValue("@surName", adm.SurName);
-                cmd.Parameters.AddWithValue("@userName,", adm.UserName);
-                cmd.Parameters.AddWithValue("@phone,", adm.Phone);
-                cmd.Parameters.AddWithValue("@mail,", adm.Mail);
-                cmd.Parameters.AddWithValue("@adminPassword,", adm.AdminPassword);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-            finally { con.Close(); }
-        }
-        #endregion
+
     }
 }

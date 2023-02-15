@@ -32,8 +32,7 @@ namespace FastOutdoors.AdminPanel
             if (e.CommandName == "delete")
             {
                 dm.MemberDelete(id);
-                lv_memberList.DataSource = dm.MemberList();
-                lv_memberList.DataBind();
+                
             }
             lv_memberList.DataSource = dm.MemberList();
             lv_memberList.DataBind();

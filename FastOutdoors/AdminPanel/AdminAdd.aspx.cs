@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace FastOutdoors.AdminPanel
 {
-    public partial class MemberAdd : System.Web.UI.Page
+    public partial class AdminAdd : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

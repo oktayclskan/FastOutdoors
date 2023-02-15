@@ -67,16 +67,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPanel\AdminAdd.aspx" />
     <Content Include="AdminPanel\AdminLogin.aspx" />
     <Content Include="AdminPanel\Assets\Css\AdminLogin.css" />
     <Content Include="AdminPanel\Assets\Css\AdminPages.css" />
     <Content Include="AdminPanel\Assets\Css\Animation.css" />
+    <Content Include="AdminPanel\Assets\Img\facebook.png" />
+    <Content Include="AdminPanel\Assets\Img\fastOutdoorsl.jpg" />
+    <Content Include="AdminPanel\Assets\Img\instagram.png" />
+    <Content Include="AdminPanel\Assets\Img\twitter.png" />
+    <Content Include="AdminPanel\Assets\Img\whatsapp.png" />
     <Content Include="AdminPanel\Default.aspx" />
-    <Content Include="AdminPanel\MemberAdd.aspx" />
     <Content Include="AdminPanel\MemberList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPanel\AdminAdd.aspx.cs">
+      <DependentUpon>AdminAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdminAdd.aspx.designer.cs">
+      <DependentUpon>AdminAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -97,13 +109,6 @@
     </Compile>
     <Compile Include="AdminPanel\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminPanel\MemberAdd.aspx.cs">
-      <DependentUpon>MemberAdd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminPanel\MemberAdd.aspx.designer.cs">
-      <DependentUpon>MemberAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\MemberList.aspx.cs">
       <DependentUpon>MemberList.aspx</DependentUpon>
@@ -130,9 +135,7 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdminPanel\Assets\Img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

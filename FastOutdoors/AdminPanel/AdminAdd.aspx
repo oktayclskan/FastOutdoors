@@ -4,7 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="AdminAddContainer">
-
+        <div class="AdminAddContainerTitle">
+            <h3>Admin Ekle</h3>
+        </div>
         <asp:Panel ID="pnl_successful" runat="server" CssClass="pnlSuccessful" Visible="false">
             Admin Ekleme Başarılı
         </asp:Panel>

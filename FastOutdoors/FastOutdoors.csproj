@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPanel\AdminAdd.aspx" />
+    <Content Include="AdminPanel\AdminList.aspx" />
     <Content Include="AdminPanel\AdminLogin.aspx" />
     <Content Include="AdminPanel\Assets\Css\AdminLogin.css" />
     <Content Include="AdminPanel\Assets\Css\AdminPages.css" />
@@ -77,6 +78,8 @@
     <Content Include="AdminPanel\Assets\Img\instagram.png" />
     <Content Include="AdminPanel\Assets\Img\twitter.png" />
     <Content Include="AdminPanel\Assets\Img\whatsapp.png" />
+    <Content Include="AdminPanel\CategoryAdd.aspx" />
+    <Content Include="AdminPanel\CategoryList.aspx" />
     <Content Include="AdminPanel\Default.aspx" />
     <Content Include="AdminPanel\MemberList.aspx" />
     <Content Include="Web.config" />
@@ -88,6 +91,13 @@
     </Compile>
     <Compile Include="AdminPanel\AdminAdd.aspx.designer.cs">
       <DependentUpon>AdminAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdminList.aspx.cs">
+      <DependentUpon>AdminList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdminList.aspx.designer.cs">
+      <DependentUpon>AdminList.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
@@ -102,6 +112,20 @@
     </Compile>
     <Compile Include="AdminPanel\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CategoryAdd.aspx.cs">
+      <DependentUpon>CategoryAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CategoryAdd.aspx.designer.cs">
+      <DependentUpon>CategoryAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CategoryList.aspx.cs">
+      <DependentUpon>CategoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CategoryList.aspx.designer.cs">
+      <DependentUpon>CategoryList.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

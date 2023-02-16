@@ -62,7 +62,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Admins(Name,SurName,UserName,Phone,Mail,AdminPassword) VALUES(@name,@surName,@userName,@phone,@mail,@adminPassword)";
+                cmd.CommandText = "INSERT INTO Admins(Name,SurName,UserName,Phone,Mail,AdminPassword,AdminStatus) VALUES(@name,@surName,@userName,@phone,@mail,@adminPassword,1)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@name", adm.Name);
                 cmd.Parameters.AddWithValue("@surName", adm.SurName);
@@ -77,6 +77,63 @@ namespace DataAccessLayer
             catch
             {
                 return false;
+            }
+            finally { con.Close(); }
+        }
+        public List<Admin> AdminList(int d)
+        {
+            List<Admin> admins = new List<Admin>();
+            try
+            {
+                cmd.CommandText = "SELECT * From Admins Where AdminStatus=@adminStatus";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@adminStatus", d);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Admin a = new Admin();
+                    a.ID = reader.GetInt32(0);
+                    a.Name = reader.GetString(1);
+                    a.SurName = reader.GetString(2);
+                    a.UserName = reader.GetString(3);
+                    a.Phone = reader.GetString(4);
+                    a.Mail = reader.GetString(5);
+                    a.AdminPassword = reader.GetString(6);
+                    a.AdminStatus = reader.GetBoolean(7);
+                    a.AdminStatusStr = reader.GetBoolean(7) ? "<label style='color:green'>Aktif</label>" : "<label style='color:Red'>Pasif</label>";
+                    admins.Add(a);
+                }
+                return admins;
+
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
+        public void AdminStatusPassive(int id)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Admins Set AdminStatus=0 WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
+        public void AdminStatusActive(int id)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Admins Set AdminStatus=1 WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
             }
             finally { con.Close(); }
         }
@@ -174,6 +231,53 @@ namespace DataAccessLayer
                 cmd.ExecuteNonQuery();
             }
 
+            finally { con.Close(); }
+        }
+
+        #endregion
+        #region CategoryMetot
+        public List<Category> CategoryList()
+        {
+            List<Category> categories = new List<Category>();
+            try
+            {
+                cmd.CommandText = "SELECT * From Categorys";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Category c = new Category();
+                    c.ID = reader.GetInt32(0);
+                    c.Name = reader.GetString(1);
+                    c.Img = reader.GetString(2);
+                    categories.Add(c);
+                }
+                return categories;
+                
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
+        public bool CategoryAdd(Category c)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Categorys(Name,Img) VALUES (@name,@img)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@name",c.Name);
+                cmd.Parameters.AddWithValue("@img",c.Img);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
             finally { con.Close(); }
         }
         #endregion

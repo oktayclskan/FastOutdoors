@@ -33,10 +33,12 @@ namespace FastOutdoors.AdminPanel
                                     Admin a = new Admin();
                                     a.Name = tb_name.Text;
                                     a.SurName = tb_surname.Text;
-                                    a.UserName = tb_surname.Text;
+                                    a.UserName = tb_username.Text;
                                     a.Phone = tb_phone.Text;
                                     a.Mail = tb_mail.Text;
                                     a.AdminPassword = tb_AdminPassword.Text;
+                                    a.AdminStatus = true;
+                                   
                                     if (dm.AdminAdd(a))
                                     {
                                         pnl_eror.Visible = false;

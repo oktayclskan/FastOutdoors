@@ -66,62 +66,66 @@ body {
                 border-bottom: 2px solid red;
             }
 
-.exitBtn {
-    float: right;
-    padding: 6px;
-    text-decoration: none;
-    margin-right: 25px;
-    margin-top: -5px;
-    background-color: #1370C4;
-    border-radius: 5px;
-    width: 50px;
-    text-align: center;
-    font-weight: 900;
-    color: white;
-}
-
-    .exitBtn:hover {
-        opacity: 0.7;
-    }
-
-.LoginName {
-    padding-right: 20px;
-    color: white;
-}
-
 .loginDesc {
     margin-top: 15px;
     float: right;
 }
 
-.memberTable {
+    .loginDesc .exitBtn {
+        float: right;
+        padding: 6px;
+        text-decoration: none;
+        margin-right: 25px;
+        margin-top: -5px;
+        background-color: #1370C4;
+        border-radius: 5px;
+        width: 50px;
+        text-align: center;
+        font-weight: 900;
+        color: white;
+    }
+
+        .loginDesc .exitBtn:hover {
+            opacity: 0.7;
+        }
+
+
+
+    .loginDesc .LoginName {
+        padding-right: 20px;
+        color: white;
+    }
+
+
+
+.Table {
     margin-left: auto;
     margin-right: auto;
     color: whitesmoke;
 }
 
-    .memberTable td {
+    .Table td {
         color: black;
     }
 
-    .memberTable thead tr {
+    .Table thead tr {
         background-color: #4d4949;
     }
 
-        .memberTable thead tr th {
+        .Table thead tr th {
             padding: 5px;
         }
 
-    .memberTable tbody tr {
+    .Table tbody tr {
         background-color: #d1d1d1;
     }
 
-    .memberTable tbody td {
+    .Table tbody td {
         padding: 5px;
         border-bottom: 1px solid red;
     }
 
-    .memberTable .banBTN {
+    .Table .banBTN {
         text-decoration: none;
         background-color: red;
         color: whitesmoke;
@@ -132,7 +136,7 @@ body {
         border: 0px solid #000000;
     }
 
-    .memberTable .unbanBTN {
+    .Table .unbanBTN {
         text-decoration: none;
         background-color: #1370C4;
         color: whitesmoke;
@@ -143,7 +147,7 @@ body {
         border: 0px solid #000000;
     }
 
-    .memberTable .dltBTN {
+    .Table .dltBTN {
         text-decoration: none;
         color: whitesmoke;
         background-color: #111111;
@@ -151,15 +155,15 @@ body {
         border-radius: 5px;
     }
 
-        .memberTable .dltBTN:hover {
+        .Table .dltBTN:hover {
             opacity: 0.7;
         }
 
-    .memberTable .unbanBTN:hover {
+    .Table .unbanBTN:hover {
         opacity: 0.7;
     }
 
-    .memberTable .banBTN:hover {
+    .Table .banBTN:hover {
         opacity: 0.7;
     }
 
@@ -216,6 +220,7 @@ body {
         display: block;
         background-color: #0D0D0D;
     }
+
     .AdminAddContainer .pnlEror {
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
@@ -224,5 +229,114 @@ body {
         border-bottom: 1px solid red;
         display: block;
         background-color: #0D0D0D;
-        color:red;
+        color: red;
     }
+
+.AdminList .adminControlBtns {
+    margin: 25px;
+    text-align: center;
+}
+
+    .AdminList .adminControlBtns .activeAdmBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1F1F1F;
+        padding: 10px;
+        border-radius: 5px;
+        border-bottom: 1px solid red;
+    }
+
+        .AdminList .adminControlBtns .activeAdmBtn:hover {
+            opacity: 0.7;
+        }
+
+    .AdminList .adminControlBtns .passiveAdmBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1F1F1F;
+        padding: 10px;
+        border-radius: 5px;
+        border-bottom: 1px solid red;
+    }
+
+        .AdminList .adminControlBtns .passiveAdmBtn:hover {
+            opacity: 0.7;
+        }
+
+.AdminList .deactivateBtn {
+    text-decoration: none;
+    background-color: red;
+    color: whitesmoke;
+    padding: 4px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+    .AdminList .deactivateBtn:hover {
+        opacity: 0.5;
+    }
+
+.AdminList .activateBtn {
+    text-decoration: none;
+    background-color: green;
+    color: whitesmoke;
+    padding: 4px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.categoryList .categoryProcessBtn {
+    font-size: 14px;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #353434;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+    .categoryList .categoryProcessBtn:hover {
+        color: red;
+    }
+
+.categoryList .categoryAddlinkBtn {
+    justify-content: center;
+    text-decoration: none;
+    padding: 7px;
+    background-color: #0D0D0D;
+    border-radius: 5px;
+    color: whitesmoke;
+    border-bottom: 1px solid red;
+}
+
+    .categoryList .categoryAddlinkBtn:hover {
+        opacity: 0.6;
+    }
+
+.categoryList .linkCategoryAdd {
+    text-align: center;
+    margin: 15px;
+}
+.categoryAddContainer {
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+    border-radius: 7px;
+    margin-top: 25px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+    background-color: #1F1F1F;
+}
+    .categoryAddContainer .row {
+        padding: 5px;
+        margin-left: 50px;
+    }
+.categoryAddContainer .textBox {
+    margin-top: 5px;
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+    border: none;
+    font-family: Calibri;
+}

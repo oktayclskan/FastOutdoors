@@ -26,12 +26,13 @@
 
             <div class="loginDesc">
                 <asp:Label ID="lb_loginName" runat="server" CssClass="LoginName"></asp:Label>
+
                 <asp:LinkButton ID="lbtn_exit" runat="server" Text="Çıkış" CssClass="exitBtn" OnClick="lbtn_exit_Click"></asp:LinkButton>
             </div>
                 <ul class="menuList">
-                    <li style="margin-left: 45px;"><a href="MemberList.aspx">Üye İşlemleri</a></li>
-                    <li><a href="AdminAdd.aspx"s>Admin Ekle</a></li>
-                    <li><a href="#">content</a></li>
+                    <li style="margin-left: 45px;"><a href="CategoryList.aspx">Kategori İşlemleri</a></li>
+                    <li ><a href="MemberList.aspx">Üye İşlemleri</a></li>
+                    <li><a href="AdminList.aspx">Admin İşlemleri</a></li>
                     <li><a href="#">content</a></li>
                 </ul>
         </div>

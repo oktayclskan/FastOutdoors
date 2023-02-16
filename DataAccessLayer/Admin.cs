@@ -15,7 +15,8 @@ namespace DataAccessLayer
         public string Phone { get; set; }
         public string Mail { get; set; }
         public string AdminPassword { get; set; }
-        
-        
+        public bool AdminStatus { get; set; }
+        public string AdminStatusStr { get; set; }
+
     }
 }

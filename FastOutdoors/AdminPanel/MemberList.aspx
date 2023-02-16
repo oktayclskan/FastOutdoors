@@ -6,7 +6,7 @@
     <div class="memberList">
         <asp:ListView ID="lv_memberList" runat="server" class="memberTable" OnItemCommand="lv_memberList_ItemCommand">
             <LayoutTemplate>
-                <table class="memberTable" cellpaddind="0" cellspacing="3">
+                <table class="Table" cellpaddind="0" cellspacing="3">
                     <tr>
                         <thead>
                             <th>ID</th>
@@ -15,7 +15,6 @@
                             <th>Kullanıcı Adı</th>
                             <th>Telefon</th>
                             <th>E-Posta</th>
-
                             <th>Konum</th>
                             <th>Durum</th>
                             <th>Seçenek</th>
@@ -35,7 +34,6 @@
                     <td><%# Eval("UserName") %></td>
                     <td><%# Eval("Phone") %></td>
                     <td><%# Eval("Mail") %></td>
-
                     <td><%# Eval("Location") %></td>
                     <td><%# Eval("MemberStatusStr") %></td>
                     <td>

@@ -281,6 +281,48 @@ namespace DataAccessLayer
             finally { con.Close(); }
         }
         #endregion
+        #region Comments Metots
+        public List<Comment> CommentList()
+        {
+            
+            try
+            {
+                List<Comment> comments = new List<Comment>();
+
+                cmd.CommandText = "SELECT C.ID, C.Category_ID, C.Member_ID, C.Admin_ID, C.Tile, C.Content, C.CommemtDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID=M.ID Join Admins AS A ON C.Admin_ID=A.ID ";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Comment c = new Comment();
+                    c.ID = reader.GetInt32(0);
+                    c.Category_ID = reader.GetInt32(1);
+                    c.CategoryName = reader.GetString(2);
+                    c.Member_ID = reader.GetInt32(3);
+                    c.MemberName = reader.GetString(4);
+                    c.Admin_ID = reader.GetInt32(5);
+                    c.AdminName = reader.GetString(6);
+                    c.Title = reader.GetString(7);
+                    c.Content = reader.GetString(8);
+                    c.CommentDate = reader.GetDateTime(9);
+                    c.CommentViews = reader.GetInt32(10);
+                    c.CommentStatus = reader.GetBoolean(11);
+                    c.Img = reader.GetString(12);
+                    comments.Add(c);
+                }
+                return comments;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        #endregion
 
     }
 }

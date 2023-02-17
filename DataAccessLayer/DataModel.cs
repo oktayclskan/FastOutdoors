@@ -280,6 +280,18 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+        public void CategoryDelete(int id)
+        {
+            try
+            {
+                cmd.CommandText = "Delete From Categorys Where ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id",id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
         #endregion
         #region Comments Metots
         public List<Comment> CommentList()

@@ -30,7 +30,7 @@
                     <td><%# Eval("Name") %></td>
                     <td><%# Eval("Img") %></td>
                     <td>
-                        <asp:LinkButton ID="lbtn_categoryDel" runat="server" CssClass="categoryProcessBtn">Kategori Sil</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_categoryDel" runat="server" CssClass="categoryProcessBtn" CommandArgument='<%# Eval("ID") %>' >Kategori Sil</asp:LinkButton>
                     </td>
                 </tr>
             </ItemTemplate>

@@ -24,9 +24,10 @@
             Login
         </div>
         <div class="container">
-            <div>
+            <div class="SingIn">
                 <div class="row">
-                    <asp:Panel ID="pnl_eror" runat="server" CssClass="erorBox" Visible="false">
+
+                    <asp:Panel ID="pnl_eror" runat="server" CssClass="pnlEror" Visible="false">
                         <asp:Label ID="lbl_eror" runat="server"></asp:Label>
                     </asp:Panel>
                 </div>

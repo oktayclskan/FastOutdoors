@@ -8,7 +8,7 @@ namespace DataAccessLayer
 {
     public class ConnectionStrings
     {
-        public static string desktopComputer = @"Data Source=DESKTOP-9FP6GB0\SQLEXPRESS; Initial Catalog=FastOutdoorsDB;Integrated Security=True";
-        public static string Laptop = @"Data Source=; Initial Catalog=FastOutdoorsDB;Integrated Security=True";
+        public static string desktopComputer = @"Data Source=.\SQLEXPRESS; Initial Catalog=FastOutdoorsDB;Integrated Security=True";
+
     }
 }

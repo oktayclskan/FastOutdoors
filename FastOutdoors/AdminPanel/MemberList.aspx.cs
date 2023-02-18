@@ -29,7 +29,7 @@ namespace FastOutdoors.AdminPanel
             {
                 dm.MemberUnBan(id);
             }
-            if (e.CommandName == "delete")
+            if (e.CommandName == "remove")
             {
                 dm.MemberDelete(id);
                 

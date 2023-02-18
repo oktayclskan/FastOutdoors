@@ -33,7 +33,8 @@
                     <li style="margin-left: 45px;"><a href="CategoryList.aspx">Kategori İşlemleri</a></li>
                     <li ><a href="MemberList.aspx">Üye İşlemleri</a></li>
                     <li><a href="AdminList.aspx">Admin İşlemleri</a></li>
-                    <li><a href="#">content</a></li>
+                    <li><a href="CommentsList.aspx">Yorum İşlemleri</a></li>
+                    
                 </ul>
         </div>
         <div>

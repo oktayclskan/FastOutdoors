@@ -16,14 +16,14 @@ namespace DataAccessLayer
             cmd = con.CreateCommand();
         }
         #region Admin Metots
-        public Admin AdminLogin(string mail,string sifre)
+        public Admin AdminLogin(string mail, string sifre)
         {
             try
             {
                 cmd.CommandText = "SELECT COUNT(*) FROM Admins WHERE Mail=@mail AND AdminPassword=@sifre";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@mail",mail);
-                cmd.Parameters.AddWithValue("@sifre",sifre);
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@sifre", sifre);
                 con.Open();
                 int sayi = Convert.ToInt32(cmd.ExecuteScalar());
                 if (sayi > 0)
@@ -148,7 +148,7 @@ namespace DataAccessLayer
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                
+
                 while (reader.Read())
                 {
                     Member m = new Member();
@@ -178,7 +178,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "UPDATE Members Set MemberStatus=0 WHERE ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",id);
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -190,7 +190,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "UPDATE Members SET MemberStatus = 1 WHERE ID =@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",id);
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -202,7 +202,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "INSERT INTO Members (Name,SurName,UserName,Phone,Mail,MemberPassword,Location,MemberStatus) VALUES(@name,@surName,@userName,@phone,@mail,@memberPassword,@location,@memberStatus)";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@name",mem.Name);
+                cmd.Parameters.AddWithValue("@name", mem.Name);
                 cmd.Parameters.AddWithValue("@surName", mem.SurName);
                 cmd.Parameters.AddWithValue("@userName,", mem.UserName);
                 cmd.Parameters.AddWithValue("@phone,", mem.Phone);
@@ -226,7 +226,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "DELETE FROM Members Where ID = @id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",id);
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -254,7 +254,7 @@ namespace DataAccessLayer
                     categories.Add(c);
                 }
                 return categories;
-                
+
             }
             catch
             {
@@ -268,8 +268,8 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "INSERT INTO Categorys(Name,Img) VALUES (@name,@img)";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@name",c.Name);
-                cmd.Parameters.AddWithValue("@img",c.Img);
+                cmd.Parameters.AddWithValue("@name", c.Name);
+                cmd.Parameters.AddWithValue("@img", c.Img);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -286,7 +286,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "Delete From Categorys Where ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",id);
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -294,14 +294,13 @@ namespace DataAccessLayer
         }
         #endregion
         #region Comments Metots
+
         public List<Comment> CommentList()
         {
-            
+            List<Comment> comments = new List<Comment>();
             try
             {
-                List<Comment> comments = new List<Comment>();
-
-                cmd.CommandText = "SELECT C.ID, C.Category_ID, C.Member_ID, C.Admin_ID, C.Tile, C.Content, C.CommemtDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID=M.ID Join Admins AS A ON C.Admin_ID=A.ID ";
+                cmd.CommandText = "SELECT C.ID, cg.Name,m.Name, C.Title, C.Content, C.CommentDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID = M.ID ";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -309,18 +308,14 @@ namespace DataAccessLayer
                 {
                     Comment c = new Comment();
                     c.ID = reader.GetInt32(0);
-                    c.Category_ID = reader.GetInt32(1);
-                    c.CategoryName = reader.GetString(2);
-                    c.Member_ID = reader.GetInt32(3);
-                    c.MemberName = reader.GetString(4);
-                    c.Admin_ID = reader.GetInt32(5);
-                    c.AdminName = reader.GetString(6);
-                    c.Title = reader.GetString(7);
-                    c.Content = reader.GetString(8);
-                    c.CommentDate = reader.GetDateTime(9);
-                    c.CommentViews = reader.GetInt32(10);
-                    c.CommentStatus = reader.GetBoolean(11);
-                    c.Img = reader.GetString(12);
+                    c.CategoryName = reader.GetString(1);
+                    c.MemberName = reader.GetString(2);
+                    c.Title = reader.GetString(3);
+                    c.Content = reader.GetString(4);
+                    c.CommentDate = reader.GetDateTime(5);
+                    c.CommentViews = reader.GetInt32(6);
+                    c.CommentStatus = reader.GetBoolean(7);
+                    c.Img = !reader.IsDBNull(8) ? reader.GetString(8) : "none.png";
                     comments.Add(c);
                 }
                 return comments;

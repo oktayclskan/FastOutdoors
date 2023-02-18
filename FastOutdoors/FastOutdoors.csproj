@@ -73,6 +73,7 @@
     <Content Include="AdminPanel\Assets\Css\AdminLogin.css" />
     <Content Include="AdminPanel\Assets\Css\AdminPages.css" />
     <Content Include="AdminPanel\Assets\Css\Animation.css" />
+    <Content Include="AdminPanel\Assets\Img\CommentImg\none.png" />
     <Content Include="AdminPanel\Assets\Img\facebook.png" />
     <Content Include="AdminPanel\Assets\Img\fastOutdoorsl.jpg" />
     <Content Include="AdminPanel\Assets\Img\instagram.png" />
@@ -80,6 +81,7 @@
     <Content Include="AdminPanel\Assets\Img\whatsapp.png" />
     <Content Include="AdminPanel\CategoryAdd.aspx" />
     <Content Include="AdminPanel\CategoryList.aspx" />
+    <Content Include="AdminPanel\CommentsList.aspx" />
     <Content Include="AdminPanel\Default.aspx" />
     <Content Include="AdminPanel\MemberList.aspx" />
     <Content Include="Web.config" />
@@ -126,6 +128,13 @@
     </Compile>
     <Compile Include="AdminPanel\CategoryList.aspx.designer.cs">
       <DependentUpon>CategoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CommentsList.aspx.cs">
+      <DependentUpon>CommentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CommentsList.aspx.designer.cs">
+      <DependentUpon>CommentsList.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -38,8 +38,8 @@
                     <td><%# Eval("MemberStatusStr") %></td>
                     <td>
                         <asp:LinkButton ID="lbtn_ban" runat="server" CssClass="banBTN" CommandArgument='<%#Eval("ID")%>' CommandName="ban">Banla</asp:LinkButton>
-                        <asp:LinkButton ID="lbtn_unban" runat="server" CssClass="unbanBTN" CommandArgument='<%#Eval("ID")%>' CommandName="unban">Unban</asp:LinkButton>
-                        <asp:LinkButton ID="lbtn_Dlt" runat="server" CssClass="dltBTN" CommandArgument='<%#Eval("ID")%>' CommandName="delete">Delete</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_unban" runat="server" CssClass="unbanBTN" CommandArgument='<%#Eval("ID")%>' CommandName="unban">Ban Kaldır</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_Dlt" runat="server" CssClass="dltBTN" CommandArgument='<%#Eval("ID")%>' CommandName="remove">Sil</asp:LinkButton>
                        
                     </td>
 

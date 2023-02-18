@@ -13,8 +13,6 @@ namespace DataAccessLayer
         public string CategoryName { get; set; }
         public int Member_ID { get; set; }
         public string MemberName { get; set; }
-        public int Admin_ID { get; set; }
-        public string AdminName { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public DateTime CommentDate { get; set; }

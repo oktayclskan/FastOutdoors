@@ -70,6 +70,7 @@
     <Content Include="AdminPanel\AdminAdd.aspx" />
     <Content Include="AdminPanel\AdminList.aspx" />
     <Content Include="AdminPanel\AdminLogin.aspx" />
+    <Content Include="AdminPanel\Answers.aspx" />
     <Content Include="AdminPanel\Assets\Css\AdminLogin.css" />
     <Content Include="AdminPanel\Assets\Css\AdminPages.css" />
     <Content Include="AdminPanel\Assets\Css\Animation.css" />
@@ -84,6 +85,7 @@
     <Content Include="AdminPanel\CommentsList.aspx" />
     <Content Include="AdminPanel\Default.aspx" />
     <Content Include="AdminPanel\MemberList.aspx" />
+    <Content Include="AdminPanel\ParagraphList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +116,13 @@
     </Compile>
     <Compile Include="AdminPanel\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Answers.aspx.cs">
+      <DependentUpon>Answers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Answers.aspx.designer.cs">
+      <DependentUpon>Answers.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\CategoryAdd.aspx.cs">
       <DependentUpon>CategoryAdd.aspx</DependentUpon>
@@ -149,6 +158,13 @@
     </Compile>
     <Compile Include="AdminPanel\MemberList.aspx.designer.cs">
       <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParagraphList.aspx.cs">
+      <DependentUpon>ParagraphList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParagraphList.aspx.designer.cs">
+      <DependentUpon>ParagraphList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

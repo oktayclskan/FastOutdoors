@@ -399,5 +399,44 @@ body {
 }
 
     .categoryAddContainer .addCategoryBtn:hover {
-        opacity:0.6;
+        opacity: 0.6;
+    }
+
+.commentList .CommentBanBtn {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #c25858;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 12pt;
+}
+
+    .commentList .CommentBanBtn:hover {
+        background-color: red;
+    }
+
+.answersList .CommentBanBtn {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #c25858;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 12pt;
+}
+
+    .answersList .CommentBanBtn:hover {
+        background-color: red;
+    }
+
+.paragraphsList .paragraphBanBtn {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #c25858;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 12pt;
+}
+
+    .paragraphsList .paragraphBanBtn:hover {
+        background-color: red;
     }

@@ -20,7 +20,13 @@ namespace FastOutdoors.AdminPanel
 
         protected void lv_commentList_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
-
+            int id = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "remove")
+            {
+                dm.CommentDelete(id);
+                lv_commentList.DataSource = dm.CommentList();
+                lv_commentList.DataBind();
+            }
         }
     }
 }

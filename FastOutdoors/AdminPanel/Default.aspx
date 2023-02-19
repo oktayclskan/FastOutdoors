@@ -3,16 +3,10 @@
     <link href="Assets/Css/Animation.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
-    <br />
-    HATALAR
-    <br />
-    Uye sil çalışmıyor
     <div class="containerANM">
         <div class="ring"></div>
         <div class="ring"></div>
         <div class="ring"></div>
         <p>FastOutdoor...</p>
-
     </div>
 </asp:Content>

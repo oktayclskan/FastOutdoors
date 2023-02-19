@@ -34,6 +34,9 @@
                     <li ><a href="MemberList.aspx">Üye İşlemleri</a></li>
                     <li><a href="AdminList.aspx">Admin İşlemleri</a></li>
                     <li><a href="CommentsList.aspx">Yorum İşlemleri</a></li>
+                    <li><a href="Answers.aspx">Cevap İşlemleri</a></li>
+                    <li><a href="ParagraphList.aspx">Öğretiçi Metin İşlemleri</a></li>
+                    
                     
                 </ul>
         </div>

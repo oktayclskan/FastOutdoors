@@ -315,6 +315,7 @@ namespace DataAccessLayer
                     c.CommentDate = reader.GetDateTime(5);
                     c.CommentViews = reader.GetInt32(6);
                     c.CommentStatus = reader.GetBoolean(7);
+                    c.CommentStatusStr = reader.GetBoolean(7) ? "<label style='color:green'>Yayında</label>" : "<label style='color:red'>Kaldırılmış</label>";
                     c.Img = !reader.IsDBNull(8) ? reader.GetString(8) : "none.png";
                     comments.Add(c);
                 }
@@ -329,7 +330,79 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
+        public void CommentDelete(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE From Comments Where ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
         #endregion
-
+        #region Answer Metots
+        public List<Answers> AnswerList()
+        {
+            List<Answers> answers = new List<Answers>();
+            try
+            {
+                cmd.CommandText = "Select A.ID, C.ID, M.Name,A.Contents,A.AnwersTime From Answers AS A join Comments AS C ON A.Comment_ID=c.ID join Members AS m ON A.Member_ID = M.ID";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Answers a = new Answers();
+                    a.ID = reader.GetInt32(0);
+                    a.Comment_ID = reader.GetInt32(1);
+                    a.MemberName = reader.GetString(2);
+                    a.Content = reader.GetString(3);
+                    a.AnswersTime = reader.GetDateTime(4);
+                    answers.Add(a);
+                }
+                return answers;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
+        #endregion
+        #region Paragrahs Metots
+        public List<Paragraphs> ParagraphsList()
+        {
+            List<Paragraphs> paragraphs = new List<Paragraphs>();
+            try
+            {
+                cmd.CommandText = "SELECT P.ID, C.Name, A.Name, P.Title, P.Contents, P.ParagraphsViews,P.ParagraphsDateTime,P.Img FROM Paragraphs AS P Join Categorys AS C ON P.Category_ID=C.ID Join Admins AS A ON P.Admin_ID=A.ID";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Paragraphs p = new Paragraphs();
+                    p.ID = reader.GetInt32(0);
+                    p.CategoryName = reader.GetString(1);
+                    p.AdminName = reader.GetString(2);
+                    p.Title = reader.GetString(3);
+                    p.Contents = reader.GetString(4);
+                    p.ParagraphViews = reader.GetInt32(5);
+                    p.ParagraphDateTime = reader.GetDateTime(6);
+                    p.Img = !reader.IsDBNull(7) ? reader.GetString(7) : "none.png";
+                    paragraphs.Add(p);
+                }
+                return paragraphs;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        } 
+        #endregion
     }
 }

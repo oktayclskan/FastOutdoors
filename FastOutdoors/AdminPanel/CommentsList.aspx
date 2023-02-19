@@ -10,15 +10,15 @@
                     <tr>
                         <thead>
                             <th>ID</th>
-                            <th>Isim</th>
+                            <th>Kategori</th>
+                            <th>Uye Adı</th>
+                            <th>Başlık</th>
+                            <th>Yorum</th>
+                            <th>Yorum Tarihi</th>
+                            <th>Görüntülenme</th>
+                            <th>Durum</th>
                             <th>Resim</th>
-                            <th>Resim</th>
-                            <th>Resim</th>
-                            <th>Resim</th>
-                            <th>Resim</th>
-                            <th>Resim</th>
-                            <th>Resim</th>
-                            <th>Resim</th>
+                            <th>Seçenek</th>
                         </thead>
                     </tr>
                     <tbody>
@@ -35,12 +35,12 @@
                     <td><%# Eval("Content") %></td>
                     <td><%# Eval("CommentDate") %></td>
                     <td><%# Eval("CommentViews") %></td>
-                    <td><%# Eval("CommentStatus") %></td>
+                    <td><%# Eval("CommentStatusStr") %></td>
                     <td>
                         <img style="text-align: center;" src="../AdminPanel/Assets/Img/CommentImg/<%# Eval("Img")%>" width="25" />
                     </td>
                     <td>
-                        <asp:LinkButton ID="lbtn_categoryDel" runat="server" CommandArgument='<%# Eval("ID") %>'>Yorum Kaldır</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_categoryDel" runat="server" CssClass="CommentBanBtn" CommandArgument='<%# Eval("ID") %>' CommandName="remove">Kaldır</asp:LinkButton>
                     </td>
                 </tr>
             </ItemTemplate>

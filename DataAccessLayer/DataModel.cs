@@ -371,6 +371,18 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+        public void DeleteAnswer(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM Answers WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
         #endregion
         #region Paragrahs Metots
         public List<Paragraphs> ParagraphsList()
@@ -402,7 +414,93 @@ namespace DataAccessLayer
                 return null;
             }
             finally { con.Close(); }
-        } 
+        }
+        public void DeleteParagraph(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE From Paragraphs WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
+        public bool ParagraphAdd(Paragraphs p)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Paragraphs(Category_ID,Admin_ID,Title,Contents,ParagraphsViews,ParagraphsDateTime,Img) VALUES(@categoryID,@adminID,@title,@contents,@paragraphsViews,@paragraphsDateTime,@img)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@categoryID", p.Category_ID);
+                cmd.Parameters.AddWithValue("@adminID", p.Admin_ID);
+                cmd.Parameters.AddWithValue("@title", p.Title);
+                cmd.Parameters.AddWithValue("@contents", p.Contents);
+                cmd.Parameters.AddWithValue("@paragraphsViews", p.ParagraphViews);
+                cmd.Parameters.AddWithValue("@paragraphsDateTime", p.ParagraphDateTime);
+                cmd.Parameters.AddWithValue("@img", p.Img);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
+        public Paragraphs ParagraphgetGet(int id)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT P.ID, C.Name, A.Name, P.Title, P.Contents, P.ParagraphsViews,P.ParagraphsDateTime,P.Img FROM Paragraphs AS P Join Categorys AS C ON P.Category_ID=C.ID Join Admins AS A ON P.Admin_ID=A.ID Where P.ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                Paragraphs p = new Paragraphs();
+                while (reader.Read())
+                {
+                    p.ID = reader.GetInt32(0);
+                    p.CategoryName = reader.GetString(1);
+                    p.AdminName = reader.GetString(2);
+                    p.Title = reader.GetString(3);
+                    p.Contents = reader.GetString(4);
+                    p.ParagraphViews = reader.GetInt32(5);
+                    p.ParagraphDateTime = reader.GetDateTime(6);
+                    p.Img = !reader.IsDBNull(7) ? reader.GetString(7) : "none.png";
+                }
+                return p;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
+        public bool ParagraphUpdate(Paragraphs p)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Paragraphs SET Category_ID = @categoryID ,Title = @title, Contents = @contents, Img = @img, WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id",p.ID);
+                cmd.Parameters.AddWithValue("@category_ID", p.Category_ID);
+                cmd.Parameters.AddWithValue("@title",p.Title);
+                cmd.Parameters.AddWithValue("@contents", p.Contents);
+                cmd.Parameters.AddWithValue("@img", p.Img);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
+
         #endregion
     }
 }

@@ -13,6 +13,7 @@
         <asp:Panel ID="pnl_eror" runat="server" CssClass="pnlEror" Visible="false">
             <asp:Label ID="lbl_eror" runat="server"></asp:Label>
         </asp:Panel>
+        <a href="CategoryList.aspx"><i class="fa-solid fa-angles-left AddBackBtn"></i> </a>
         <div class="row">
             <h6 style="margin-top: 15px;">İsim Giriniz</h6>
             <asp:TextBox ID="tb_name" runat="server" CssClass="textBox"></asp:TextBox>

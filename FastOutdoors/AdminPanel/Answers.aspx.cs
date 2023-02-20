@@ -19,7 +19,13 @@ namespace FastOutdoors.AdminPanel
 
         protected void lv_answerList_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
-
+            int id = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "remove")
+            {
+                dm.DeleteAnswer(id);
+            }
+            lv_answerList.DataSource = dm.AnswerList();
+            lv_answerList.DataBind();
         }
     }
 }

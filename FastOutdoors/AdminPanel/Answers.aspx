@@ -30,7 +30,7 @@
                     <td><%# Eval("Content") %></td>
                     <td><%# Eval("AnswersTime") %></td>
                     <td>
-                        <asp:LinkButton ID="lbtn_remove" runat="server" CssClass="CommentBanBtn" CommandArgument='<%# Eval("ID") %>' >Kaldır</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_remove" runat="server" CssClass="CommentBanBtn" CommandArgument='<%# Eval("ID") %>' CommandName="remove" >Kaldır</asp:LinkButton>
                     </td>
                 </tr>
             </ItemTemplate>

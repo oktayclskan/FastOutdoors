@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+    <link href="Assets/Css/fontawesome-free-6.3.0-web/css/all.min.css" rel="stylesheet" />
     <link href="Assets/Css/AdminPages.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -35,9 +36,7 @@
                     <li><a href="AdminList.aspx">Admin İşlemleri</a></li>
                     <li><a href="CommentsList.aspx">Yorum İşlemleri</a></li>
                     <li><a href="Answers.aspx">Cevap İşlemleri</a></li>
-                    <li><a href="ParagraphList.aspx">Öğretiçi Metin İşlemleri</a></li>
-                    
-                    
+                    <li><a href="ParagraphList.aspx">Metin İşlemleri</a></li>                    
                 </ul>
         </div>
         <div>
@@ -47,5 +46,9 @@
             </div>
         </div>
     </form>
+    <script src="Assets/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('ContentPlaceHolder1_tb_content');
+    </script>
 </body>
 </html>

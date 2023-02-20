@@ -10,7 +10,7 @@ body {
 }
 
 .contentContainer {
-    width: 1150px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -292,6 +292,17 @@ body {
     font-weight: 700;
 }
 
+.AdminAddContainer .AddBackBtn {
+    color: #1370C4;
+    float: right;
+    padding: 5px;
+    margin: 10px;
+}
+
+    .AdminAddContainer .AddBackBtn:hover {
+        opacity: 0.7;
+    }
+
 .categoryList .categoryProcessBtn {
     font-size: 14px;
     text-decoration: none;
@@ -402,6 +413,17 @@ body {
         opacity: 0.6;
     }
 
+.categoryAddContainer .AddBackBtn {
+    color: #1370C4;
+    float: right;
+    padding: 5px;
+    margin: 10px;
+}
+
+    .categoryAddContainer .AddBackBtn:hover {
+        opacity: 0.7;
+    }
+
 .commentList .CommentBanBtn {
     text-decoration: none;
     color: whitesmoke;
@@ -428,15 +450,181 @@ body {
         background-color: red;
     }
 
-.paragraphsList .paragraphBanBtn {
-    text-decoration: none;
-    color: whitesmoke;
-    background-color: #c25858;
-    padding: 4px;
-    border-radius: 5px;
-    font-size: 12pt;
+.paragraphsList {
+    width: 100%;
 }
 
-    .paragraphsList .paragraphBanBtn:hover {
-        background-color: red;
+    .paragraphsList .paragraphControl {
+        text-align: center;
+        margin-top: 15px;
     }
+
+    .paragraphsList .paragraphBanBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #c25858;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: 12pt;
+    }
+
+        .paragraphsList .paragraphBanBtn:hover {
+            background-color: red;
+        }
+
+    .paragraphsList .paragraphAddLink {
+        margin-top: 15px;
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1F1F1F;
+        padding: 10px;
+        border-radius: 5px;
+        border-bottom: 1px solid red;
+    }
+
+        .paragraphsList .paragraphAddLink:hover {
+            opacity: 0.7;
+        }
+
+.ParagraphAddContainer {
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+    border-radius: 7px;
+    margin-top: 25px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+    background-color: #1F1F1F;
+}
+
+    .ParagraphAddContainer .ParagraphAddContainerTitle {
+        padding: 5px;
+        text-align: center;
+        border-bottom: 1px solid red;
+    }
+
+    .ParagraphAddContainer .row {
+        padding: 5px;
+        margin-left: 50px;
+    }
+
+    .ParagraphAddContainer .textBox {
+        margin-top: 5px;
+        width: 250px;
+        height: 25px;
+        border-radius: 5px;
+        background-color: #d1d1d1;
+        border: none;
+        font-family: Calibri;
+    }
+
+    .ParagraphAddContainer .AddBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1370C4;
+        padding: 5px;
+        border-radius: 5px;
+        display: block;
+        width: 100px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+        .ParagraphAddContainer .AddBtn:hover {
+            opacity: 0.7;
+        }
+
+    .ParagraphAddContainer .pnlSuccessful {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid red;
+        display: block;
+        background-color: #0D0D0D;
+    }
+
+    .ParagraphAddContainer .pnlEror {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid red;
+        display: block;
+        background-color: #0D0D0D;
+        color: red;
+    }
+
+    .ParagraphAddContainer .AddBackBtn {
+        color: #1370C4;
+        float: right;
+        padding: 5px;
+        margin: 10px;
+    }
+
+        .ParagraphAddContainer .AddBackBtn:hover {
+            opacity: 0.7;
+        }
+
+.ParagraphUpdateContainer {
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+    border-radius: 7px;
+    margin-top: 25px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+    background-color: #1F1F1F;
+}
+
+    .ParagraphUpdateContainer .ParagraphUpdateContainerTitle {
+        padding: 5px;
+        text-align: center;
+        border-bottom: 1px solid red;
+    }
+
+    .ParagraphUpdateContainer .row {
+        padding: 5px;
+        margin-left: 50px;
+    }
+
+    .ParagraphUpdateContainer .textBox {
+        margin-top: 5px;
+        width: 250px;
+        height: 25px;
+        border-radius: 5px;
+        background-color: #d1d1d1;
+        border: none;
+        font-family: Calibri;
+    }
+
+    .ParagraphUpdateContainer .AddBackBtn {
+        color: #1370C4;
+        float: right;
+        padding: 5px;
+        margin: 10px;
+    }
+
+        .ParagraphUpdateContainer .AddBackBtn:hover {
+            opacity: 0.7;
+        }
+
+    .ParagraphUpdateContainer .UpdateBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1370C4;
+        padding: 5px;
+        border-radius: 5px;
+        display: block;
+        width: 100px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+        .ParagraphUpdateContainer .UpdateBtn:hover {
+            opacity: 0.7;
+        }

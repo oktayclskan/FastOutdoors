@@ -1,11 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPanel/AdminMaster.Master" AutoEventWireup="true" CodeBehind="ParagraphList.aspx.cs" Inherits="FastOutdoors.AdminPanel.ParagraphList" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="paragraphsList">
+        <div class="paragraphControl">
+            <a class="paragraphAddLink" href="ParagraphAdd.aspx">Metin Ekle</a>
+
+        </div>
         <asp:ListView ID="lv_paragrapList" runat="server" class="memberTable" OnItemCommand="lv_paragrapList_ItemCommand">
             <LayoutTemplate>
-                <table class="Table" cellpaddind="0" cellspacing="3">
+                <table style="margin-top: 15px;" class="Table" cellpaddind="0" cellspacing="3">
                     <tr>
                         <thead>
                             <th>ID</th>
@@ -16,7 +21,7 @@
                             <th>Görüntülenme</th>
                             <th>Ekleme Tarihi</th>
                             <th>Resim</th>
-                            <th>Secenek</th>
+                            <th colspan="2">Secenek</th>
 
                         </thead>
                     </tr>
@@ -36,7 +41,9 @@
                     <td><%# Eval("ParagraphDateTime") %></td>
                     <td><%# Eval("Img") %></td>
                     <td>
-                        <asp:LinkButton ID="lbtn_remove" runat="server" CssClass="paragraphBanBtn" CommandArgument='<%# Eval("ID") %>' >Kaldır</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_remove" runat="server" CssClass="paragraphBanBtn" CommandArgument='<%# Eval("ID") %>' CommandName="remove">Kaldır</asp:LinkButton>
+                    <td>
+                        <a class="paragraphAddLink" href="ParagraphUpdate.aspx?pid=<%# Eval("ID") %>">Güncelle</a>
                     </td>
                 </tr>
             </ItemTemplate>

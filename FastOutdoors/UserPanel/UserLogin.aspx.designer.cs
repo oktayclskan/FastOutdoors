@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FastOutdoors.AdminPanel
+namespace FastOutdoors.UserPanel
 {
 
 
-    public partial class ParagraphUpdate
+    public partial class UserLogin
     {
 
         /// <summary>
-        /// pnl_successful control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_successful;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// pnl_eror control.
@@ -42,57 +42,30 @@ namespace FastOutdoors.AdminPanel
         protected global::System.Web.UI.WebControls.Label lbl_eror;
 
         /// <summary>
-        /// dll_category control.
+        /// tb_mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dll_category;
+        protected global::System.Web.UI.WebControls.TextBox tb_mail;
 
         /// <summary>
-        /// tb_title control.
+        /// tb_Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_title;
+        protected global::System.Web.UI.WebControls.TextBox tb_Password;
 
         /// <summary>
-        /// img_paragraphimg control.
+        /// lbtn_logIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image img_paragraphimg;
-
-        /// <summary>
-        /// tb_content control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_content;
-
-        /// <summary>
-        /// fu_Image control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fu_Image;
-
-        /// <summary>
-        /// lb_update control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lb_update;
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_logIn;
     }
 }

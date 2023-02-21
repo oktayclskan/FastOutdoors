@@ -7,21 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FastOutdoors.AdminPanel
+namespace FastOutdoors.UserPanel
 {
 
 
-    public partial class ParagraphUpdate
+    public partial class Register
     {
 
         /// <summary>
-        /// pnl_successful control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_successful;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// pnl_succesful control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnl_succesful;
 
         /// <summary>
         /// pnl_eror control.
@@ -42,57 +51,75 @@ namespace FastOutdoors.AdminPanel
         protected global::System.Web.UI.WebControls.Label lbl_eror;
 
         /// <summary>
-        /// dll_category control.
+        /// tb_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dll_category;
+        protected global::System.Web.UI.WebControls.TextBox tb_name;
 
         /// <summary>
-        /// tb_title control.
+        /// tb_surName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_title;
+        protected global::System.Web.UI.WebControls.TextBox tb_surName;
 
         /// <summary>
-        /// img_paragraphimg control.
+        /// tb_userName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image img_paragraphimg;
+        protected global::System.Web.UI.WebControls.TextBox tb_userName;
 
         /// <summary>
-        /// tb_content control.
+        /// tb_phone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_content;
+        protected global::System.Web.UI.WebControls.TextBox tb_phone;
 
         /// <summary>
-        /// fu_Image control.
+        /// tb_mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fu_Image;
+        protected global::System.Web.UI.WebControls.TextBox tb_mail;
 
         /// <summary>
-        /// lb_update control.
+        /// tb_Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lb_update;
+        protected global::System.Web.UI.WebControls.TextBox tb_Password;
+
+        /// <summary>
+        /// tb_location control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_location;
+
+        /// <summary>
+        /// lbtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtn;
     }
 }

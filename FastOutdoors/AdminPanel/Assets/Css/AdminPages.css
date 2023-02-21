@@ -167,7 +167,13 @@ body {
     .Table .banBTN:hover {
         opacity: 0.7;
     }
-
+.menuList .downBtn {
+    color: red;
+    margin-left:5px;
+}
+.menuList a:hover{
+    opacity:0.7;
+}
 .AdminAddContainer {
     border-right: 1px solid red;
     border-left: 1px solid red;
@@ -612,6 +618,8 @@ body {
             opacity: 0.7;
         }
 
+
+
     .ParagraphUpdateContainer .UpdateBtn {
         text-decoration: none;
         color: whitesmoke;
@@ -628,3 +636,24 @@ body {
         .ParagraphUpdateContainer .UpdateBtn:hover {
             opacity: 0.7;
         }
+
+    .ParagraphUpdateContainer .pnlSuccessful {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid red;
+        display: block;
+        background-color: #0D0D0D;
+    }
+
+    .ParagraphUpdateContainer .pnlEror {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid red;
+        display: block;
+        background-color: #0D0D0D;
+        color: red;
+    }

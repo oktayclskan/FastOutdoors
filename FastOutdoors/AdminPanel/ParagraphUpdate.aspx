@@ -7,7 +7,7 @@
             <h3>Metin Güncelle</h3>
         </div>
         <asp:Panel ID="pnl_successful" runat="server" CssClass="pnlSuccessful" Visible="false">
-            Metin Ekleme Başarılı
+            Metin Güncelleme Başarılı
         </asp:Panel>
 
         <asp:Panel ID="pnl_eror" runat="server" CssClass="pnlEror" Visible="false">
@@ -37,7 +37,7 @@
         </div>
 
         <div class="row">
-            <asp:LinkButton ID="lb_Add" runat="server" CssClass="UpdateBtn" >Güncelle</asp:LinkButton>
+            <asp:LinkButton ID="lb_update" runat="server" CssClass="UpdateBtn" OnClick="lb_update_Click" >Güncelle</asp:LinkButton>
         </div>
     </div>
 </asp:Content>

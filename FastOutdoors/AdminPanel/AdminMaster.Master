@@ -31,12 +31,12 @@
                 <asp:LinkButton ID="lbtn_exit" runat="server" Text="Çıkış" CssClass="exitBtn" OnClick="lbtn_exit_Click"></asp:LinkButton>
             </div>
                 <ul class="menuList">
-                    <li style="margin-left: 45px;"><a href="CategoryList.aspx">Kategori İşlemleri</a></li>
-                    <li ><a href="MemberList.aspx">Üye İşlemleri</a></li>
-                    <li><a href="AdminList.aspx">Admin İşlemleri</a></li>
-                    <li><a href="CommentsList.aspx">Yorum İşlemleri</a></li>
-                    <li><a href="Answers.aspx">Cevap İşlemleri</a></li>
-                    <li><a href="ParagraphList.aspx">Metin İşlemleri</a></li>                    
+                    <li style="margin-left: 45px;"><a href="CategoryList.aspx">Kategori İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>
+                    <li ><a href="MemberList.aspx">Üye İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>
+                    <li><a href="AdminList.aspx">Admin İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>
+                    <li><a href="CommentsList.aspx">Yorum İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>
+                    <li><a href="Answers.aspx">Cevap İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>
+                    <li><a href="ParagraphList.aspx">Metin İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>                    
                 </ul>
         </div>
         <div>

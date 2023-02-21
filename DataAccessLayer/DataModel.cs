@@ -200,16 +200,16 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Members (Name,SurName,UserName,Phone,Mail,MemberPassword,Location,MemberStatus) VALUES(@name,@surName,@userName,@phone,@mail,@memberPassword,@location,@memberStatus)";
+                cmd.CommandText = "INSERT INTO Members (Name,SurName,UserName,Phone,Mail,MemberPassword,Location,MemberStatus)" +
+                    " VALUES(@name,@surName,@userName,@phone,@mail,@memberPassword,@location,1)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@name", mem.Name);
                 cmd.Parameters.AddWithValue("@surName", mem.SurName);
-                cmd.Parameters.AddWithValue("@userName,", mem.UserName);
-                cmd.Parameters.AddWithValue("@phone,", mem.Phone);
-                cmd.Parameters.AddWithValue("@mail,", mem.Mail);
-                cmd.Parameters.AddWithValue("@memberPassword,", mem.MemberPassword);
-                cmd.Parameters.AddWithValue("@location,", mem.Location);
-                cmd.Parameters.AddWithValue("@memberStatus,", mem.MemberStatus);
+                cmd.Parameters.AddWithValue("@userName", mem.UserName);
+                cmd.Parameters.AddWithValue("@phone", mem.Phone);
+                cmd.Parameters.AddWithValue("@mail", mem.Mail);
+                cmd.Parameters.AddWithValue("@memberPassword", mem.MemberPassword);
+                cmd.Parameters.AddWithValue("@location", mem.Location);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -231,6 +231,50 @@ namespace DataAccessLayer
                 cmd.ExecuteNonQuery();
             }
 
+            finally { con.Close(); }
+        }
+        public Member MemberLogin(string mail, string password)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT(*) FROM Members WHERE Mail=@mail AND MemberPassword=@password";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@password", password);
+                con.Open();
+                cmd.ExecuteScalar();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                if (num > 0)
+                {
+                    cmd.CommandText = "SELECT * FROM Members WHERE Mail=@mail AND MemberPassword=@password";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@mail", mail);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    Member m = new Member();
+                    while (reader.Read())
+                    {
+                        m.ID = reader.GetInt32(0);
+                        m.Name = reader.GetString(1);
+                        m.SurName = reader.GetString(2);
+                        m.UserName = reader.GetString(3);
+                        m.Phone = reader.GetString(4);
+                        m.Mail = reader.GetString(5);
+                        m.MemberPassword = reader.GetString(6);
+                        m.Location = reader.GetString(7);
+                    }
+                    return m;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
             finally { con.Close(); }
         }
 
@@ -339,6 +383,30 @@ namespace DataAccessLayer
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
+        public bool CommentAdd(Comment c)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Comments(Category_ID,Member_ID,Title,Content,CommentDate,CommentViews,CommentStatus,Img) VALUES (@categoryID,@memberID,@title,@content,@commentDate,@commentViews,1,@img)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@categoryID", c.CommentDate);
+                cmd.Parameters.AddWithValue("@memberID", c.Member_ID);
+                cmd.Parameters.AddWithValue("@title", c.Title);
+                cmd.Parameters.AddWithValue("@content", c.Content);
+                cmd.Parameters.AddWithValue("@commentDate", c.CommentDate);
+                cmd.Parameters.AddWithValue("@commentViews", c.CommentViews);
+                cmd.Parameters.AddWithValue("1", c.CommentStatus);
+                cmd.Parameters.AddWithValue("@img", c.Img);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
             }
             finally { con.Close(); }
         }
@@ -483,11 +551,11 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "UPDATE Paragraphs SET Category_ID = @categoryID ,Title = @title, Contents = @contents, Img = @img, WHERE ID=@id";
+                cmd.CommandText = "UPDATE Paragraphs SET Category_ID=@categoryID,Title = @title,Contents=@contents,Img =@img WHERE ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",p.ID);
-                cmd.Parameters.AddWithValue("@category_ID", p.Category_ID);
-                cmd.Parameters.AddWithValue("@title",p.Title);
+                cmd.Parameters.AddWithValue("@id", p.ID);
+                cmd.Parameters.AddWithValue("@categoryID", p.Category_ID);
+                cmd.Parameters.AddWithValue("@title", p.Title);
                 cmd.Parameters.AddWithValue("@contents", p.Contents);
                 cmd.Parameters.AddWithValue("@img", p.Img);
                 con.Open();

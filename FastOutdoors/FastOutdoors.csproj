@@ -2324,6 +2324,17 @@
     <Content Include="AdminPanel\ParagraphAdd.aspx" />
     <Content Include="AdminPanel\ParagraphList.aspx" />
     <Content Include="AdminPanel\ParagraphUpdate.aspx" />
+    <Content Include="UserPanel\Assets\Css\LoginAndRegister.css" />
+    <Content Include="UserPanel\Assets\Css\Master.css" />
+    <Content Include="UserPanel\Assets\Img\facebook.png" />
+    <Content Include="UserPanel\Assets\Img\fastOutdoorsl.jpg" />
+    <Content Include="UserPanel\Assets\Img\instagram.png" />
+    <Content Include="UserPanel\Assets\Img\LoginBackgraoung.png" />
+    <Content Include="UserPanel\Assets\Img\twitter.png" />
+    <Content Include="UserPanel\Assets\Img\whatsapp.png" />
+    <Content Include="UserPanel\Index.aspx" />
+    <Content Include="UserPanel\Register.aspx" />
+    <Content Include="UserPanel\UserLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2419,6 +2430,34 @@
       <DependentUpon>ParagraphUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserPanel\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\UserPanel.Master.cs">
+      <DependentUpon>UserPanel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\UserPanel.Master.designer.cs">
+      <DependentUpon>UserPanel.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPanel\AdminMaster.Master" />
@@ -2487,6 +2526,7 @@
     <Content Include="AdminPanel\Assets\ckeditor\SECURITY.md" />
     <Content Include="AdminPanel\Assets\ckeditor\skins\moono-lisa\readme.md" />
     <None Include="packages.config" />
+    <Content Include="UserPanel\UserPanel.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

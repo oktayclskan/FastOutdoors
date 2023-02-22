@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="Assets/Css/Master.css" rel="stylesheet" />
+    <link href="Assets/Css/UserPages.css" rel="stylesheet" />
     <link href="../AdminPanel/Assets/Css/fontawesome-free-6.3.0-web/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,6 +16,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
         <header class="header">
             <img src="Assets/Img/fastOutdoorsl.jpg" />
             <div class="headerTitle">
@@ -32,12 +34,28 @@
             </div>
             <div style="clear: both"></div>
         </header>
-          <nav class="topMenu">
+        <nav class="topMenu">
+            <div class="content">
+                <ul>
+                    <li><a href="Index.aspx">Anasayfa</a></li>
+                    <li><a href="BlogPages.aspx">Blog</a></li>
+                    <li><a href="#">Form</a></li>
+                </ul>
+            </div>
+            <asp:Panel ID="pnl_noEntry" runat="server">
                 <div class="buttons">
                     <a href="UserLogin.aspx"><i class="fa-solid fa-right-to-bracket"></i>Giriş Yap</a>
                     <a href="Register.aspx"><i class="fa-solid fa-user-plus"></i>Kayıt Ol</a>
                 </div>
-            </nav>
+            </asp:Panel>
+            <div class="userInfo">
+                <asp:Panel ID="pnl_loggedIn" runat="server" Visible="false">
+                    <asp:Label ID="lbl_memberName" runat="server">
+                    </asp:Label>
+                    <asp:LinkButton ID="lbtb_exit" runat="server" CssClass="exitBtn" OnClick="lbtb_exit_Click">Çıkış Yap</asp:LinkButton>
+                </asp:Panel>
+            </div>
+        </nav>
         <div class="userPanelContainer">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

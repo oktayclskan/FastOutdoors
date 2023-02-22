@@ -32,6 +32,17 @@
         font-family: 'Poppins', sans-serif;
     }
 
+    .loginContainer i {
+        float: right;
+        color: whitesmoke;
+        font-size: 25px;
+        margin: 25px;
+    }
+
+        .loginContainer i:hover {
+            color: #636bc1;
+        }
+
     .loginContainer .LoginContent {
         margin-top: 30px;
         margin-left: 70px;
@@ -52,7 +63,7 @@
             border-radius: 7px;
             background-color: #37373E;
             border: none;
-            color:#808080;
+            color: #808080;
         }
 
         .loginContainer .LoginContent .row .loginBtn {
@@ -68,11 +79,12 @@
         }
 
             .loginContainer .LoginContent .row .loginBtn:hover {
-                background-color:#1b1919;
+                background-color: #1b1919;
                 color: #FFFFFF;
             }
+
 .RegisterContainer {
-    margin-top:-70px;
+    margin-top: -70px;
     width: 380px;
     height: 600px;
     margin-left: auto;
@@ -84,6 +96,17 @@
     backdrop-filter: blur(10px);
     border-radius: 7px;
 }
+
+    .RegisterContainer i {
+        float: right;
+        color: whitesmoke;
+        font-size: 25px;
+        margin: 25px;
+    }
+
+        .RegisterContainer i:hover {
+            color: #636bc1;
+        }
 
     .RegisterContainer .title {
         color: white;
@@ -116,7 +139,7 @@
         }
 
         .RegisterContainer .RegisterContent .row .loginBtn {
-            margin-top:5px;
+            margin-top: 5px;
             background-color: #FFFFFF;
             width: 212px;
             display: block;

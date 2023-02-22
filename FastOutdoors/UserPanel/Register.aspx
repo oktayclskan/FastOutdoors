@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="../AdminPanel/Assets/Css/fontawesome-free-6.3.0-web/css/all.min.css" rel="stylesheet" />
     <link href="Assets/Css/LoginAndRegister.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,6 +16,7 @@
         <img class="img" src="Assets/Img/LoginBackgraoung.png" />
         <div style="padding: 60px;"></div>
         <div class="RegisterContainer">
+            <a href="Index.aspx"><i class="fa-solid fa-chevron-left"></i></a>
             <div class="title">
                 <h1>Kayıt Oluştur</h1>
             </div>

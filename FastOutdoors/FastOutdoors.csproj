@@ -2314,6 +2314,7 @@
     <Content Include="AdminPanel\Assets\Img\facebook.png" />
     <Content Include="AdminPanel\Assets\Img\fastOutdoorsl.jpg" />
     <Content Include="AdminPanel\Assets\Img\instagram.png" />
+    <Content Include="AdminPanel\Assets\Img\ParagraphsImages\trekking.jpg" />
     <Content Include="AdminPanel\Assets\Img\twitter.png" />
     <Content Include="AdminPanel\Assets\Img\whatsapp.png" />
     <Content Include="AdminPanel\CategoryAdd.aspx" />
@@ -2326,12 +2327,15 @@
     <Content Include="AdminPanel\ParagraphUpdate.aspx" />
     <Content Include="UserPanel\Assets\Css\LoginAndRegister.css" />
     <Content Include="UserPanel\Assets\Css\Master.css" />
+    <Content Include="UserPanel\Assets\Css\UserPages.css" />
     <Content Include="UserPanel\Assets\Img\facebook.png" />
     <Content Include="UserPanel\Assets\Img\fastOutdoorsl.jpg" />
     <Content Include="UserPanel\Assets\Img\instagram.png" />
     <Content Include="UserPanel\Assets\Img\LoginBackgraoung.png" />
+    <Content Include="UserPanel\Assets\Img\trekking.jpg" />
     <Content Include="UserPanel\Assets\Img\twitter.png" />
     <Content Include="UserPanel\Assets\Img\whatsapp.png" />
+    <Content Include="UserPanel\BlogPages.aspx" />
     <Content Include="UserPanel\Index.aspx" />
     <Content Include="UserPanel\Register.aspx" />
     <Content Include="UserPanel\UserLogin.aspx" />
@@ -2430,6 +2434,13 @@
       <DependentUpon>ParagraphUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserPanel\BlogPages.aspx.cs">
+      <DependentUpon>BlogPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\BlogPages.aspx.designer.cs">
+      <DependentUpon>BlogPages.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2540,9 +2551,7 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdminPanel\Assets\Img\ParagraphsImages\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

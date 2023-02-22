@@ -1,0 +1,41 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+.BlogPagesContainer .row {
+    margin-top: 20px;
+    float: left;
+    margin-left: 25px;
+    text-align: center;
+}
+.BlogPagesContainer .row h2 {
+   position:absolute;
+   font-size:25px;
+   color:whitesmoke;
+   margin-top:85px;
+   margin-left:90px;
+   
+}
+
+    .BlogPagesContainer .row img {
+        
+        border-bottom: 3px solid red;
+    }
+.BlogPagesContainer .images img
+{
+    width:350px;
+    float:left;
+}
+.BlogPagesContainer .images .contentLink{
+    margin-left:15px;
+    text-decoration:none;
+    font-size:10pt;
+    color:black;
+    background-color:whitesmoke;
+    padding:5px;
+    border-radius:5px;
+}
+.BlogPagesContainer .images .contentLink:hover{
+    color:whitesmoke;
+    background-color:#000000;
+}

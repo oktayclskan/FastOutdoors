@@ -250,7 +250,6 @@ namespace DataAccessLayer
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@mail", mail);
                     cmd.Parameters.AddWithValue("@password", password);
-                    con.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
                     Member m = new Member();
                     while (reader.Read())

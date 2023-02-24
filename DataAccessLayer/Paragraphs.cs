@@ -17,6 +17,7 @@ namespace DataAccessLayer
         public string Contents { get; set; }
         public int ParagraphViews { get; set; }
         public DateTime ParagraphDateTime { get; set; }
+        public string ParagraphDateTimeStr { get; set; }
         public string Img { get; set; }
     }
 }

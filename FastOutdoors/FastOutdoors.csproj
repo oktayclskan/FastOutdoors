@@ -2337,6 +2337,7 @@
     <Content Include="UserPanel\Assets\Img\whatsapp.png" />
     <Content Include="UserPanel\BlogPages.aspx" />
     <Content Include="UserPanel\Index.aspx" />
+    <Content Include="UserPanel\ParagraphRead.aspx" />
     <Content Include="UserPanel\Register.aspx" />
     <Content Include="UserPanel\UserLogin.aspx" />
     <Content Include="Web.config" />
@@ -2447,6 +2448,13 @@
     </Compile>
     <Compile Include="UserPanel\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\ParagraphRead.aspx.cs">
+      <DependentUpon>ParagraphRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\ParagraphRead.aspx.designer.cs">
+      <DependentUpon>ParagraphRead.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPanel\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

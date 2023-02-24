@@ -11,18 +11,12 @@
                         <a href='../AdminPanel/Assets/Img/ParagraphsImages/<%# Eval("Img") %>' target="_blank">
                             <img src='../AdminPanel/Assets/Img/ParagraphsImages/<%# Eval("Img") %>' /></a>
                         <h2><%# Eval("CategoryName") %><br />
-                            <a class="contentLink" href="#">İçeriği Oku</a>
+                            <a class="contentLink" href="ParagraphRead.aspx?pid=<%# Eval("ID") %>">İçeriği Oku</a>
                         </h2>
-                        
-                    </div>
-                    
-                </div>
-                <div class="row">
-                    <div class="baslik">
-                        
                     </div>
                 </div>
             </div>
         </ItemTemplate>
     </asp:Repeater>
+
 </asp:Content>

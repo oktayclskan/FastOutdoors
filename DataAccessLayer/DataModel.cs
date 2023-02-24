@@ -568,6 +568,29 @@ namespace DataAccessLayer
             finally { con.Close(); }
         }
 
+        public bool ViewPlus(int pid)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT ParagraphsViews From Paragraphs WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id",pid);
+                con.Open();
+                int number = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.CommandText = "UPDATE Paragraphs SET ParagraphsViews=@n WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id",pid);
+                number = number + 1;
+                cmd.Parameters.AddWithValue("@n",number);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
         #endregion
     }
 }

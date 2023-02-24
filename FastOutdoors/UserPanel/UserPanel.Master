@@ -16,7 +16,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        
+
         <header class="header">
             <img src="Assets/Img/fastOutdoorsl.jpg" />
             <div class="headerTitle">
@@ -60,6 +60,58 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <div style="clear: both"></div>
+        <footer class="footer">
+            <div class="main">
+                <div class="aboutUs">
+                    <h2>Hakkımızda</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                </div>
+                <div class="social">
+                    <h2>Takipte Kalın</h2>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="Assets/Img/facebook.png" /><span>Facebook'ta bizi beğenin</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Assets/Img/instagram.png" /><span>Facebook'ta bizi takip edin</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Assets/Img/twitter.png" /><span>Facebook'ta bizi beğenin</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Assets/Img/whatsapp.png" /><span>Facebook'ta bizle iletişime geçin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cotanct">
+                    <h2>İletişim</h2>
+                    <div class="row">
+                        <i class="fa-sharp fa-solid fa-house-chimney"></i><span>Şirket Adı H2O Developers. </span>
+                        <br />
+                        <br />
+                        <span>Eskişehir/Tepebaşı</span>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-phone-volume"></i> <span>0542 545 0437 </span>
+                    </div>
+                    <div class="row">
+                        <i class="fa-sharp fa-solid fa-envelope-open"></i> <span>H2Odevelopers@gamil.com</span>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>

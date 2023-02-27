@@ -11,7 +11,7 @@ namespace FastOutdoors.AdminPanel
 {
 
 
-    public partial class ParagraphAdd
+    public partial class CategoryUpdate
     {
 
         /// <summary>
@@ -42,40 +42,22 @@ namespace FastOutdoors.AdminPanel
         protected global::System.Web.UI.WebControls.Label lbl_eror;
 
         /// <summary>
-        /// dll_category control.
+        /// tb_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dll_category;
+        protected global::System.Web.UI.WebControls.TextBox tb_name;
 
         /// <summary>
-        /// tb_title control.
+        /// img_categoryImg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_title;
-
-        /// <summary>
-        /// tb_brief control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_brief;
-
-        /// <summary>
-        /// tb_content control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_content;
+        protected global::System.Web.UI.WebControls.Image img_categoryImg;
 
         /// <summary>
         /// fu_Image control.
@@ -87,12 +69,12 @@ namespace FastOutdoors.AdminPanel
         protected global::System.Web.UI.WebControls.FileUpload fu_Image;
 
         /// <summary>
-        /// lb_Add control.
+        /// lbtn_update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lb_Add;
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_update;
     }
 }

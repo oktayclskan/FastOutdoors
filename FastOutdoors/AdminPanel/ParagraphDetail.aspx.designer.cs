@@ -11,88 +11,61 @@ namespace FastOutdoors.AdminPanel
 {
 
 
-    public partial class ParagraphAdd
+    public partial class ParagraphDetail
     {
 
         /// <summary>
-        /// pnl_successful control.
+        /// img_images control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_successful;
+        protected global::System.Web.UI.WebControls.Image img_images;
 
         /// <summary>
-        /// pnl_eror control.
+        /// ltrl_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl_eror;
+        protected global::System.Web.UI.WebControls.Literal ltrl_title;
 
         /// <summary>
-        /// lbl_eror control.
+        /// ltrl_brief control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_eror;
+        protected global::System.Web.UI.WebControls.Literal ltrl_brief;
 
         /// <summary>
-        /// dll_category control.
+        /// ltrl_content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dll_category;
+        protected global::System.Web.UI.WebControls.Literal ltrl_content;
 
         /// <summary>
-        /// tb_title control.
+        /// ltrl_views control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_title;
+        protected global::System.Web.UI.WebControls.Literal ltrl_views;
 
         /// <summary>
-        /// tb_brief control.
+        /// ltrl_dateTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_brief;
-
-        /// <summary>
-        /// tb_content control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_content;
-
-        /// <summary>
-        /// fu_Image control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fu_Image;
-
-        /// <summary>
-        /// lb_Add control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lb_Add;
+        protected global::System.Web.UI.WebControls.Literal ltrl_dateTime;
     }
 }

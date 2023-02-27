@@ -40,6 +40,7 @@ namespace FastOutdoors.AdminPanel
                 p.Admin_ID = a.ID;
                 p.Category_ID = Convert.ToInt32(dll_category.SelectedItem.Value);
                 p.Title = tb_title.Text;
+                p.Brief = tb_brief.Text;
                 p.Contents = tb_content.Text;
                 if (fu_Image.HasFile)
                 {

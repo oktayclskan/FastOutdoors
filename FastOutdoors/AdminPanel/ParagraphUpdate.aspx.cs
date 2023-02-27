@@ -27,6 +27,7 @@ namespace FastOutdoors.AdminPanel
                     dll_category.SelectedValue = p.Category_ID.ToString();
                     tb_title.Text = p.Title;
                     tb_content.Text = p.Contents;
+                    tb_brief.Text = p.Brief;
                     img_paragraphimg.ImageUrl = "~/AdminPanel/Assets/Img/ParagraphsImages/" + p.Img;
                 }
             }
@@ -43,6 +44,7 @@ namespace FastOutdoors.AdminPanel
             p.Category_ID = Convert.ToInt32(dll_category.SelectedItem.Value);
             p.Title = tb_title.Text;
             p.Contents = tb_content.Text;
+            p.Brief = tb_brief.Text;
             if (fu_Image.HasFile)
             {
                 FileInfo fi = new FileInfo(fu_Image.FileName);
@@ -58,27 +60,21 @@ namespace FastOutdoors.AdminPanel
                     pnl_successful.Visible = false;
                     lbl_eror.Text = "Resim .png veya .jpg Olmalıdır";
                 }
-                if (dm.ParagraphUpdate(p))
-                {
-                    pnl_eror.Visible = false;
-                    pnl_successful.Visible = true;
-                    tb_title.Text = tb_content.Text = "";
-                    dll_category.SelectedValue = "0";
-                }
-                else
-                {
-                    pnl_eror.Visible = true;
-                    pnl_successful.Visible = false;
-                    lbl_eror.Text = "Metin düzenleme Başarısız";
-                }
+                
+            }
+            if (dm.ParagraphUpdate(p))
+            {
+                pnl_eror.Visible = false;
+                pnl_successful.Visible = true;
+                tb_title.Text = tb_content.Text = "";
+                dll_category.SelectedValue = "0";
             }
             else
             {
                 pnl_eror.Visible = true;
                 pnl_successful.Visible = false;
-                lbl_eror.Text = "Tekrar Resim Seciniz ";
+                lbl_eror.Text = "Metin düzenleme Başarısız";
             }
-            
         }
     }
 }

@@ -335,6 +335,49 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+        public bool CategoryUpdate(Category c)
+        {
+            try
+            {
+                cmd.CommandText="UPDATE Categorys SET Name=@name,Img=@img WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id",c.ID);
+                cmd.Parameters.AddWithValue("@name",c.Name);
+                cmd.Parameters.AddWithValue("@img", c.Img);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
+        public Category CategoryGet(int id)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT ID,Name,Img From Categorys WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id",id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                Category c = new Category();
+                while (reader.Read())
+                {
+                    c.ID = reader.GetInt32(0);
+                    c.Name = reader.GetString(1);
+                    c.Img = !reader.IsDBNull(2) ? reader.GetString(2) : "none.png";
+                }
+                return c;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
         #endregion
         #region Comments Metots
 
@@ -457,7 +500,7 @@ namespace DataAccessLayer
             List<Paragraphs> paragraphs = new List<Paragraphs>();
             try
             {
-                cmd.CommandText = "SELECT P.ID, C.Name, A.Name, P.Title, P.Contents, P.ParagraphsViews,P.ParagraphsDateTime,P.Img FROM Paragraphs AS P Join Categorys AS C ON P.Category_ID=C.ID Join Admins AS A ON P.Admin_ID=A.ID";
+                cmd.CommandText = "SELECT P.ID, C.Name, A.Name, P.Title, P.Contents, P.ParagraphsViews,P.ParagraphsDateTime,P.Img,P.Brief FROM Paragraphs AS P Join Categorys AS C ON P.Category_ID=C.ID Join Admins AS A ON P.Admin_ID=A.ID";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -472,6 +515,7 @@ namespace DataAccessLayer
                     p.ParagraphViews = reader.GetInt32(5);
                     p.ParagraphDateTime = reader.GetDateTime(6);
                     p.Img = !reader.IsDBNull(7) ? reader.GetString(7) : "none.png";
+                    p.Brief = reader.GetString(8);
                     paragraphs.Add(p);
                 }
                 return paragraphs;
@@ -498,7 +542,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Paragraphs(Category_ID,Admin_ID,Title,Contents,ParagraphsViews,ParagraphsDateTime,Img) VALUES(@categoryID,@adminID,@title,@contents,@paragraphsViews,@paragraphsDateTime,@img)";
+                cmd.CommandText = "INSERT INTO Paragraphs(Category_ID,Admin_ID,Title,Contents,ParagraphsViews,ParagraphsDateTime,Img,Brief) VALUES(@categoryID,@adminID,@title,@contents,@paragraphsViews,@paragraphsDateTime,@img,@brief)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@categoryID", p.Category_ID);
                 cmd.Parameters.AddWithValue("@adminID", p.Admin_ID);
@@ -507,6 +551,7 @@ namespace DataAccessLayer
                 cmd.Parameters.AddWithValue("@paragraphsViews", p.ParagraphViews);
                 cmd.Parameters.AddWithValue("@paragraphsDateTime", p.ParagraphDateTime);
                 cmd.Parameters.AddWithValue("@img", p.Img);
+                cmd.Parameters.AddWithValue("@brief", p.Brief);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -521,7 +566,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "SELECT P.ID, C.Name, A.Name, P.Title, P.Contents, P.ParagraphsViews,P.ParagraphsDateTime,P.Img FROM Paragraphs AS P Join Categorys AS C ON P.Category_ID=C.ID Join Admins AS A ON P.Admin_ID=A.ID Where P.ID = @id";
+                cmd.CommandText = "SELECT P.ID, P.Category_ID, A.Name, P.Title, P.Contents, P.ParagraphsViews,P.ParagraphsDateTime,P.Img,P.Brief FROM Paragraphs AS P Join Categorys AS C ON P.Category_ID=C.ID Join Admins AS A ON P.Admin_ID=A.ID Where P.ID = @id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
@@ -530,13 +575,14 @@ namespace DataAccessLayer
                 while (reader.Read())
                 {
                     p.ID = reader.GetInt32(0);
-                    p.CategoryName = reader.GetString(1);
+                    p.Category_ID = reader.GetInt32(1);
                     p.AdminName = reader.GetString(2);
                     p.Title = reader.GetString(3);
                     p.Contents = reader.GetString(4);
                     p.ParagraphViews = reader.GetInt32(5);
                     p.ParagraphDateTime = reader.GetDateTime(6);
                     p.Img = !reader.IsDBNull(7) ? reader.GetString(7) : "none.png";
+                    p.Brief = reader.GetString(8);
                 }
                 return p;
             }
@@ -550,13 +596,14 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "UPDATE Paragraphs SET Category_ID=@categoryID,Title = @title,Contents=@contents,Img =@img WHERE ID=@id";
+                cmd.CommandText = "UPDATE Paragraphs SET Category_ID=@categoryID,Title = @title,Contents=@contents,Img =@img,Brief=@brief WHERE ID=@id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", p.ID);
                 cmd.Parameters.AddWithValue("@categoryID", p.Category_ID);
                 cmd.Parameters.AddWithValue("@title", p.Title);
                 cmd.Parameters.AddWithValue("@contents", p.Contents);
                 cmd.Parameters.AddWithValue("@img", p.Img);
+                cmd.Parameters.AddWithValue("@brief", p.Brief);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -574,14 +621,14 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "SELECT ParagraphsViews From Paragraphs WHERE ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",pid);
+                cmd.Parameters.AddWithValue("@id", pid);
                 con.Open();
                 int number = Convert.ToInt32(cmd.ExecuteScalar());
                 cmd.CommandText = "UPDATE Paragraphs SET ParagraphsViews=@n WHERE ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",pid);
+                cmd.Parameters.AddWithValue("@id", pid);
                 number = number + 1;
-                cmd.Parameters.AddWithValue("@n",number);
+                cmd.Parameters.AddWithValue("@n", number);
                 cmd.ExecuteNonQuery();
                 return true;
             }
@@ -591,6 +638,7 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+
         #endregion
     }
 }

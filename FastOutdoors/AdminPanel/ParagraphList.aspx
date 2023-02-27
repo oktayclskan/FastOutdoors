@@ -17,11 +17,11 @@
                             <th>Kategori</th>
                             <th>Ekleyen Admin</th>
                             <th>Başlık</th>
-                            <th>İçerik</th>
+                            <th>Özet</th>
                             <th>Görüntülenme</th>
                             <th>Ekleme Tarihi</th>
                             <th>Resim</th>
-                            <th colspan="2">Secenek</th>
+                            <th colspan="3">Secenek</th>
 
                         </thead>
                     </tr>
@@ -36,14 +36,16 @@
                     <td><%# Eval("CategoryName") %></td>
                     <td><%# Eval("AdminName") %></td>
                     <td><%# Eval("Title") %></td>
-                    <td><%# Eval("Contents") %></td>
+                    <td><%# Eval("Brief") %></td>
                     <td><%# Eval("ParagraphViews") %></td>
                     <td><%# Eval("ParagraphDateTime") %></td>
                     <td><%# Eval("Img") %></td>
                     <td>
                         <asp:LinkButton ID="lbtn_remove" runat="server" CssClass="paragraphBanBtn" CommandArgument='<%# Eval("ID") %>' CommandName="remove">Kaldır</asp:LinkButton>
-                    <td>
-                        <a class="paragraphAddLink" href="ParagraphUpdate.aspx?pid=<%# Eval("ID") %>">Güncelle</a>
+
+                        <a class="ParagraphUpdateBtn" href="ParagraphUpdate.aspx?pid=<%# Eval("ID") %>">Güncelle</a>
+
+                        <a class="ParagraphUpdateBtn" href="ParagraphDetail.aspx?pid=<%# Eval("ID") %>">Detay</a>
                     </td>
                 </tr>
             </ItemTemplate>

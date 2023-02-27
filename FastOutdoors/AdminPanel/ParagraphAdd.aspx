@@ -26,6 +26,10 @@
             <h6>Başlık Giriniz</h6>
             <asp:TextBox ID="tb_title" runat="server" CssClass="textBox"></asp:TextBox>
         </div>
+        <div class="row">
+            <h6>Özet Giriniz</h6>
+            <asp:TextBox ID="tb_brief" runat="server" TextMode="MultiLine" CssClass="textBox"></asp:TextBox>
+        </div>
         <div style="width:415px;" class="row">
             <h6>Metin Giriniz</h6>
             <asp:TextBox  ID="tb_content" runat="server" TextMode="MultiLine" ></asp:TextBox>

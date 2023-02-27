@@ -78,6 +78,15 @@ namespace FastOutdoors.AdminPanel
         protected global::System.Web.UI.WebControls.TextBox tb_content;
 
         /// <summary>
+        /// tb_brief control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_brief;
+
+        /// <summary>
         /// fu_Image control.
         /// </summary>
         /// <remarks>

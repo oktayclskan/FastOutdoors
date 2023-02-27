@@ -28,8 +28,12 @@
         <div style="width:415px;" class="row">
             <asp:Image ID="img_paragraphimg" runat="server" Width="150"/>
             <br />
-            <h6>Metin Giriniz</h6>
+            <h6>Metin Yazınız</h6>
             <asp:TextBox  ID="tb_content" runat="server" TextMode="MultiLine" ></asp:TextBox>
+        </div>
+         <div class="row">
+            <h6>Özet Yazınız</h6>
+            <asp:TextBox ID="tb_brief" runat="server" CssClass="textBox"></asp:TextBox>
         </div>
          <div class="row">
             <h6>Resim Ekle</h6>

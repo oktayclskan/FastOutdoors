@@ -2319,10 +2319,12 @@
     <Content Include="AdminPanel\Assets\Img\whatsapp.png" />
     <Content Include="AdminPanel\CategoryAdd.aspx" />
     <Content Include="AdminPanel\CategoryList.aspx" />
+    <Content Include="AdminPanel\CategoryUpdate.aspx" />
     <Content Include="AdminPanel\CommentsList.aspx" />
     <Content Include="AdminPanel\Default.aspx" />
     <Content Include="AdminPanel\MemberList.aspx" />
     <Content Include="AdminPanel\ParagraphAdd.aspx" />
+    <Content Include="AdminPanel\ParagraphDetail.aspx" />
     <Content Include="AdminPanel\ParagraphList.aspx" />
     <Content Include="AdminPanel\ParagraphUpdate.aspx" />
     <Content Include="UserPanel\Assets\Css\LoginAndRegister.css" />
@@ -2392,6 +2394,13 @@
     <Compile Include="AdminPanel\CategoryList.aspx.designer.cs">
       <DependentUpon>CategoryList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\CategoryUpdate.aspx.cs">
+      <DependentUpon>CategoryUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CategoryUpdate.aspx.designer.cs">
+      <DependentUpon>CategoryUpdate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel\CommentsList.aspx.cs">
       <DependentUpon>CommentsList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2419,6 +2428,13 @@
     </Compile>
     <Compile Include="AdminPanel\ParagraphAdd.aspx.designer.cs">
       <DependentUpon>ParagraphAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ParagraphDetail.aspx.cs">
+      <DependentUpon>ParagraphDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ParagraphDetail.aspx.designer.cs">
+      <DependentUpon>ParagraphDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\ParagraphList.aspx.cs">
       <DependentUpon>ParagraphList.aspx</DependentUpon>

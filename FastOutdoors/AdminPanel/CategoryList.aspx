@@ -31,6 +31,7 @@
                     <td><%# Eval("Img") %></td>
                     <td>
                         <asp:LinkButton ID="lbtn_categoryDel" runat="server" CssClass="categoryProcessBtn" CommandArgument='<%# Eval("ID") %>' >Kategori Sil</asp:LinkButton>
+                        <a class="categoryUpdateBtn" href="CategoryUpdate.aspx?cid=<%# Eval("ID") %>">Düzenle</a>
                     </td>
                 </tr>
             </ItemTemplate>

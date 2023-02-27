@@ -167,13 +167,16 @@ body {
     .Table .banBTN:hover {
         opacity: 0.7;
     }
+
 .menuList .downBtn {
     color: red;
-    margin-left:5px;
+    margin-left: 5px;
 }
-.menuList a:hover{
-    opacity:0.7;
+
+.menuList a:hover {
+    opacity: 0.7;
 }
+
 .AdminAddContainer {
     border-right: 1px solid red;
     border-left: 1px solid red;
@@ -353,29 +356,42 @@ body {
     background-color: #1F1F1F;
 }
 
-    .categoryAddContainer .row {
-        padding: 7px;
-        margin-left: 50px;
+.categoryList .categoryUpdateBtn {
+    font-size: 14px;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #353434;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+    .categoryList .categoryUpdateBtn:hover {
+        color: red;
     }
 
-    .categoryAddContainer .textBox {
-        margin-top: 5px;
-        width: 250px;
-        height: 25px;
-        border-radius: 5px;
-        background-color: #d1d1d1;
-        border: none;
-        font-family: Calibri;
-    }
+.categoryAddContainer .row {
+    padding: 7px;
+    margin-left: 50px;
+}
 
-    .categoryAddContainer .fuImgAdd {
-        margin-top: 5px;
-        color: whitesmoke;
-    }
+.categoryAddContainer .textBox {
+    margin-top: 5px;
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+    border: none;
+    font-family: Calibri;
+}
 
-        .categoryAddContainer .fuImgAdd:hover {
-            opacity: 0.6;
-        }
+.categoryAddContainer .fuImgAdd {
+    margin-top: 5px;
+    color: whitesmoke;
+}
+
+    .categoryAddContainer .fuImgAdd:hover {
+        opacity: 0.6;
+    }
 
 .categoryAddContainerTitle {
     padding: 5px;
@@ -472,9 +488,27 @@ body {
         padding: 4px;
         border-radius: 5px;
         font-size: 12pt;
+        display: flex;
+        margin-bottom: 3px;
+
     }
 
         .paragraphsList .paragraphBanBtn:hover {
+            background-color: red;
+        }
+
+    .paragraphsList .ParagraphUpdateBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #c25858;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: 12pt;
+        display:flex;
+        margin-bottom:3px;
+        
+    }
+        .paragraphsList .ParagraphUpdateBtn:hover {
             background-color: red;
         }
 
@@ -648,6 +682,121 @@ body {
     }
 
     .ParagraphUpdateContainer .pnlEror {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid red;
+        display: block;
+        background-color: #0D0D0D;
+        color: red;
+    }
+.ParagraphDetail .imgDetails{
+    width:600px;
+    float:left;
+    margin-right:20px;
+    border-radius:10px;
+}
+.ParagraphDetail .row {
+    margin-top:25px;
+}
+.ParagraphDetail .title{
+    color:#9b3434;
+    text-align:center;
+
+}
+.ParagraphDetail .brief {
+    color: #827f7f;
+    font-size: 12pt;
+}
+.ParagraphDetail .brief h2 {
+    color: whitesmoke;
+}
+.ParagraphDetail .content {
+    color: #827f7f;
+    font-size:15pt;
+}
+.ParagraphDetail .content h2 {
+    color: whitesmoke;
+}
+.ParagraphDetail .views{
+    margin-top:15px;
+    margin-bottom:12px;
+}
+.ParagraphDetail .dateTime {
+}
+.CategoryUpdateContainer {
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+    border-radius: 7px;
+    margin-top: 25px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+    background-color: #1F1F1F;
+}
+
+    .CategoryUpdateContainer .UpdateBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1370C4;
+        padding: 5px;
+        border-radius: 5px;
+        display: block;
+        width: 100px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+        .CategoryUpdateContainer .UpdateBtn:hover {
+            opacity: 0.7;
+        }
+
+    .CategoryUpdateContainer .textBox {
+        margin-top: 5px;
+        width: 250px;
+        height: 25px;
+        border-radius: 5px;
+        background-color: #d1d1d1;
+        border: none;
+        font-family: Calibri;
+    }
+
+    .CategoryUpdateContainer .CategoryUpdateTitle {
+        padding: 5px;
+        text-align: center;
+        border-bottom: 1px solid red;
+    }
+
+    .CategoryUpdateContainer .row {
+        padding: 5px;
+        margin-left: 50px;
+    }
+
+    .CategoryUpdateContainer .AddBackBtn {
+        color: #1370C4;
+        float: right;
+        padding: 5px;
+        margin: 10px;
+    }
+
+        .CategoryUpdateContainer .AddBackBtn:hover {
+            opacity: 0.7;
+        }
+
+    .CategoryUpdateContainer .pnlSuccessful {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid red;
+        display: block;
+        background-color: #0D0D0D;
+    }
+
+    .CategoryUpdateContainer .pnlEror {
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
         padding: 10px;

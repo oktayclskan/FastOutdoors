@@ -421,7 +421,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "SELECT C.ID, cg.Name,m.Name, C.Title, C.Content, C.CommentDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID = M.ID WHERE ID=@id ";
+                cmd.CommandText = "SELECT C.ID, cg.Name,m.Name, C.Title, C.Content, C.CommentDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID = M.ID WHERE C.ID=@id ";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
@@ -434,9 +434,10 @@ namespace DataAccessLayer
                     c.MemberName = reader.GetString(2);
                     c.Title = reader.GetString(3);
                     c.Content = reader.GetString(4);
-                    c.CommentViews = reader.GetInt32(5);
-                    c.CommentStatus = reader.GetBoolean(6);
-                    c.Img = reader.GetString(7);
+                    c.CommentDate = reader.GetDateTime(5);
+                    c.CommentViews = reader.GetInt32(6);
+                    c.CommentStatus = reader.GetBoolean(7);
+                    c.Img = reader.GetString(8);
                 }
                 return c;
             }

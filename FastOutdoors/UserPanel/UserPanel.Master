@@ -37,9 +37,9 @@
         <nav class="topMenu">
             <div class="content">
                 <ul>
-                    <li><a href="Index.aspx">Anasayfa</a></li>
                     <li><a href="BlogPages.aspx">Blog</a></li>
-                    <li><a href="#">Form</a></li>
+                    <li><a href="FormPage.aspx">Form</a></li>
+                    <li><a href="ComplaintSuggestionPages.aspx">Şikayet / Öneri</a></li>
                 </ul>
             </div>
             <asp:Panel ID="pnl_noEntry" runat="server">

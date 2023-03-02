@@ -2339,6 +2339,9 @@
     <Content Include="UserPanel\Assets\Img\twitter.png" />
     <Content Include="UserPanel\Assets\Img\whatsapp.png" />
     <Content Include="UserPanel\BlogPages.aspx" />
+    <Content Include="UserPanel\ComplaintSuggestionPages.aspx" />
+    <Content Include="UserPanel\FormPage.aspx" />
+    <Content Include="UserPanel\FormRead.aspx" />
     <Content Include="UserPanel\Index.aspx" />
     <Content Include="UserPanel\ParagraphRead.aspx" />
     <Content Include="UserPanel\Register.aspx" />
@@ -2465,6 +2468,27 @@
     </Compile>
     <Compile Include="UserPanel\BlogPages.aspx.designer.cs">
       <DependentUpon>BlogPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\ComplaintSuggestionPages.aspx.cs">
+      <DependentUpon>ComplaintSuggestionPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\ComplaintSuggestionPages.aspx.designer.cs">
+      <DependentUpon>ComplaintSuggestionPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\FormPage.aspx.cs">
+      <DependentUpon>FormPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\FormPage.aspx.designer.cs">
+      <DependentUpon>FormPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\FormRead.aspx.cs">
+      <DependentUpon>FormRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\FormRead.aspx.designer.cs">
+      <DependentUpon>FormRead.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPanel\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

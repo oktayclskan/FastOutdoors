@@ -30,7 +30,7 @@ namespace FastOutdoors.UserPanel
         protected void lbtb_exit_Click(object sender, EventArgs e)
         {
             Session["member"]= null;
-            Response.Redirect("Index.aspx");
+            Response.Redirect("BlogPages.aspx");
         }
     }
 }

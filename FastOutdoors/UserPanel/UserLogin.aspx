@@ -17,7 +17,7 @@
         <div style="padding: 66px;"></div>
         
         <div class="loginContainer">
-            <a href="Index.aspx"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="BlogPages.aspx"><i class="fa-solid fa-chevron-left"></i></a>
             <div class="title">
                 <h1>Giriş Yapın</h1>
             </div>

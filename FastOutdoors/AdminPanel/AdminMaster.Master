@@ -36,7 +36,8 @@
                     <li><a href="AdminList.aspx">Admin İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>
                     <li><a href="CommentsList.aspx">Yorum İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>
                     <li><a href="Answers.aspx">Cevap İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>
-                    <li><a href="ParagraphList.aspx">Metin İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>                    
+                    <li><a href="ParagraphList.aspx">Metin İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>            
+                    <li><a href="ComplaintSuggestionList.aspx">Şikayet/Öneri İşlemleri<i class="fa-solid fa-angle-down downBtn"></i></a></li>            
                 </ul>
         </div>
         <div>

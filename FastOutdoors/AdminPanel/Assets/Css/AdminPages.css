@@ -446,27 +446,58 @@ body {
         opacity: 0.7;
     }
 
+.commentControlBtn {
+    margin: 25px;
+    text-align: center;
+}
+
+    .commentControlBtn .cmdControlBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1F1F1F;
+        padding: 10px;
+        border-radius: 5px;
+        border-bottom: 1px solid red;
+    }
+
+        .commentControlBtn .cmdControlBtn:hover {
+            opacity: 0.7;
+        }
+
+
+
 .commentList .CommentBanBtn {
     text-decoration: none;
     color: whitesmoke;
-    background-color: #c25858;
+    background-color: red;
     padding: 7px;
     border-radius: 5px;
     font-size: 12pt;
 }
 
     .commentList .CommentBanBtn:hover {
-        background-color: red;
+        background-color: #c25858;
     }
 
-.answersList .CommentBanBtn {
+.commentList .ApprovedBtn {
     text-decoration: none;
-    color: whitesmoke;
-    background-color: #c25858;
-    padding: 4px;
+    background-color: #3ca734;
+    padding: 7px;
     border-radius: 5px;
     font-size: 12pt;
+    color:whitesmoke;
 }
+    .commentList .ApprovedBtn:hover{
+        opacity:0.8;
+    }
+    .answersList .CommentBanBtn {
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #c25858;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: 12pt;
+    }
 
     .answersList .CommentBanBtn:hover {
         background-color: red;
@@ -490,7 +521,6 @@ body {
         font-size: 12pt;
         display: flex;
         margin-bottom: 3px;
-
     }
 
         .paragraphsList .paragraphBanBtn:hover {
@@ -504,10 +534,10 @@ body {
         padding: 4px;
         border-radius: 5px;
         font-size: 12pt;
-        display:flex;
-        margin-bottom:3px;
-        
+        display: flex;
+        margin-bottom: 3px;
     }
+
         .paragraphsList .ParagraphUpdateBtn:hover {
             background-color: red;
         }
@@ -691,40 +721,59 @@ body {
         background-color: #0D0D0D;
         color: red;
     }
-.ParagraphDetail .imgDetails{
-    width:600px;
-    float:left;
-    margin-right:20px;
-    border-radius:10px;
-}
-.ParagraphDetail .row {
-    margin-top:25px;
-}
-.ParagraphDetail .title{
-    color:#9b3434;
-    text-align:center;
 
+.ParagraphDetail .imgDetails {
+    width: 600px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
 }
+
+.ParagraphDetail .row {
+    margin-top: 25px;
+}
+
+.ParagraphDetail .title {
+    color: #9b3434;
+    text-align: center;
+}
+
 .ParagraphDetail .brief {
     color: #827f7f;
     font-size: 12pt;
 }
-.ParagraphDetail .brief h2 {
-    color: whitesmoke;
-}
+
+    .ParagraphDetail .brief h2 {
+        color: whitesmoke;
+    }
+
 .ParagraphDetail .content {
     color: #827f7f;
-    font-size:15pt;
+    font-size: 15pt;
 }
-.ParagraphDetail .content h2 {
-    color: whitesmoke;
+
+    .ParagraphDetail .content h2 {
+        color: whitesmoke;
+    }
+
+.ParagraphDetail .views {
+    margin-top: 15px;
+    margin-bottom: 12px;
 }
-.ParagraphDetail .views{
-    margin-top:15px;
-    margin-bottom:12px;
-}
+
 .ParagraphDetail .dateTime {
 }
+
+.ParagraphDetail i {
+    font-size: 20pt;
+    color: #285bd3;
+}
+
+    .ParagraphDetail i:hover {
+        font-size: 20pt;
+        color: white;
+    }
+
 .CategoryUpdateContainer {
     border-right: 1px solid red;
     border-left: 1px solid red;
@@ -805,4 +854,48 @@ body {
         display: block;
         background-color: #0D0D0D;
         color: red;
+    }
+
+.complaintSuggestionContorlBtn {
+    margin: 25px;
+    text-align: center;
+}
+
+    .complaintSuggestionContorlBtn .readAndToBeReadBtn {
+        margin-top: 15px;
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #1F1F1F;
+        padding: 10px;
+        border-radius: 5px;
+        border-bottom: 1px solid red;
+    }
+
+        .complaintSuggestionContorlBtn .readAndToBeReadBtn:hover {
+            opacity: 0.7;
+        }
+.complaintSuggestionList .removeBtn {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: red;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12pt;
+    margin-left:10px;
+}
+.complaintSuggestionList .removeBtn:hover{
+    opacity:0.6;
+}
+.complaintSuggestionList .readBtn {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color:#1b971a;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 12pt;
+    margin-left: 10px;
+}
+
+    .complaintSuggestionList .readBtn:hover {
+        opacity: 0.6;
     }

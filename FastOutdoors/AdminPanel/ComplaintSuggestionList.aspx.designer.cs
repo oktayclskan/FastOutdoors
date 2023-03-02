@@ -11,43 +11,43 @@ namespace FastOutdoors.AdminPanel
 {
 
 
-    public partial class CommentsList
+    public partial class ComplaintSuggestionList
     {
 
         /// <summary>
-        /// lbtn_approved control.
+        /// lbtn_read control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtn_approved;
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_read;
 
         /// <summary>
-        /// lbtn_waiting control.
+        /// lbtn_toBeRead control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtn_waiting;
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_toBeRead;
 
         /// <summary>
-        /// lv_commentApproved control.
+        /// lv_toBeRead control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lv_commentApproved;
+        protected global::System.Web.UI.WebControls.ListView lv_toBeRead;
 
         /// <summary>
-        /// lv_commentWaiting control.
+        /// lv_read control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lv_commentWaiting;
+        protected global::System.Web.UI.WebControls.ListView lv_read;
     }
 }

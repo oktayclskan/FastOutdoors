@@ -45,6 +45,7 @@
     <Compile Include="Answers.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Comment.cs" />
+    <Compile Include="ComplaintSuggestion.cs" />
     <Compile Include="ConnectionStrings.cs" />
     <Compile Include="DataModel.cs" />
     <Compile Include="Member.cs" />

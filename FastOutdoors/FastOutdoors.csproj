@@ -2321,6 +2321,7 @@
     <Content Include="AdminPanel\CategoryList.aspx" />
     <Content Include="AdminPanel\CategoryUpdate.aspx" />
     <Content Include="AdminPanel\CommentsList.aspx" />
+    <Content Include="AdminPanel\ComplaintSuggestionList.aspx" />
     <Content Include="AdminPanel\Default.aspx" />
     <Content Include="AdminPanel\MemberList.aspx" />
     <Content Include="AdminPanel\ParagraphAdd.aspx" />
@@ -2407,6 +2408,13 @@
     </Compile>
     <Compile Include="AdminPanel\CommentsList.aspx.designer.cs">
       <DependentUpon>CommentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ComplaintSuggestionList.aspx.cs">
+      <DependentUpon>ComplaintSuggestionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ComplaintSuggestionList.aspx.designer.cs">
+      <DependentUpon>ComplaintSuggestionList.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

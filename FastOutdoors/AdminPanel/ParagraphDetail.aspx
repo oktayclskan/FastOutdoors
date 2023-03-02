@@ -4,6 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="ParagraphDetail">
+        <div style="float:right;">
+            <a href="ParagraphList.aspx"><i class="fa-solid fa-arrow-left-long"></i></a>
+            
+        </div>
         <div class="row">
             <div>
                 <asp:Image CssClass="imgDetails" ID="img_images" runat="server" />

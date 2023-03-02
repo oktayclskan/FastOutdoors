@@ -339,10 +339,10 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText="UPDATE Categorys SET Name=@name,Img=@img WHERE ID=@id";
+                cmd.CommandText = "UPDATE Categorys SET Name=@name,Img=@img WHERE ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",c.ID);
-                cmd.Parameters.AddWithValue("@name",c.Name);
+                cmd.Parameters.AddWithValue("@id", c.ID);
+                cmd.Parameters.AddWithValue("@name", c.Name);
                 cmd.Parameters.AddWithValue("@img", c.Img);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -360,7 +360,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "SELECT ID,Name,Img From Categorys WHERE ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",id);
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 Category c = new Category();
@@ -381,13 +381,14 @@ namespace DataAccessLayer
         #endregion
         #region Comments Metots
 
-        public List<Comment> CommentList()
+        public List<Comment> CommentList(int ct)
         {
             List<Comment> comments = new List<Comment>();
             try
             {
-                cmd.CommandText = "SELECT C.ID, cg.Name,m.Name, C.Title, C.Content, C.CommentDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID = M.ID ";
+                cmd.CommandText = "SELECT C.ID, cg.Name,m.Name, C.Title, C.Content, C.CommentDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID = M.ID WHERE CommentStatus=@commentStatus ";
                 cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@commentStatus", ct);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -401,7 +402,7 @@ namespace DataAccessLayer
                     c.CommentDate = reader.GetDateTime(5);
                     c.CommentViews = reader.GetInt32(6);
                     c.CommentStatus = reader.GetBoolean(7);
-                    c.CommentStatusStr = reader.GetBoolean(7) ? "<label style='color:green'>Yayında</label>" : "<label style='color:red'>Kaldırılmış</label>";
+                    c.CommentStatusStr = reader.GetBoolean(7) ? "<label style='color:green'>Yayında</label>" : "<label style='color:red'>Onay Bekliyor</label>";
                     c.Img = !reader.IsDBNull(8) ? reader.GetString(8) : "none.png";
                     comments.Add(c);
                 }
@@ -415,6 +416,35 @@ namespace DataAccessLayer
             {
                 con.Close();
             }
+        }
+        public Comment CommentGet(int id)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT C.ID, cg.Name,m.Name, C.Title, C.Content, C.CommentDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID = M.ID WHERE ID=@id ";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                Comment c = new Comment();
+                while (reader.Read())
+                {
+                    c.ID = reader.GetInt32(0);
+                    c.CategoryName = reader.GetString(1);
+                    c.MemberName = reader.GetString(2);
+                    c.Title = reader.GetString(3);
+                    c.Content = reader.GetString(4);
+                    c.CommentViews = reader.GetInt32(5);
+                    c.CommentStatus = reader.GetBoolean(6);
+                    c.Img = reader.GetString(7);
+                }
+                return c;
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
         }
         public void CommentDelete(int id)
         {
@@ -451,6 +481,26 @@ namespace DataAccessLayer
                 return false;
             }
             finally { con.Close(); }
+        }
+        public bool CommentApprove(int id)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Comments SET CommentStatus=1 WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
         }
         #endregion
         #region Answer Metots
@@ -639,6 +689,68 @@ namespace DataAccessLayer
             finally { con.Close(); }
         }
 
+        #endregion
+
+        #region ComplaintSuggestionMetots
+        public List<ComplaintSuggestion> ComplaintSuggestionList(int compsugges)
+        {
+            List<ComplaintSuggestion> complaintSuggestions = new List<ComplaintSuggestion>();
+            try
+            {
+                cmd.CommandText = "Select cs.ID, m.Name,cs.Content,ComplaintSuggestionStatus From complaintSuggestion AS cs Join Members AS m ON cs.Member_ID=m.ID WHERE ComplaintSuggestionStatus=@complaintSuggestionStatus";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@complaintSuggestionStatus", compsugges);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    ComplaintSuggestion cs = new ComplaintSuggestion();
+                    cs.ID = reader.GetInt32(0);
+                    cs.MemberName = reader.GetString(1);
+                    cs.Content = reader.GetString(2);
+                    cs.ComplaintSuggestionStatus = reader.GetBoolean(3);
+                    cs.ComplaintSuggestionStatusStr = reader.GetBoolean(3) ? "<label style='color:green'>Okundu</label>" : "<label style='color:red'>Okunmuş</label>";
+                    complaintSuggestions.Add(cs);
+                }
+                return complaintSuggestions;
+
+
+            }
+            catch
+            {
+                return null;
+            }
+            finally { con.Close(); }
+        }
+        public void ComplaintSuggestionDelete(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM complaintSuggestion Where ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id",id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally { con.Close(); }
+        }
+        public bool ComplaintSuggestionRead(int id)
+        {
+            try
+            {
+                cmd.CommandText = "Update complaintSuggestion Set ComplaintSuggestionStatus=1 WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id",id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
         #endregion
     }
 }

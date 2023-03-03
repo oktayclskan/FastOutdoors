@@ -14,7 +14,6 @@
                     <tr>
                         <thead>
                             <th>ID</th>
-                            <th>Uye Adı</th>
                             <th>Mesaj</th>
                             <th>Seçenekler</th>
                         </thead>
@@ -27,7 +26,6 @@
             <ItemTemplate>
                 <tr>
                     <td><%# Eval("ID") %></td>
-                    <td><%# Eval("MemberName") %></td>
                     <td><%# Eval("Content") %></td>
                     <td>
                         <asp:LinkButton ID="lbtn_read" runat="server" CssClass="readBtn" CommandArgument='<%# Eval("ID") %>' CommandName="Read">Okundu Yap</asp:LinkButton>
@@ -41,7 +39,6 @@
                     <tr>
                         <thead>
                             <th>ID</th>
-                            <th>Uye Adı</th>
                             <th>Mesaj</th>
                             <th>Durum</th>
                             <th>Seçenekler</th>
@@ -56,7 +53,6 @@
             <ItemTemplate>
                 <tr>
                     <td><%# Eval("ID") %></td>
-                    <td><%# Eval("MemberName") %></td>
                     <td><%# Eval("Content") %></td>
                     <td><%# Eval("ComplaintSuggestionStatusStr") %></td>
                     <td>

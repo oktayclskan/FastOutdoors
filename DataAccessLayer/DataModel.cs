@@ -698,7 +698,7 @@ namespace DataAccessLayer
             List<ComplaintSuggestion> complaintSuggestions = new List<ComplaintSuggestion>();
             try
             {
-                cmd.CommandText = "Select cs.ID, m.Name,cs.Content,ComplaintSuggestionStatus From complaintSuggestion AS cs Join Members AS m ON cs.Member_ID=m.ID WHERE ComplaintSuggestionStatus=@complaintSuggestionStatus";
+                cmd.CommandText = "Select ID,Content,ComplaintSuggestionStatus From complaintSuggestion  WHERE ComplaintSuggestionStatus=@complaintSuggestionStatus";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@complaintSuggestionStatus", compsugges);
                 con.Open();
@@ -707,10 +707,9 @@ namespace DataAccessLayer
                 {
                     ComplaintSuggestion cs = new ComplaintSuggestion();
                     cs.ID = reader.GetInt32(0);
-                    cs.MemberName = reader.GetString(1);
-                    cs.Content = reader.GetString(2);
-                    cs.ComplaintSuggestionStatus = reader.GetBoolean(3);
-                    cs.ComplaintSuggestionStatusStr = reader.GetBoolean(3) ? "<label style='color:green'>Okundu</label>" : "<label style='color:red'>Okunmuş</label>";
+                    cs.Content = reader.GetString(1);
+                    cs.ComplaintSuggestionStatus = reader.GetBoolean(2);
+                    cs.ComplaintSuggestionStatusStr = reader.GetBoolean(2) ? "<label style='color:green'>Okundu</label>" : "<label style='color:red'>Okunmuş</label>";
                     complaintSuggestions.Add(cs);
                 }
                 return complaintSuggestions;

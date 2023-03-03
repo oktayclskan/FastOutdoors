@@ -111,7 +111,6 @@
             .formPage .row .Category i {
                 color: #d4a248;
                 padding-right: 5px;
-                
             }
 
             .formPage .row .Category .memberName {
@@ -122,52 +121,110 @@
         .formPage .row .title {
             padding: 3px;
             float: left;
-           
         }
 
         .formPage .row .ContentLink {
             padding-top: 15px;
             color: whitesmoke;
-            font-weight:900;
-            font-size:15pt;
-            float:right;
-           margin-right:250px;
+            font-weight: 900;
+            font-size: 15pt;
+            float: right;
+            margin-right: 250px;
         }
 
             .formPage .row .ContentLink a {
                 text-decoration: none;
                 padding-top: 15px;
-                color:#d0c7c7;
-                border-bottom:1px solid #6c6c6f;
-                border-radius:3px;
+                color: #d0c7c7;
+                border-bottom: 1px solid #6c6c6f;
+                border-radius: 3px;
             }
-                .formPage .row .ContentLink a:hover{
-                    color:#333334;
-                }
-                .formPage .row .views {
-                    float: right;
-                    padding: 8px;
+
+                .formPage .row .ContentLink a:hover {
+                    color: #333334;
                 }
 
-        .formPage .row .views i{
-           padding-right:7px;
+        .formPage .row .views {
+            float: right;
+            padding: 8px;
         }
+
+            .formPage .row .views i {
+                padding-right: 7px;
+            }
+
 .FormPageNoEntry {
-    height:450px;
+    height: 450px;
 }
-.FormPageNoEntry .Container{
-    padding-top:30px;
-    background-color:#413e3e;
-    height:70px;
-    text-align:center;
-    margin-top:150px;
-    border-radius:10px;
-}
-    .FormPageNoEntry .Container a{
-        text-decoration:none;
-        color:#a09696;
+
+    .FormPageNoEntry .Container {
+        padding-top: 30px;
+        background-color: #413e3e;
+        height: 70px;
+        text-align: center;
+        margin-top: 150px;
+        border-radius: 10px;
     }
-        .FormPageNoEntry .Container a:hover {
-            color: #d0c7c7;
+
+        .FormPageNoEntry .Container a {
+            text-decoration: none;
+            color: #a09696;
         }
-        
+
+            .FormPageNoEntry .Container a:hover {
+                color: #d0c7c7;
+            }
+
+.ComplaintSuggestionPage {
+    width: 1200px;
+    height: 500px;
+}
+
+    .ComplaintSuggestionPage .Container {
+        margin-top: 55px;
+        text-align: center;
+    }
+
+        .ComplaintSuggestionPage .Container .row .textbox {
+            width: 550px;
+            height: 250px;
+            color:#808080;
+            padding: 10px;
+        }
+
+        .ComplaintSuggestionPage .Container .pnlSucces {
+            background-color: #333334;
+            color: #d0c7c7;
+            width: 562px;
+            margin-right: auto;
+            margin-left: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 5px;
+        }
+        .ComplaintSuggestionPage .Container .pnlEror{
+            background-color: #9b1717;
+            color: whitesmoke;
+            width: 562px;
+            margin-right: auto;
+            margin-left: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 5px;
+        }
+        .ComplaintSuggestionPage .Container .sendBtn {
+            background-color: #3a55f6;
+            color: white;
+            text-decoration: none;
+            display: block;
+            width: 542px;
+            margin-right: auto;
+            margin-left: auto;
+            padding:15px;
+            border-radius:3px;
+           font-family:ArialCalibri;
+            font-size:15pt;
+        }
+        .ComplaintSuggestionPage .Container .sendBtn:hover{
+            background-color: #2c40bb;
+        }

@@ -42,6 +42,7 @@ namespace FastOutdoors.AdminPanel
                 {
                     string connect = fi.Extension;
                     string name = Guid.NewGuid().ToString();
+                    c.Img = name + connect;
                     fu_Image.SaveAs(Server.MapPath("~/AdminPanel/Assets/Img/" + name + connect));
                 }
                 else

@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Luckiest+Guy&family=Prompt:ital@1&display=swap" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -103,10 +109,10 @@
                         <span>Eskişehir/Tepebaşı</span>
                     </div>
                     <div class="row">
-                        <i class="fa-solid fa-phone-volume"></i> <span>0542 545 0437 </span>
+                        <i class="fa-solid fa-phone-volume"></i><span>0542 545 0437 </span>
                     </div>
                     <div class="row">
-                        <i class="fa-sharp fa-solid fa-envelope-open"></i> <span>H2Odevelopers@gamil.com</span>
+                        <i class="fa-sharp fa-solid fa-envelope-open"></i><span>H2Odevelopers@gamil.com</span>
                     </div>
 
                 </div>

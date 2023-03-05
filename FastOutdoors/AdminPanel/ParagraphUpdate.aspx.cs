@@ -45,6 +45,7 @@ namespace FastOutdoors.AdminPanel
             p.Title = tb_title.Text;
             p.Contents = tb_content.Text;
             p.Brief = tb_brief.Text;
+
             if (fu_Image.HasFile)
             {
                 FileInfo fi = new FileInfo(fu_Image.FileName);
@@ -52,6 +53,7 @@ namespace FastOutdoors.AdminPanel
                 {
                     string connect = fi.Extension;
                     string name = Guid.NewGuid().ToString();
+                    p.Img = name + connect;
                     fu_Image.SaveAs(Server.MapPath("~/AdminPanel/Assets/Img/ParagraphsImages/" + name + connect));
                 }
                 else

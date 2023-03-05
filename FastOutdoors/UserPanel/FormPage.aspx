@@ -6,14 +6,24 @@
     <asp:Panel ID="pnl_noEntry" runat="server">
         <div class="FormPageNoEntry">
             <div class="Container">
-                <a href="UserLogin.aspx"><h1>Form sayfamızı görüntüleyebilmek için giriş yapmanız gerekmektedir</h1></a>
+                <a href="UserLogin.aspx">
+                    <h1>Form sayfamızı görüntüleyebilmek için giriş yapmanız gerekmektedir</h1>
+                </a>
             </div>
         </div>
     </asp:Panel>
     <asp:Panel ID="pnl_LoggedIn" runat="server" Visible="false">
         <div class="formPage">
             <div class="Header">
-                <h3><i class="fa-solid fa-icons"></i>Forum'da neler oluyor??</h3>
+                <div>
+                    <span><i class="fa-solid fa-icons"></i>Forum'da neler oluyor??</span>
+                    <div style="float: right">
+                        <h4>Sende Deneyimlerini Paylaş</h4>
+                        <a href="CommentAdd.aspx" class="commentAddBtn" >Yorum Yap</a>
+                    </div>
+                </div>
+
+
             </div>
             <asp:Repeater ID="rp_Comments" runat="server">
                 <ItemTemplate>

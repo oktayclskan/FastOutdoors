@@ -86,7 +86,7 @@
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
         margin-top: 15px;
-        padding: 10px;
+        padding: 8px;
         background-color: #333334;
         color: whitesmoke;
     }
@@ -95,6 +95,28 @@
             color: #d4a248;
             margin: 10px;
         }
+
+        .formPage .Header span {
+            font-weight: 900;
+            font-size: 16pt;
+        }
+
+        .formPage .Header h4 {
+            margin-bottom: 6px;
+        }
+
+        .formPage .Header .commentAddBtn {
+            text-decoration: none;
+            margin-left: 50px;
+            background-color: #9F9E9E;
+            color: whitesmoke;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+            .formPage .Header .commentAddBtn:hover {
+                color: #333334;
+            }
 
     .formPage .row {
         margin-top: 15px;
@@ -175,6 +197,48 @@
                 color: #d0c7c7;
             }
 
+.FormRead {
+    height: 500px;
+}
+
+    .FormRead .question {
+        margin-top: 25px;
+    }
+
+        .FormRead .question i {
+            font-size: 30pt;
+            padding: 10px;
+            color: whitesmoke;
+        }
+
+        .FormRead .question span {
+            font-size: 25pt;
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        .FormRead .question .title {
+            padding-left: 10px;
+            font-weight: 900;
+            font-size: 15pt;
+        }
+
+    .FormRead .row {
+        margin-top: 25px;
+        background-color: #908B8B;
+        border: 1px solid black;
+        min-height: 200px;
+    }
+
+        .FormRead .row .dateTime {
+            padding: 10px;
+            background-color: #333334;
+            color: #6c6c6f;
+        }
+
+        .FormRead .row .content {
+            padding: 8px;
+        }
+
 .ComplaintSuggestionPage {
     width: 1200px;
     height: 500px;
@@ -188,7 +252,7 @@
         .ComplaintSuggestionPage .Container .row .textbox {
             width: 550px;
             height: 250px;
-            color:#808080;
+            color: #808080;
             padding: 10px;
         }
 
@@ -202,7 +266,8 @@
             border-top-right-radius: 10px;
             padding: 5px;
         }
-        .ComplaintSuggestionPage .Container .pnlEror{
+
+        .ComplaintSuggestionPage .Container .pnlEror {
             background-color: #9b1717;
             color: whitesmoke;
             width: 562px;
@@ -212,6 +277,7 @@
             border-top-right-radius: 10px;
             padding: 5px;
         }
+
         .ComplaintSuggestionPage .Container .sendBtn {
             background-color: #3a55f6;
             color: white;
@@ -220,11 +286,139 @@
             width: 542px;
             margin-right: auto;
             margin-left: auto;
-            padding:15px;
-            border-radius:3px;
-           font-family:ArialCalibri;
-            font-size:15pt;
+            padding: 15px;
+            border-radius: 3px;
+            font-family: ArialCalibri;
+            font-size: 15pt;
         }
-        .ComplaintSuggestionPage .Container .sendBtn:hover{
-            background-color: #2c40bb;
+
+            .ComplaintSuggestionPage .Container .sendBtn:hover {
+                background-color: #2c40bb;
+            }
+
+.CommentAddContainer {
+    height: 600px;
+}
+
+    .CommentAddContainer .rightMain {
+        float: left;
+        width: 570px;
+        border: 1px solid #c8c1c1;
+        height: 450px;
+        margin-top: 25px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .CommentAddContainer .leftMain {
+        margin-top: 25px;
+        float: left;
+        width: 570px;
+        border: 1px solid #c8c1c1;
+        height: 450px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding-left: 15px;
+    }
+
+        .CommentAddContainer .leftMain .row {
+            margin-bottom: 20px;
         }
+
+    .CommentAddContainer .CommentAddContainerTitle {
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
+        font-family: 'Prompt', sans-serif;
+        margin-top: 25px;
+    }
+
+    .CommentAddContainer .leftMain h1 {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .CommentAddContainer .leftMain .row .dllCategory {
+        background-color: silver;
+        font-size: 13pt;
+        border-radius: 5px;
+        color: #333334;
+        border: none;
+    }
+
+    .CommentAddContainer .leftMain .row .inputBox {
+        margin-top: 5px;
+        width: 450px;
+        height: 35px;
+        border-radius: 5px;
+        background-color: silver;
+        border: none;
+        color: #6c6c6f;
+        padding: 5px;
+    }
+
+    .CommentAddContainer .leftMain .row .fuImgAdd {
+        background-color: silver;
+        font-size: 13pt;
+        border-radius: 5px;
+        color: #333334;
+        border: none;
+        width:245px;
+    }
+
+    .CommentAddContainer .rightMain .row {
+        margin-left: 20px;
+    }
+
+    .CommentAddContainer h3 {
+        text-align: center;
+        margin: 15px;
+        font-size: 15pt;
+    }
+
+    .CommentAddContainer .rightMain .row .contentInputBox {
+        width: 520px;
+        height: 270px;
+        background-color: silver;
+        border-radius: 7px;
+        color: #6c6c6f;
+        padding: 7px;
+    }
+
+    .CommentAddContainer .rightMain .row .commentBtn {
+        text-decoration: none;
+        display: block;
+        width: 507px;
+        text-align: center;
+        background-color: #1569b5;
+        color: whitesmoke;
+        font-weight: 900;
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+    }
+
+        .CommentAddContainer .rightMain .row .commentBtn:hover {
+            background-color: #1569b5;
+        }
+
+    .CommentAddContainer .rightMain .pnlSuccessful {
+        text-align: center;
+        padding: 5px;
+        background-color: #333334;
+        width: 523px;
+        margin-left: 21px;
+        border-radius: 5px;
+        font-weight: 900;
+        color:whitesmoke;
+    }
+    .CommentAddContainer .rightMain .pnlEror {
+        text-align: center;
+        padding: 5px;
+        background-color: #333334;
+        width: 523px;
+        margin-left: 21px;
+        border-radius: 5px;
+        font-weight: 900;
+        color: whitesmoke;
+    }

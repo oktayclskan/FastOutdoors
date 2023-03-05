@@ -2339,6 +2339,7 @@
     <Content Include="UserPanel\Assets\Img\twitter.png" />
     <Content Include="UserPanel\Assets\Img\whatsapp.png" />
     <Content Include="UserPanel\BlogPages.aspx" />
+    <Content Include="UserPanel\CommentAdd.aspx" />
     <Content Include="UserPanel\ComplaintSuggestionPages.aspx" />
     <Content Include="UserPanel\FormPage.aspx" />
     <Content Include="UserPanel\FormRead.aspx" />
@@ -2468,6 +2469,13 @@
     </Compile>
     <Compile Include="UserPanel\BlogPages.aspx.designer.cs">
       <DependentUpon>BlogPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\CommentAdd.aspx.cs">
+      <DependentUpon>CommentAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPanel\CommentAdd.aspx.designer.cs">
+      <DependentUpon>CommentAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPanel\ComplaintSuggestionPages.aspx.cs">
       <DependentUpon>ComplaintSuggestionPages.aspx</DependentUpon>

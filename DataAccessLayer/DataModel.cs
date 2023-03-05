@@ -465,13 +465,12 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "INSERT INTO Comments(Category_ID,Member_ID,Title,Content,CommentDate,CommentViews,CommentStatus,Img) VALUES (@categoryID,@memberID,@title,@content,@commentDate,@commentViews,1,@img)";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@categoryID", c.CommentDate);
+                cmd.Parameters.AddWithValue("@categoryID", c.Category_ID);
                 cmd.Parameters.AddWithValue("@memberID", c.Member_ID);
                 cmd.Parameters.AddWithValue("@title", c.Title);
                 cmd.Parameters.AddWithValue("@content", c.Content);
                 cmd.Parameters.AddWithValue("@commentDate", c.CommentDate);
                 cmd.Parameters.AddWithValue("@commentViews", c.CommentViews);
-                cmd.Parameters.AddWithValue("1", c.CommentStatus);
                 cmd.Parameters.AddWithValue("@img", c.Img);
                 con.Open();
                 cmd.ExecuteNonQuery();

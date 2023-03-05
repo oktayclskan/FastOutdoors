@@ -15,15 +15,6 @@ namespace FastOutdoors.UserPanel
     {
 
         /// <summary>
-        /// ltrl_content control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrl_content;
-
-        /// <summary>
         /// ltrl_title control.
         /// </summary>
         /// <remarks>
@@ -31,5 +22,23 @@ namespace FastOutdoors.UserPanel
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrl_title;
+
+        /// <summary>
+        /// ltrl_dateTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrl_dateTime;
+
+        /// <summary>
+        /// ltrl_content control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrl_content;
     }
 }

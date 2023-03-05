@@ -137,6 +137,46 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+        public bool AdminUserNameControl(string UserName)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT (*) FROM Admins WHERE UserName=@userName";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@userName",UserName);
+                con.Open();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                if (num == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally { con.Close(); }
+        }
+        public bool AdminMailControl(string mail)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT (*) FROM Admins WHERE Mail=@mail";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@mail", mail);
+                con.Open();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                if (num == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally { con.Close(); }
+        }
         #endregion
         #region Member Metots
         public List<Member> MemberList()
@@ -276,6 +316,47 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+        public bool MemberRegisterUserNameControl(string UserName)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT (*) FROM Members WHERE UserName=@userName";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@userName", UserName);
+                con.Open();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                if (num == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally { con.Close(); }
+        }
+        public bool MemberRegisterMailControl(string mail)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT (*) FROM Members WHERE Mail=@mail";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@mail", mail);
+                con.Open();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                if (num == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally { con.Close(); }
+        }
+
 
         #endregion
         #region CategoryMetot
@@ -375,6 +456,26 @@ namespace DataAccessLayer
             catch
             {
                 return null;
+            }
+            finally { con.Close(); }
+        }
+        public bool CategoryControl(string name)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT(*) From Categorys WHERE Name=@name";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@name",name);
+                con.Open();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                if (num == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             finally { con.Close(); }
         }
@@ -690,7 +791,6 @@ namespace DataAccessLayer
         }
 
         #endregion
-
         #region ComplaintSuggestionMetots
         public List<ComplaintSuggestion> ComplaintSuggestionList(int compsugges)
         {

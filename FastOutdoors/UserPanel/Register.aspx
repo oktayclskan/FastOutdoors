@@ -21,10 +21,10 @@
                 <h1>Kayıt Oluştur</h1>
             </div>
             <div class="row">
-                <asp:Panel ID="pnl_succesful" runat="server" CssClass="pnl_succes" Visible="false">
+                <asp:Panel ID="pnl_succesful" runat="server" CssClass="pnlSucces" Visible="false">
                     Kayıt İşlemi Başarılı
                 </asp:Panel>
-                <asp:Panel ID="pnl_eror" runat="server" CssClass="pnl_eror" Visible="false">
+                <asp:Panel ID="pnl_eror" runat="server" CssClass="pnlEror" Visible="false">
                     <asp:Label ID="lbl_eror" runat="server"></asp:Label>
                 </asp:Panel>
             </div>

@@ -32,32 +32,49 @@ namespace FastOutdoors.UserPanel
                                 {
                                     if (!string.IsNullOrEmpty(tb_location.Text.Trim()))
                                     {
-                                        Member m = new Member();
-                                        m.Name = tb_name.Text;
-                                        m.SurName = tb_surName.Text;
-                                        m.UserName = tb_userName.Text;
-                                        m.Phone = tb_phone.Text;
-                                        m.Mail = tb_mail.Text;
-                                        m.MemberPassword = tb_Password.Text;
-                                        m.Location = tb_location.Text;
-                                        m.MemberStatus = true;
-                                        if (dm.MemberAdd(m))
+                                        if (dm.MemberRegisterUserNameControl(tb_userName.Text.Trim()))
                                         {
-                                            pnl_eror.Visible = false;
-                                            pnl_succesful.Visible = true;
-                                            tb_name.Text = " ";
-                                            tb_surName.Text = " ";
-                                            tb_userName.Text = " ";
-                                            tb_phone.Text = " ";
-                                            tb_mail.Text = " ";
-                                            tb_Password.Text = " ";
-                                            tb_location.Text = " ";
+                                            if (dm.MemberRegisterMailControl(tb_mail.Text.Trim()))
+                                            {
+                                                Member m = new Member();
+                                                m.Name = tb_name.Text;
+                                                m.SurName = tb_surName.Text;
+                                                m.UserName = tb_userName.Text;
+                                                m.Phone = tb_phone.Text;
+                                                m.Mail = tb_mail.Text;
+                                                m.MemberPassword = tb_Password.Text;
+                                                m.Location = tb_location.Text;
+                                                m.MemberStatus = true;
+                                                if (dm.MemberAdd(m))
+                                                {
+                                                    pnl_eror.Visible = false;
+                                                    pnl_succesful.Visible = true;
+                                                    tb_name.Text = " ";
+                                                    tb_surName.Text = " ";
+                                                    tb_userName.Text = " ";
+                                                    tb_phone.Text = " ";
+                                                    tb_mail.Text = " ";
+                                                    tb_Password.Text = " ";
+                                                    tb_location.Text = " ";
+                                                }
+                                                else
+                                                {
+                                                    pnl_eror.Visible = true;
+                                                    lbl_eror.Text = "Kayıt İşlemi Başarısız";
+                                                }
+                                            }
+                                            else
+                                            {
+                                                pnl_eror.Visible = true;
+                                                lbl_eror.Text = "Bu mail daha önce alınmış";
+                                            }
                                         }
                                         else
                                         {
                                             pnl_eror.Visible = true;
-                                            lbl_eror.Text = "Kayıt İşlemi Başarısız";
+                                            lbl_eror.Text = "Bu kullanıcı adı daha önce alınmış";
                                         }
+
                                     }
                                     else
                                     {

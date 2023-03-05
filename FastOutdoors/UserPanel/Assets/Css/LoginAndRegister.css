@@ -64,6 +64,7 @@
             background-color: #37373E;
             border: none;
             color: #808080;
+            padding-left: 7px;
         }
 
         .loginContainer .LoginContent .row .loginBtn {
@@ -82,6 +83,11 @@
                 background-color: #1b1919;
                 color: #FFFFFF;
             }
+
+    .loginContainer .pnlEror {
+        margin-left: 22px;
+        color: whitesmoke;
+    }
 
 .RegisterContainer {
     margin-top: -70px;
@@ -117,7 +123,7 @@
 
     .RegisterContainer .RegisterContent {
         margin-top: 5px;
-        margin-left: 70px;
+        margin-left: 60px;
     }
 
         .RegisterContainer .RegisterContent .row {
@@ -136,6 +142,7 @@
             background-color: #37373E;
             border: none;
             color: #808080;
+            padding-left: 7px;
         }
 
         .RegisterContainer .RegisterContent .row .loginBtn {
@@ -155,3 +162,15 @@
                 background-color: #1b1919;
                 color: #FFFFFF;
             }
+
+    .RegisterContainer .row .pnlEror {
+        text-align: center;
+        padding: 5px;
+        color: whitesmoke;
+    }
+
+    .RegisterContainer .row .pnlSucces {
+        padding: 5px;
+        color: whitesmoke;
+        text-align: center;
+    }

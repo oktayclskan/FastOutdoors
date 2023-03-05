@@ -13,48 +13,58 @@ namespace FastOutdoors.AdminPanel
         DataModel dm = new DataModel();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void lbtn_categoryAdd_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(tb_name.Text.Trim()))
             {
-                Category c = new Category();
-                c.Name = tb_name.Text;
-                if (fu_Image.HasFile)
+                if (dm.CategoryControl(tb_name.Text.Trim()))
                 {
-                    FileInfo fi = new FileInfo(fu_Image.FileName);
-                    if (fi.Extension == ".jpg" || fi.Extension == ".png")
+                    Category c = new Category();
+                    c.Name = tb_name.Text;
+                    if (fu_Image.HasFile)
                     {
-                        string extension = fi.Extension;
-                        string name = Guid.NewGuid().ToString();
-                        c.Img = name + extension;
-                        fu_Image.SaveAs(Server.MapPath("~/AdminPanel/Assets/Img/" + name + extension));
-                        if (dm.CategoryAdd(c))
+                        FileInfo fi = new FileInfo(fu_Image.FileName);
+                        if (fi.Extension == ".jpg" || fi.Extension == ".png")
                         {
-                            pnl_successful.Visible = true;
-                            pnl_eror.Visible = false;
+                            string extension = fi.Extension;
+                            string name = Guid.NewGuid().ToString();
+                            c.Img = name + extension;
+                            fu_Image.SaveAs(Server.MapPath("~/AdminPanel/Assets/Img/" + name + extension));
+                            if (dm.CategoryAdd(c))
+                            {
+                                pnl_successful.Visible = true;
+                                pnl_eror.Visible = false;
+                            }
+                            else
+                            {
+                                pnl_successful.Visible = false;
+                                pnl_eror.Visible = true;
+                                lbl_eror.Text = "Kategori ekleriken bir hata oluştu";
+                            }
                         }
                         else
                         {
                             pnl_successful.Visible = false;
                             pnl_eror.Visible = true;
-                            lbl_eror.Text = "Kategori ekleriken bir hata oluştu";
+                            lbl_eror.Text = "Resim uzantısı sadece .jpg veya png olmalıdır";
                         }
                     }
                     else
                     {
-                        pnl_successful.Visible = false;
                         pnl_eror.Visible = true;
-                        lbl_eror.Text = "Resim uzantısı sadece .jpg veya png olmalıdır";
+                        lbl_eror.Text = "Resim Eklemeniz Gerekmektedir";
                     }
                 }
                 else
                 {
+                    pnl_successful.Visible = false;
                     pnl_eror.Visible = true;
-                    lbl_eror.Text = "Resim Eklemeniz Gerekmektedir";
+                    lbl_eror.Text = "Bu kategori daha önce eklenmiş";
                 }
+
             }
             else
             {

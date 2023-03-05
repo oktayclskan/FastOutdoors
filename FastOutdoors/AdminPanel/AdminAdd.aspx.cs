@@ -30,32 +30,52 @@ namespace FastOutdoors.AdminPanel
                             {
                                 if (!string.IsNullOrEmpty(tb_AdminPassword.Text.Trim()))
                                 {
-                                    Admin a = new Admin();
-                                    a.Name = tb_name.Text;
-                                    a.SurName = tb_surname.Text;
-                                    a.UserName = tb_username.Text;
-                                    a.Phone = tb_phone.Text;
-                                    a.Mail = tb_mail.Text;
-                                    a.AdminPassword = tb_AdminPassword.Text;
-                                    a.AdminStatus = true;
-                                   
-                                    if (dm.AdminAdd(a))
+                                    if (dm.AdminUserNameControl(tb_username.Text.Trim()))
                                     {
-                                        pnl_eror.Visible = false;
-                                        pnl_successful.Visible = true;
-                                        tb_name.Text = " ";
-                                        tb_surname.Text = " ";
-                                        tb_username.Text = " ";
-                                        tb_phone.Text = " ";
-                                        tb_mail.Text = " ";
+                                        if (dm.AdminMailControl(tb_mail.Text.Trim()))
+                                        {
+                                            Admin a = new Admin();
+                                            a.Name = tb_name.Text;
+                                            a.SurName = tb_surname.Text;
+                                            a.UserName = tb_username.Text;
+                                            a.Phone = tb_phone.Text;
+                                            a.Mail = tb_mail.Text;
+                                            a.AdminPassword = tb_AdminPassword.Text;
+                                            a.AdminStatus = true;
 
+                                            if (dm.AdminAdd(a))
+                                            {
+                                                pnl_eror.Visible = false;
+                                                pnl_successful.Visible = true;
+                                                tb_name.Text = " ";
+                                                tb_surname.Text = " ";
+                                                tb_username.Text = " ";
+                                                tb_phone.Text = " ";
+                                                tb_mail.Text = " ";
+
+                                            }
+                                            else
+                                            {
+                                                pnl_successful.Visible = false;
+                                                pnl_eror.Visible = true;
+                                                lbl_eror.Text = "Admin Ekleme Başarısız";
+                                            }
+                                        }
+                                        else
+                                        {
+                                            pnl_successful.Visible = false;
+                                            pnl_eror.Visible = true;
+                                            lbl_eror.Text = "Bu mail daha önce kullanılmış";
+                                        }
+                                        
                                     }
                                     else
                                     {
                                         pnl_successful.Visible = false;
                                         pnl_eror.Visible = true;
-                                        lbl_eror.Text = "Admin Ekleme Başarısız";
+                                        lbl_eror.Text = "Kullanıcı adı daha önce kullanılmış";
                                     }
+                                    
                                 }
                                 else
                                 {

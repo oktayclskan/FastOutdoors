@@ -23,7 +23,7 @@
             </div>
             <div class="LoginContent">
                 <div class="row">
-                <asp:Panel ID="pnl_eror" runat="server" CssClass="pnl_eror" Visible="false">
+                <asp:Panel ID="pnl_eror" runat="server" CssClass="pnlEror" Visible="false">
                     <asp:Label ID="lbl_eror" runat="server"></asp:Label>
                 </asp:Panel>
             </div>

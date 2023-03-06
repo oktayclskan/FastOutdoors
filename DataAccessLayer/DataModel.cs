@@ -680,25 +680,27 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
-        public Answers AnswersGet(int id)
+        public List<Answers> AnswersGet(int id)
         {
+            List<Answers> answers = new List<Answers>();
             try
             {
-                cmd.CommandText = "Select A.ID, C.ID, M.Name,A.Contents,A.AnwersTime From Answers AS A join Comments AS C ON A.Comment_ID=c.ID join Members AS m ON A.Member_ID = M.ID WHERE A.ID=@id";
+                cmd.CommandText = "SELECT a.ID, m.Name, a.Contents , a.AnwersTime FROM Answers AS a JOIN Comments AS c ON a.Comment_ID = c.ID JOIN Members AS m ON m.ID = a.Member_ID WHERE c.ID = @id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                Answers a = new Answers();
+
                 while (reader.Read())
                 {
+                    Answers a = new Answers();
                     a.ID = reader.GetInt32(0);
-                    a.Comment_ID = reader.GetInt32(1);
-                    a.MemberName = reader.GetString(2);
-                    a.Content = reader.GetString(3);
-                    a.AnswersTime = reader.GetDateTime(4);
+                    a.MemberName = reader.GetString(1);
+                    a.Content = reader.GetString(2);
+                    a.AnswersTime = reader.GetDateTime(3);
+                    answers.Add(a);
                 }
-                return a;
+                return answers;
             }
             catch
             {
@@ -709,6 +711,7 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
+
         #endregion
         #region Paragrahs Metots
         public List<Paragraphs> ParagraphsList()

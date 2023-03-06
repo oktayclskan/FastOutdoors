@@ -19,7 +19,7 @@
                     <span><i class="fa-solid fa-icons"></i>Forum'da neler oluyor??</span>
                     <div style="float: right">
                         <h4>Sende Deneyimlerini Paylaş</h4>
-                        <a href="CommentAdd.aspx" class="commentAddBtn" >Yorum Yap</a>
+                        <a href="CommentAdd.aspx" class="commentAddBtn">Yorum Yap</a>
                     </div>
                 </div>
 
@@ -52,6 +52,7 @@
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
+            
         </div>
     </asp:Panel>
 </asp:Content>

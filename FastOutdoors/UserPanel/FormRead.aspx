@@ -23,22 +23,31 @@
         <div class="answertitle">
             <h4>Verilen Cevaplar</h4>
         </div>
-    </div>
-    <asp:Repeater ID="rp_aswers" runat="server">
-        <ItemTemplate>
-            <div class="container">
-                Üye  =
-                    <label class="Yorumuye"><%# Eval("MemberName") %> </label>
-                <br />
-                <%# Eval("Content") %>
-            </div>
-        </ItemTemplate>
-    </asp:Repeater>
-    <div class="deneme">
-        <asp:Literal ID="ltrl_AmemberName" runat="server"></asp:Literal>
-        <asp:Literal ID="ltrl_AContent" runat="server"></asp:Literal>
+        <asp:ListView ID="lv_answer" runat="server">
+            <LayoutTemplate>
+                <table class="AnswerTable" cellpaddind="0" cellspacing="0">
+                    <tr>
+                        <thead>
+                        </thead>
+                    </tr>
+
+                    <tbody>
+                        <asp:PlaceHolder ID="ItemPlaceHolder" runat="server"></asp:PlaceHolder>
+                    </tbody>
+                </table>
+            </LayoutTemplate>
+            <ItemTemplate>
+                <tr>
+                    
+                    <td><%# Eval("MemberName") %></td>
+                    <td><%# Eval("Content") %></td>
+                    <td><%# Eval("AnswersTime") %></td>
+
+                </tr>
+            </ItemTemplate>
+        </asp:ListView>
     </div>
 
-    <div>
-    </div>
+
+
 </asp:Content>

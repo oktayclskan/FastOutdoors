@@ -424,12 +424,34 @@
     }
 
 .answerContainer .answertitle {
-    padding:5px;
-    text-align:center;
+    padding: 5px;
+    text-align: center;
     margin-top: 20px;
     background-color: #d7d6d6;
 }
-.deneme{
-    height:100px;
-    border:1px solid red;
+
+.answerContainer .AnswerTable {
+    margin: 10px;
+    width: 1170px;
 }
+
+    .answerContainer .AnswerTable td {
+        padding-left: 10px;
+        border-bottom:1px solid #333334;
+    }
+
+    .answerContainer .AnswerTable tbody td:first-child {
+        color: whitesmoke;
+    }
+
+    .answerContainer .AnswerTable tbody td:nth-child(2) {
+        width: 800px;
+        padding-left: 30px;
+        max-width: 800px;
+        overflow-wrap: break-word;
+        padding:8px;
+    }
+
+    .answerContainer .AnswerTable tbody td:last-child {
+        padding-right: 30px;
+    }

@@ -17,6 +17,7 @@ namespace FastOutdoors.UserPanel
             {
                 rp_Comments.DataSource = dm.CommentList(1);
                 rp_Comments.DataBind();
+
                 if (Session["member"] !=null)
                 {
                     pnl_LoggedIn.Visible = true;

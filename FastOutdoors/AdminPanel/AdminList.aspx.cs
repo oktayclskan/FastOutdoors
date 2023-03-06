@@ -31,6 +31,10 @@ namespace FastOutdoors.AdminPanel
         protected void lv_AdminListsPassive_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             int id = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "remove")
+            {
+                dm.AdminRemove(id);
+            }
             if (e.CommandName == "activate")
             {
                 dm.AdminStatusActive(id);

@@ -300,17 +300,30 @@ body {
     border-radius: 5px;
     font-weight: 700;
 }
+    .AdminList .activateBtn:hover{
+        opacity:0.6;
+    }
 
-.AdminAddContainer .AddBackBtn {
-    color: #1370C4;
-    float: right;
-    padding: 5px;
-    margin: 10px;
+    .AdminAddContainer .AddBackBtn {
+        color: #1370C4;
+        float: right;
+        padding: 5px;
+        margin: 10px;
+    }
+.AdminList .adminRemoveBtn {
+    text-decoration: none;
+    padding: 4px;
+    background-color: #1F1F1F;
+    color:whitesmoke;
+    border-radius:5px;
+}
+.AdminList .adminRemoveBtn:hover {
+    opacity: 0.6;
 }
 
-    .AdminAddContainer .AddBackBtn:hover {
-        opacity: 0.7;
-    }
+.AdminAddContainer .AddBackBtn:hover {
+    opacity: 0.7;
+}
 
 .categoryList .categoryProcessBtn {
     font-size: 14px;
@@ -470,7 +483,7 @@ body {
     text-decoration: none;
     color: whitesmoke;
     background-color: red;
-    padding: 7px;
+    padding: 4px;
     border-radius: 5px;
     font-size: 12pt;
 }

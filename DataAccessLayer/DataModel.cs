@@ -143,7 +143,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "SELECT COUNT (*) FROM Admins WHERE UserName=@userName";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@userName",UserName);
+                cmd.Parameters.AddWithValue("@userName", UserName);
                 con.Open();
                 int num = Convert.ToInt32(cmd.ExecuteScalar());
                 if (num == 0)
@@ -176,6 +176,21 @@ namespace DataAccessLayer
                 }
             }
             finally { con.Close(); }
+        }
+        public void AdminRemove(int id)
+        {
+            try
+            {
+                cmd.CommandText = "Delete From Admins WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
         }
         #endregion
         #region Member Metots
@@ -465,7 +480,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "SELECT COUNT(*) From Categorys WHERE Name=@name";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@name",name);
+                cmd.Parameters.AddWithValue("@name", name);
                 con.Open();
                 int num = Convert.ToInt32(cmd.ExecuteScalar());
                 if (num == 0)
@@ -632,6 +647,27 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
+        public bool AnswerAdd(Answers a)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Answers(Comment_ID,Member_ID,Content,AnswerTime)(@commentID,@memberID,@content,@answerTime)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@commentID", a.Comment_ID);
+                cmd.Parameters.AddWithValue("@memberID", a.Member_ID);
+                cmd.Parameters.AddWithValue("@content", a.Content);
+                cmd.Parameters.AddWithValue("@answerTime", a.AnswersTime);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
+        }
+
         public void DeleteAnswer(int id)
         {
             try
@@ -643,6 +679,35 @@ namespace DataAccessLayer
                 cmd.ExecuteNonQuery();
             }
             finally { con.Close(); }
+        }
+        public Answers AnswersGet(int id)
+        {
+            try
+            {
+                cmd.CommandText = "Select A.ID, C.ID, M.Name,A.Contents,A.AnwersTime From Answers AS A join Comments AS C ON A.Comment_ID=c.ID join Members AS m ON A.Member_ID = M.ID WHERE A.ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                Answers a = new Answers();
+                while (reader.Read())
+                {
+                    a.ID = reader.GetInt32(0);
+                    a.Comment_ID = reader.GetInt32(1);
+                    a.MemberName = reader.GetString(2);
+                    a.Content = reader.GetString(3);
+                    a.AnswersTime = reader.GetDateTime(4);
+                }
+                return a;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
         }
         #endregion
         #region Paragrahs Metots
@@ -827,7 +892,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "DELETE FROM complaintSuggestion Where ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",id);
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -839,7 +904,7 @@ namespace DataAccessLayer
             {
                 cmd.CommandText = "Update complaintSuggestion Set ComplaintSuggestionStatus=1 WHERE ID=@id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id",id);
+                cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -853,3 +918,4 @@ namespace DataAccessLayer
         #endregion
     }
 }
+

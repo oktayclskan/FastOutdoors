@@ -20,6 +20,9 @@ namespace FastOutdoors.UserPanel
                 ltrl_title.Text = c.Title;
                 ltrl_content.Text = c.Content;
                 ltrl_dateTime.Text = c.CommentDate.ToLongDateString();
+                Answers a = dm.AnswersGet(id);
+                ltrl_AmemberName.Text = a.MemberName;
+                ltrl_AContent.Text = a.Content;
             }
         }
     }

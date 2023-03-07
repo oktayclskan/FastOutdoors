@@ -27,7 +27,7 @@
         <div class="rightMain">
             <h3>Yorum giriniz</h3>
             <asp:Panel ID="pnl_successful" runat="server" CssClass="pnlSuccessful" Visible="false">
-                Kategori Ekleme Başarılı
+                Yorum Ekleme Başarılı
             </asp:Panel>
             <asp:Panel ID="pnl_eror" runat="server" CssClass="pnlEror" Visible="false">
                 <asp:Label ID="lbl_eror" runat="server"></asp:Label>

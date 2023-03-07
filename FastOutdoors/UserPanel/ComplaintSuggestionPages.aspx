@@ -14,7 +14,7 @@
             <div class="row">
                 <asp:TextBox ID="tb_content" TextMode="MultiLine" CssClass="textbox" runat="server" Text="Lütfen Şikayet/Öneri yazınız"></asp:TextBox>
             </div>
-            <asp:LinkButton ID="lbtn_send" runat="server" CssClass="sendBtn">Gönder</asp:LinkButton>
+            <asp:LinkButton ID="lbtn_send" runat="server" CssClass="sendBtn" OnClick="lbtn_send_Click">Gönder</asp:LinkButton>
         </div>
 
     </div>

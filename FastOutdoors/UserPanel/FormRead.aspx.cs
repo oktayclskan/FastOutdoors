@@ -16,6 +16,7 @@ namespace FastOutdoors.UserPanel
             if (Request.QueryString.Count != 0)
             {
                 int id = Convert.ToInt32(Request.QueryString["fid"]);
+                dm.CommentViewPlus(id);
                 Comment c = dm.CommentGet(id);
                 ltrl_title.Text = c.Title;
                 img_images.ImageUrl = "../AdminPanel/Assets/Img/CommentImg/" + c.Img;

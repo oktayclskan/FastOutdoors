@@ -49,7 +49,7 @@
                 </tr>
             </ItemTemplate>
         </asp:ListView>
-         <asp:ListView ID="lv_commentWaiting" runat="server" class="memberTable" OnItemCommand="lv_commentWaiting_ItemCommand" Visible="false">
+        <asp:ListView ID="lv_commentWaiting" runat="server" class="memberTable" OnItemCommand="lv_commentWaiting_ItemCommand" Visible="false">
             <LayoutTemplate>
                 <table class="Table" cellpaddind="0" cellspacing="3">
                     <tr>
@@ -60,10 +60,10 @@
                             <th>Başlık</th>
                             <th>Yorum</th>
                             <th>Yorum Tarihi</th>
-                            <th>Görüntülenme</th>
+                            
                             <th>Durum</th>
                             <th>Resim</th>
-                            <th>Seçenek</th>
+                            <th colspan="2">Seçenek</th>
                         </thead>
                     </tr>
                     <tbody>
@@ -79,14 +79,16 @@
                     <td><%# Eval("Title") %></td>
                     <td><%# Eval("Content") %></td>
                     <td><%# Eval("CommentDate") %></td>
-                    <td><%# Eval("CommentViews") %></td>
+                    
                     <td><%# Eval("CommentStatusStr") %></td>
                     <td>
                         <img style="text-align: center;" src="../AdminPanel/Assets/Img/CommentImg/<%# Eval("Img")%>" width="25" />
                     </td>
                     <td>
-                        <asp:LinkButton ID="lbtn_approveBtn" runat="server" CssClass="ApprovedBtn"  CommandArgument='<%# Eval("ID") %>' CommandName="approve">Onayla</asp:LinkButton>
-                        <asp:LinkButton ID="lbtn_commentDel" runat="server" CssClass="CommentBanBtn" CommandArgument='<%# Eval("ID") %>' CommandName="remove">Kaldır</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_approveBtn" runat="server" CssClass="ApprovedBtn" CommandArgument='<%# Eval("ID") %>' CommandName="approve">Onayla</asp:LinkButton>
+                        <td>
+                            <asp:LinkButton ID="lbtn_commentDel" runat="server" CssClass="CommentBanBtn" CommandArgument='<%# Eval("ID") %>' CommandName="remove">Kaldır</asp:LinkButton></td>
+
                     </td>
                 </tr>
             </ItemTemplate>

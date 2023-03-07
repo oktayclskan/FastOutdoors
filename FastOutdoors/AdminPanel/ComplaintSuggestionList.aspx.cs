@@ -23,9 +23,12 @@ namespace FastOutdoors.AdminPanel
             int id = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "remove")
             {
+                lv_toBeRead.Visible = false;
                 dm.ComplaintSuggestionDelete(id);
                 lv_read.DataSource = dm.ComplaintSuggestionList(1);
                 lv_read.DataBind();
+
+                
             }
         }
 

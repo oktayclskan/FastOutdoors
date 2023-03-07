@@ -143,6 +143,8 @@
         .formPage .row .title {
             padding: 3px;
             float: left;
+            overflow-wrap: break-word;
+            max-width: 560px;
         }
 
         .formPage .row .ContentLink {
@@ -151,7 +153,7 @@
             font-weight: 900;
             font-size: 15pt;
             float: right;
-            margin-right: 250px;
+            margin-right: 150px;
         }
 
             .formPage .row .ContentLink a {
@@ -241,32 +243,39 @@
     .FormRead .img .imgDetails {
         width: 283px;
     }
-.AnswerAdd .row{
-   padding:10px;
+
+.AnswerAdd .row {
+    padding: 10px;
 }
+
     .AnswerAdd .row .textbox {
-        padding:10px;
+        padding: 10px;
         background-color: #9F9E9E;
-        width:1171px;
-        border:none;
-        border-bottom:3px solid silver;
-        color:#444444;
-        margin-bottom:7px;
+        width: 1171px;
+        border: none;
+        border-bottom: 3px solid silver;
+        color: #444444;
+        margin-bottom: 7px;
     }
+
 .AnswerAdd .addAnswerBtn {
-   
     padding: 10px;
     background-color: #333334;
-    border-radius:20px;
-    color:whitesmoke;
-    text-decoration:none;
-    font-weight:900;
-    margin-right:30px;
+    border-radius: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 900;
+    margin-right: 30px;
 }
 
 .ComplaintSuggestionPage {
     width: 1200px;
     height: 500px;
+}
+
+.complaintSuggestionList .Table td {
+    max-width: 800px;
+    overflow-wrap: break-word;
 }
 
 .ComplaintSuggestionPage .Container {

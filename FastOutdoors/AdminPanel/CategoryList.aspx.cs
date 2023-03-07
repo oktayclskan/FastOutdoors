@@ -20,9 +20,14 @@ namespace FastOutdoors.AdminPanel
         protected void lv_categoryList_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             int id = Convert.ToInt32(e.CommandArgument);
-            dm.CategoryDelete(id);
+            if (e.CommandName == "remove")
+            {
+                dm.CategoryDelete(id);
+            }
             lv_categoryList.DataSource = dm.CategoryList();
             lv_categoryList.DataBind();
+
+
 
         }
 

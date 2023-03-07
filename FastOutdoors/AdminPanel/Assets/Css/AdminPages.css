@@ -498,19 +498,23 @@ body {
     padding: 7px;
     border-radius: 5px;
     font-size: 12pt;
-    color:whitesmoke;
+    color: whitesmoke;
 }
     .commentList .ApprovedBtn:hover{
         opacity:0.8;
     }
-    .answersList .CommentBanBtn {
-        text-decoration: none;
-        color: whitesmoke;
-        background-color: #c25858;
-        padding: 4px;
-        border-radius: 5px;
-        font-size: 12pt;
-    }
+.answersList .Table td {
+    max-width: 850px;
+    overflow-wrap: break-word;
+}
+.answersList .CommentBanBtn {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #c25858;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 12pt;
+}
 
     .answersList .CommentBanBtn:hover {
         background-color: red;

@@ -76,7 +76,7 @@
                     <td><%# Eval("AdminStatusStr") %></td>
                     <td>
                         <asp:LinkButton ID="lbtn_Active" runat="server" CommandArgument='<%#Eval("ID")%>' CommandName="activate" CssClass="activateBtn" >Aktif Et</asp:LinkButton>
-                        <asp:LinkButton ID="lbtn_remove" runat="server" CssClass="adminRemoveBtn" CommandArgument='<%#Eval("ID")%>' CommandName="remove" >Kaldır</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_remove" runat="server" CssClass="adminRemoveBtn" CommandArgument='<%#Eval("ID")%>' CommandName="remove" >Sil</asp:LinkButton>
                     </td>
                 </tr>
             </ItemTemplate>

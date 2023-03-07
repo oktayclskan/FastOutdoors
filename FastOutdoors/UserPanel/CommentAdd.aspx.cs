@@ -40,7 +40,7 @@ namespace FastOutdoors.UserPanel
                 c.Category_ID = Convert.ToInt32(dll_category.SelectedItem.Value);
                 c.Title = tb_title.Text;
                 c.Content = tb_content.Text;
-                c.CommentStatus = true;
+                c.CommentStatus = false;
                 if (fu_Image.HasFile)
                 {
                     FileInfo fi = new FileInfo(fu_Image.FileName);

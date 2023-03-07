@@ -419,17 +419,29 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
-        public void CategoryDelete(int id)
+        public bool CategoryDelete(int id)
         {
             try
             {
-                cmd.CommandText = "Delete From Categorys Where ID=@id";
+                cmd.CommandText = "DELETE Paragraphs WHERE Category_ID = @id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = "DELETE Categorys WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+                return true;
             }
-            finally { con.Close(); }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
         }
         public bool CategoryUpdate(Category c)
         {
@@ -563,15 +575,24 @@ namespace DataAccessLayer
             }
             finally { con.Close(); }
         }
-        public void CommentDelete(int id)
+        public bool CommentDelete(int id)
         {
             try
             {
-                cmd.CommandText = "DELETE From Comments Where ID = @id";
+                cmd.CommandText = "DELETE  Answers WHERE Comment_ID = @id";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = "DELETE Comments WHERE ID = @id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
             }
             finally { con.Close(); }
         }
@@ -579,7 +600,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Comments(Category_ID,Member_ID,Title,Content,CommentDate,CommentViews,CommentStatus,Img) VALUES (@categoryID,@memberID,@title,@content,@commentDate,@commentViews,1,@img)";
+                cmd.CommandText = "INSERT INTO Comments(Category_ID,Member_ID,Title,Content,CommentDate,CommentViews,CommentStatus,Img) VALUES (@categoryID,@memberID,@title,@content,@commentDate,@commentViews,0,@img)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@categoryID", c.Category_ID);
                 cmd.Parameters.AddWithValue("@memberID", c.Member_ID);
@@ -617,6 +638,29 @@ namespace DataAccessLayer
             {
                 con.Close();
             }
+        }
+        public bool CommentViewPlus(int fid)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT CommentViews From Comments WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", fid);
+                con.Open();
+                int number = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.CommandText = "UPDATE Comments SET CommentViews=@n WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", fid);
+                number = number + 1;
+                cmd.Parameters.AddWithValue("@n", number);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally { con.Close(); }
         }
         #endregion
         #region Answer Metots
@@ -917,6 +961,26 @@ namespace DataAccessLayer
                 return false;
             }
             finally { con.Close(); }
+        }
+        public bool ComplaintSuggestionAdd(ComplaintSuggestion cs)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO complaintSuggestion(Content,ComplaintSuggestionStatus) VALUES(@content,0)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@content", cs.Content);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
         }
         #endregion
     }

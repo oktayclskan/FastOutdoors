@@ -238,62 +238,88 @@
             padding: 8px;
         }
 
+    .FormRead .img .imgDetails {
+        width: 283px;
+    }
+.AnswerAdd .row{
+   padding:10px;
+}
+    .AnswerAdd .row .textbox {
+        padding:10px;
+        background-color: #9F9E9E;
+        width:1171px;
+        border:none;
+        border-bottom:3px solid silver;
+        color:#444444;
+        margin-bottom:7px;
+    }
+.AnswerAdd .addAnswerBtn {
+   
+    padding: 10px;
+    background-color: #333334;
+    border-radius:20px;
+    color:whitesmoke;
+    text-decoration:none;
+    font-weight:900;
+    margin-right:30px;
+}
+
 .ComplaintSuggestionPage {
     width: 1200px;
     height: 500px;
 }
 
-    .ComplaintSuggestionPage .Container {
-        margin-top: 55px;
-        text-align: center;
+.ComplaintSuggestionPage .Container {
+    margin-top: 55px;
+    text-align: center;
+}
+
+    .ComplaintSuggestionPage .Container .row .textbox {
+        width: 550px;
+        height: 250px;
+        color: #808080;
+        padding: 10px;
     }
 
-        .ComplaintSuggestionPage .Container .row .textbox {
-            width: 550px;
-            height: 250px;
-            color: #808080;
-            padding: 10px;
-        }
+    .ComplaintSuggestionPage .Container .pnlSucces {
+        background-color: #333334;
+        color: #d0c7c7;
+        width: 562px;
+        margin-right: auto;
+        margin-left: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 5px;
+    }
 
-        .ComplaintSuggestionPage .Container .pnlSucces {
-            background-color: #333334;
-            color: #d0c7c7;
-            width: 562px;
-            margin-right: auto;
-            margin-left: auto;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            padding: 5px;
-        }
+    .ComplaintSuggestionPage .Container .pnlEror {
+        background-color: #9b1717;
+        color: whitesmoke;
+        width: 562px;
+        margin-right: auto;
+        margin-left: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 5px;
+    }
 
-        .ComplaintSuggestionPage .Container .pnlEror {
-            background-color: #9b1717;
-            color: whitesmoke;
-            width: 562px;
-            margin-right: auto;
-            margin-left: auto;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            padding: 5px;
-        }
+    .ComplaintSuggestionPage .Container .sendBtn {
+        background-color: #3a55f6;
+        color: white;
+        text-decoration: none;
+        display: block;
+        width: 542px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 15px;
+        border-radius: 3px;
+        font-family: ArialCalibri;
+        font-size: 15pt;
+    }
 
-        .ComplaintSuggestionPage .Container .sendBtn {
-            background-color: #3a55f6;
-            color: white;
-            text-decoration: none;
-            display: block;
-            width: 542px;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 15px;
-            border-radius: 3px;
-            font-family: ArialCalibri;
-            font-size: 15pt;
+        .ComplaintSuggestionPage .Container .sendBtn:hover {
+            background-color: #2c40bb;
         }
-
-            .ComplaintSuggestionPage .Container .sendBtn:hover {
-                background-color: #2c40bb;
-            }
 
 .CommentAddContainer {
     height: 600px;
@@ -426,7 +452,7 @@
 .answerContainer .answertitle {
     padding: 5px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 35px;
     background-color: #d7d6d6;
 }
 
@@ -437,21 +463,29 @@
 
     .answerContainer .AnswerTable td {
         padding-left: 10px;
-        border-bottom:1px solid #333334;
+        border-bottom: 1px solid #333334;
     }
 
+
     .answerContainer .AnswerTable tbody td:first-child {
-        color: whitesmoke;
+        color: #333334;
+        font-weight: 900;
     }
 
     .answerContainer .AnswerTable tbody td:nth-child(2) {
         width: 800px;
-        padding-left: 30px;
+        padding-left: 50px;
         max-width: 800px;
         overflow-wrap: break-word;
-        padding:8px;
+        padding: 10px;
+        color: #d9d5d5;
     }
 
     .answerContainer .AnswerTable tbody td:last-child {
-        padding-right: 30px;
+        padding-left: 100px;
     }
+
+        .answerContainer .AnswerTable tbody td:last-child i {
+            font-weight: 900;
+            padding: 5px;
+        }

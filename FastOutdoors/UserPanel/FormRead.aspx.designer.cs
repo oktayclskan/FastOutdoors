@@ -33,6 +33,15 @@ namespace FastOutdoors.UserPanel
         protected global::System.Web.UI.WebControls.Literal ltrl_dateTime;
 
         /// <summary>
+        /// img_images control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_images;
+
+        /// <summary>
         /// ltrl_content control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,42 @@ namespace FastOutdoors.UserPanel
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrl_content;
+
+        /// <summary>
+        /// pnlEror control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlEror;
+
+        /// <summary>
+        /// lbl_erorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_erorMsg;
+
+        /// <summary>
+        /// tb_answerAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_answerAdd;
+
+        /// <summary>
+        /// lbtn_AddAnswer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_AddAnswer;
 
         /// <summary>
         /// lv_answer control.

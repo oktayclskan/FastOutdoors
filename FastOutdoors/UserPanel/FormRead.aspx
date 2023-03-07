@@ -14,9 +14,26 @@
             <div class="dateTime">
                 <asp:Literal ID="ltrl_dateTime" runat="server"></asp:Literal>
             </div>
-            <div class="content">
+            <div style="float: left;" class="img">
+                <asp:Image CssClass="imgDetails" ID="img_images" runat="server" />
+            </div>
+            <div style="float: left;" class="content">
                 <asp:Literal ID="ltrl_content" runat="server"></asp:Literal>
             </div>
+
+        </div>
+    </div>
+    <div class="AnswerAdd">
+        <div class="row">
+            <asp:Panel ID="pnlEror" runat="server" Visible="false">
+                <asp:Label ID="lbl_erorMsg" runat="server" ></asp:Label>
+            </asp:Panel>
+        </div>
+        <div class="row">
+            <asp:TextBox ID="tb_answerAdd" runat="server" Text="Yorum ekleyin.." CssClass="textbox"></asp:TextBox>
+        </div>
+        <div style="float:right;">
+            <asp:LinkButton ID="lbtn_AddAnswer" CssClass="addAnswerBtn" runat="server" OnClick="lbtn_AddAnswer_Click" >Yorum yap</asp:LinkButton>
         </div>
     </div>
     <div class="answerContainer">
@@ -38,10 +55,10 @@
             </LayoutTemplate>
             <ItemTemplate>
                 <tr>
-                    
+
                     <td><%# Eval("MemberName") %></td>
                     <td><%# Eval("Content") %></td>
-                    <td><%# Eval("AnswersTime") %></td>
+                    <td><i class="fa-regular fa-clock"></i><%# Eval("AnswersTime") %></td>
 
                 </tr>
             </ItemTemplate>

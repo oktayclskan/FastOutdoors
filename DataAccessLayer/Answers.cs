@@ -14,6 +14,6 @@ namespace DataAccessLayer
         public string MemberName { get; set; }
         public string Content { get; set; }
         public DateTime AnswersTime { get; set; }
-        public string AnswersTimeStr { get; set; }
+        
     }
 }

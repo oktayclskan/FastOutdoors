@@ -651,7 +651,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "INSERT INTO Answers(Comment_ID,Member_ID,Content,AnswerTime)(@commentID,@memberID,@content,@answerTime)";
+                cmd.CommandText = "INSERT INTO Answers(Comment_ID,Member_ID,Contents,AnwersTime) VALUES (@commentID,@memberID,@content,@answerTime)";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@commentID", a.Comment_ID);
                 cmd.Parameters.AddWithValue("@memberID", a.Member_ID);

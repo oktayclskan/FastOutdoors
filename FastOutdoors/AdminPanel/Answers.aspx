@@ -26,7 +26,7 @@
                 <tr>
                     <td><%# Eval("ID") %></td>
                     <td><%# Eval("Comment_ID") %></td>
-                    <td><%# Eval("MemberName") %></td>
+                    <td><%# Eval("UserName") %></td>
                     <td><%# Eval("Content") %></td>
                     <td><%# Eval("AnswersTime") %></td>
                     <td>

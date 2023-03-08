@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Fast Outdoor</title>
     <link href="Assets/Css/fontawesome-free-6.3.0-web/css/all.min.css" rel="stylesheet" />
     <link href="Assets/Css/AdminPages.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

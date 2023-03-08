@@ -15,6 +15,8 @@
                         <thead>
                             <th>ID</th>
                             <th>Mesaj</th>
+                            <th>Durum
+                            </th>
                             <th>Seçenekler</th>
                         </thead>
                     </tr>
@@ -27,6 +29,7 @@
                 <tr>
                     <td><%# Eval("ID") %></td>
                     <td style="max-width: 800px; overflow-wrap: break-word;"><%# Eval("Content") %></td>
+                    <td><%# Eval("ComplaintSuggestionStatusStr") %></td>
                     <td>
                         <asp:LinkButton ID="lbtn_read" runat="server" CssClass="readBtn" CommandArgument='<%# Eval("ID") %>' CommandName="Read">Okundu Yap</asp:LinkButton>
                     </td>

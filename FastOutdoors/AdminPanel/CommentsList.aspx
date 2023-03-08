@@ -15,7 +15,7 @@
                         <thead>
                             <th>ID</th>
                             <th>Kategori</th>
-                            <th>Uye Adı</th>
+                            <th>Kullanıcı Adı</th>
                             <th>Başlık</th>
                             <th>Yorum</th>
                             <th>Yorum Tarihi</th>
@@ -34,7 +34,7 @@
                 <tr>
                     <td><%# Eval("ID") %></td>
                     <td><%# Eval("CategoryName") %></td>
-                    <td><%# Eval("MemberName") %></td>
+                    <td><%# Eval("UserName") %></td>
                     <td><%# Eval("Title") %></td>
                     <td><%# Eval("Content") %></td>
                     <td><%# Eval("CommentDate") %></td>
@@ -56,7 +56,7 @@
                         <thead>
                             <th>ID</th>
                             <th>Kategori</th>
-                            <th>Uye Adı</th>
+                            <th>Kullanıcı Adı</th>
                             <th>Başlık</th>
                             <th>Yorum</th>
                             <th>Yorum Tarihi</th>
@@ -75,7 +75,7 @@
                 <tr>
                     <td><%# Eval("ID") %></td>
                     <td><%# Eval("CategoryName") %></td>
-                    <td><%# Eval("MemberName") %></td>
+                    <td><%# Eval("UserName") %></td>
                     <td><%# Eval("Title") %></td>
                     <td><%# Eval("Content") %></td>
                     <td><%# Eval("CommentDate") %></td>

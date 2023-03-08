@@ -32,7 +32,7 @@
                             <div class="Category">
                                 <span><i class="fa-solid fa-comment-dots"></i><%# Eval("CategoryName") %></span>
                                 <div class="memberName">
-                                    <span><%# Eval("MemberName") %></span>
+                                    <span><%# Eval("UserName") %></span>
                                 </div>
                             </div>
                             <div class="title">

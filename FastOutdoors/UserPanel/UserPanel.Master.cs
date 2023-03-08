@@ -18,7 +18,7 @@ namespace FastOutdoors.UserPanel
                 pnl_loggedIn.Visible = true;
                 pnl_noEntry.Visible = false;
                 Member m = (Member)Session["member"];
-                lbl_memberName.Text =m.Name + "  " + m.SurName;
+                lbl_memberName.Text =m.Name + "  " + m.SurName + "("+m.UserName +")";
             }
             else
             {

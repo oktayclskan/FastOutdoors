@@ -56,7 +56,7 @@
             <ItemTemplate>
                 <tr>
 
-                    <td><%# Eval("MemberName") %></td>
+                    <td><%# Eval("UserName") %></td>
                     <td><%# Eval("Content") %></td>
                     <td><i class="fa-regular fa-clock"></i><%# Eval("AnswersTime") %></td>
 

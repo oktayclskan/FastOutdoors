@@ -300,26 +300,29 @@ body {
     border-radius: 5px;
     font-weight: 700;
 }
-    .AdminList .activateBtn:hover{
-        opacity:0.6;
+
+    .AdminList .activateBtn:hover {
+        opacity: 0.6;
     }
 
-    .AdminAddContainer .AddBackBtn {
-        color: #1370C4;
-        float: right;
-        padding: 5px;
-        margin: 10px;
-    }
+.AdminAddContainer .AddBackBtn {
+    color: #1370C4;
+    float: right;
+    padding: 5px;
+    margin: 10px;
+}
+
 .AdminList .adminRemoveBtn {
     text-decoration: none;
     padding: 4px;
     background-color: #1F1F1F;
-    color:whitesmoke;
-    border-radius:5px;
+    color: whitesmoke;
+    border-radius: 5px;
 }
-.AdminList .adminRemoveBtn:hover {
-    opacity: 0.6;
-}
+
+    .AdminList .adminRemoveBtn:hover {
+        opacity: 0.6;
+    }
 
 .AdminAddContainer .AddBackBtn:hover {
     opacity: 0.7;
@@ -500,13 +503,16 @@ body {
     font-size: 12pt;
     color: whitesmoke;
 }
-    .commentList .ApprovedBtn:hover{
-        opacity:0.8;
+
+    .commentList .ApprovedBtn:hover {
+        opacity: 0.8;
     }
+
 .answersList .Table td {
     max-width: 850px;
     overflow-wrap: break-word;
 }
+
 .answersList .CommentBanBtn {
     text-decoration: none;
     color: whitesmoke;
@@ -756,6 +762,7 @@ body {
 }
 
 .ParagraphDetail .brief {
+    margin-top:30px;
     color: #827f7f;
     font-size: 12pt;
 }
@@ -776,10 +783,25 @@ body {
 .ParagraphDetail .views {
     margin-top: 15px;
     margin-bottom: 12px;
+    font-weight: 900;
 }
 
+    .ParagraphDetail .views i {
+        padding: 5px;
+        font-size: 15pt;
+        padding-right: 10px;
+    }
+
+
 .ParagraphDetail .dateTime {
+    font-weight: 900;
 }
+
+    .ParagraphDetail .dateTime i {
+        padding: 5px;
+        font-size: 15pt;
+        padding-right: 10px;
+    }
 
 .ParagraphDetail i {
     font-size: 20pt;
@@ -891,6 +913,7 @@ body {
         .complaintSuggestionContorlBtn .readAndToBeReadBtn:hover {
             opacity: 0.7;
         }
+
 .complaintSuggestionList .removeBtn {
     text-decoration: none;
     color: whitesmoke;
@@ -898,15 +921,17 @@ body {
     padding: 5px;
     border-radius: 4px;
     font-size: 12pt;
-    margin-left:10px;
+    margin-left: 10px;
 }
-.complaintSuggestionList .removeBtn:hover{
-    opacity:0.6;
-}
+
+    .complaintSuggestionList .removeBtn:hover {
+        opacity: 0.6;
+    }
+
 .complaintSuggestionList .readBtn {
     text-decoration: none;
     color: whitesmoke;
-    background-color:#1b971a;
+    background-color: #1b971a;
     padding: 4px;
     border-radius: 4px;
     font-size: 12pt;

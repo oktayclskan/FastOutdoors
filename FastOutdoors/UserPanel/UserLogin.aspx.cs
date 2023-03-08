@@ -23,7 +23,7 @@ namespace FastOutdoors.UserPanel
                 if (m !=null)
                 {
                     Session["Member"]= m;
-                    Response.Redirect("BlogPages.aspx");
+                    Response.Redirect("Index.aspx");
                 }
                 else
                 {

@@ -514,7 +514,7 @@ namespace DataAccessLayer
             List<Comment> comments = new List<Comment>();
             try
             {
-                cmd.CommandText = "SELECT C.ID, cg.Name,m.Name, C.Title, C.Content, C.CommentDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID = M.ID WHERE CommentStatus=@commentStatus ";
+                cmd.CommandText = "SELECT C.ID, cg.Name,m.UserName, C.Title, C.Content, C.CommentDate, C.CommentViews, C.CommentStatus, C.Img From Comments AS C Join Categorys AS CG ON C.Category_ID=CG.ID Join Members AS M ON C.Member_ID = M.ID WHERE CommentStatus=@commentStatus";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@commentStatus", ct);
                 con.Open();
@@ -524,7 +524,7 @@ namespace DataAccessLayer
                     Comment c = new Comment();
                     c.ID = reader.GetInt32(0);
                     c.CategoryName = reader.GetString(1);
-                    c.MemberName = reader.GetString(2);
+                    c.UserName = reader.GetString(2);
                     c.Title = reader.GetString(3);
                     c.Content = reader.GetString(4);
                     c.CommentDate = reader.GetDateTime(5);
@@ -669,7 +669,7 @@ namespace DataAccessLayer
             List<Answers> answers = new List<Answers>();
             try
             {
-                cmd.CommandText = "Select A.ID, C.ID, M.Name,A.Contents,A.AnwersTime From Answers AS A join Comments AS C ON A.Comment_ID=c.ID join Members AS m ON A.Member_ID = M.ID";
+                cmd.CommandText = "Select A.ID, C.ID, m.UserName,A.Contents,A.AnwersTime From Answers AS A join Comments AS C ON A.Comment_ID=c.ID join Members AS m ON A.Member_ID = m.ID";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -678,7 +678,7 @@ namespace DataAccessLayer
                     Answers a = new Answers();
                     a.ID = reader.GetInt32(0);
                     a.Comment_ID = reader.GetInt32(1);
-                    a.MemberName = reader.GetString(2);
+                    a.UserName = reader.GetString(2);
                     a.Content = reader.GetString(3);
                     a.AnswersTime = reader.GetDateTime(4);
                     answers.Add(a);
@@ -729,7 +729,7 @@ namespace DataAccessLayer
             List<Answers> answers = new List<Answers>();
             try
             {
-                cmd.CommandText = "SELECT a.ID, m.Name, a.Contents , a.AnwersTime FROM Answers AS a JOIN Comments AS c ON a.Comment_ID = c.ID JOIN Members AS m ON m.ID = a.Member_ID WHERE c.ID = @id";
+                cmd.CommandText = "SELECT a.ID, m.UserName, a.Contents , a.AnwersTime FROM Answers AS a JOIN Comments AS c ON a.Comment_ID = c.ID JOIN Members AS m ON m.ID = a.Member_ID WHERE c.ID = @id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
@@ -739,7 +739,7 @@ namespace DataAccessLayer
                 {
                     Answers a = new Answers();
                     a.ID = reader.GetInt32(0);
-                    a.MemberName = reader.GetString(1);
+                    a.UserName= reader.GetString(1);
                     a.Content = reader.GetString(2);
                     a.AnswersTime = reader.GetDateTime(3);
                     answers.Add(a);
@@ -920,7 +920,7 @@ namespace DataAccessLayer
                     cs.ID = reader.GetInt32(0);
                     cs.Content = reader.GetString(1);
                     cs.ComplaintSuggestionStatus = reader.GetBoolean(2);
-                    cs.ComplaintSuggestionStatusStr = reader.GetBoolean(2) ? "<label style='color:green'>Okundu</label>" : "<label style='color:red'>Okunmuş</label>";
+                    cs.ComplaintSuggestionStatusStr = reader.GetBoolean(2) ? "<label style='color:green'>Okundu</label>" : "<label style='color:red'>Bekleyen</label>";
                     complaintSuggestions.Add(cs);
                 }
                 return complaintSuggestions;

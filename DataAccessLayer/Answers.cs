@@ -12,6 +12,7 @@ namespace DataAccessLayer
         public int Comment_ID { get; set; }
         public int Member_ID { get; set; }
         public string MemberName { get; set; }
+        public string UserName { get; set; }
         public string Content { get; set; }
         public DateTime AnswersTime { get; set; }
         

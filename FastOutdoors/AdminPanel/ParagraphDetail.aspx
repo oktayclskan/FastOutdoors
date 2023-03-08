@@ -29,8 +29,8 @@
                 <i class="fa-solid fa-eye"></i>Görüntüleme :
             <asp:Literal ID="ltrl_views" runat="server"></asp:Literal>
             </div>
-            <div class="dateTime">
-                <i class="fa-solid fa-video"></i>Göderi Tarihi: 
+            <div style="margin-bottom:50px;" class="dateTime">
+                <i class="fa-solid fa-video"></i>Yayın Tarihi: 
             <asp:Literal ID="ltrl_dateTime" runat="server"></asp:Literal>
             </div>
         </div>

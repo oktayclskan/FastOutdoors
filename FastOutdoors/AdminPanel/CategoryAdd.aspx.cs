@@ -35,6 +35,7 @@ namespace FastOutdoors.AdminPanel
                             fu_Image.SaveAs(Server.MapPath("~/AdminPanel/Assets/Img/" + name + extension));
                             if (dm.CategoryAdd(c))
                             {
+                                tb_name.Text = " ";
                                 pnl_successful.Visible = true;
                                 pnl_eror.Visible = false;
                             }

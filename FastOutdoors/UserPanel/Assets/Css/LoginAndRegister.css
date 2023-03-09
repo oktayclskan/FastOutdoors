@@ -65,6 +65,8 @@
             border: none;
             color: #808080;
             padding-left: 7px;
+            outline:none;
+
         }
 
         .loginContainer .LoginContent .row .loginBtn {
@@ -141,6 +143,7 @@
             border-radius: 7px;
             background-color: #37373E;
             border: none;
+            outline:none;
             color: #808080;
             padding-left: 7px;
         }

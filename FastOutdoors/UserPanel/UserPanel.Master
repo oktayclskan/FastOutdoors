@@ -72,7 +72,7 @@
                 <div class="aboutUs">
                     <h2>Hakkımızda</h2>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                        Gelişen bilim ve teknoloji ortamında günceli takip eden H2O Developers ile iş geliştirme çalışmalarında yalnız değilsiniz. Uzman, deneyimli ve en önemlisi keşfetmeyi seven kadrosu sayesinde tüm çalışmaları ile piyansın üzerinde bir performans sunuyor. Merak duygunsu ve merak duygusuyla beraber keşfetmenin keyfini bir an olsun bırakmayan H2O Developers sayesinde çalışmalar sadece iş değil müşteriyi de memnun eden bir alana dönüşüyor.  Var olan tüm gelişmeleri çalışmalarına entegre ederek adımlarına sağlam atan H2O Developers; yazılım, web tasarım  gibi sosyal medya alanlarında oldukça aktif ve uzman kadrosuyla tüm ihtiyaçlarınıza cevap veriyor.
                     </p>
                 </div>
                 <div class="social">
@@ -85,17 +85,17 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="Assets/Img/instagram.png" /><span>Facebook'ta bizi takip edin</span>
+                                <img  src="Assets/Img/instagram.png" /><span>Instagram'da bizi takip edin</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="Assets/Img/twitter.png" /><span>Facebook'ta bizi beğenin</span>
+                                <img src="Assets/Img/twitter.png" /><span>Twitter'ta bizi beğenin</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="Assets/Img/whatsapp.png" /><span>Facebook'ta bizle iletişime geçin</span>
+                                <img src="Assets/Img/whatsapp.png" /><span>Whatsaptan'tan bizle iletişime geçin</span>
                             </a>
                         </li>
                     </ul>
@@ -106,10 +106,11 @@
                         <i class="fa-sharp fa-solid fa-house-chimney"></i><span>Şirket Adı H2O Developers. </span>
                         <br />
                         <br />
-                        <span>Eskişehir/Tepebaşı</span>
+                        <span style="padding-left:37px;">Eskişehir/Tepebaşı</span>
                     </div>
                     <div class="row">
-                        <i class="fa-solid fa-phone-volume"></i><span>0542 545 0437 </span>
+                        <i class="fa-solid fa-phone-volume"></i><span>0542 545 0437 </span> 
+                        
                     </div>
                     <div class="row">
                         <i class="fa-sharp fa-solid fa-envelope-open"></i><span>H2Odevelopers@gamil.com</span>

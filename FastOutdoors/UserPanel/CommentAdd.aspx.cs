@@ -52,6 +52,9 @@ namespace FastOutdoors.UserPanel
                         fu_Image.SaveAs(Server.MapPath("~/AdminPanel/Assets/Img/CommentImg/" + name + connect));
                         if (dm.CommentAdd(c))
                         {
+                            dll_category.SelectedValue = "0";
+                            tb_content.Text = " ";
+                            tb_title.Text = " ";
                             pnl_eror.Visible = false;
                             pnl_successful.Visible = true;
 

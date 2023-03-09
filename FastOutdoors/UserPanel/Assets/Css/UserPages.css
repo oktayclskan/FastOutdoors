@@ -238,6 +238,8 @@
 
         .FormRead .row .content {
             padding: 8px;
+            max-width: 860px;
+            overflow-wrap: break-word;
         }
 
     .FormRead .img .imgDetails {

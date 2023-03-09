@@ -14,7 +14,7 @@
                     <asp:ListItem Text="Seçiniz" Value="0"></asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <div class="row">
+            <div class="row">   
                 <h4>Yorumunuzun başlığını giriniz</h4>
                 
                 <asp:TextBox ID="tb_title" CssClass="inputBox" runat="server"></asp:TextBox>
@@ -33,7 +33,6 @@
                 <asp:Label ID="lbl_eror" runat="server"></asp:Label>
             </asp:Panel>
             <div class="row">
-                
                 <asp:TextBox ID="tb_content" TextMode="MultiLine" CssClass="contentInputBox" runat="server"></asp:TextBox>
             </div>
             <div class="row">

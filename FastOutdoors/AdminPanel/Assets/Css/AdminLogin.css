@@ -53,8 +53,11 @@ body {
 .inputBox {
     height: 22px;
     width: 250px;
-    border-radius:5px;
-    font-family:Calibri;
+    border-radius: 5px;
+    font-family: Calibri;
+    border:none;
+    outline: none;
+    padding-left:3px;
 }
 .singInBtn {
     display: block;

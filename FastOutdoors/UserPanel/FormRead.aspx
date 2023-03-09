@@ -15,12 +15,11 @@
                 <asp:Literal ID="ltrl_dateTime" runat="server"></asp:Literal>
             </div>
             <div style="float: left;" class="img">
-                <asp:Image CssClass="imgDetails" ID="img_images" runat="server" />
+                <asp:Image  CssClass="imgDetails" ID="img_images" runat="server" />
             </div>
             <div style="float: left;" class="content">
                 <asp:Literal ID="ltrl_content" runat="server"></asp:Literal>
             </div>
-
         </div>
     </div>
     <div class="AnswerAdd">
@@ -55,7 +54,6 @@
             </LayoutTemplate>
             <ItemTemplate>
                 <tr>
-
                     <td><%# Eval("UserName") %></td>
                     <td><%# Eval("Content") %></td>
                     <td><i class="fa-regular fa-clock"></i><%# Eval("AnswersTime") %></td>

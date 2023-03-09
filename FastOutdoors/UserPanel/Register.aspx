@@ -16,7 +16,7 @@
         <img class="img" src="Assets/Img/LoginBackgraoung.png" />
         <div style="padding: 60px;"></div>
         <div class="RegisterContainer">
-            <a href="BlogPages.aspx"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="Index.aspx"><i class="fa-solid fa-chevron-left"></i></a>
             <div class="title">
                 <h1>Kayıt Oluştur</h1>
             </div>

@@ -55,8 +55,19 @@ namespace FastOutdoors.AdminPanel
                     }
                     else
                     {
-                        pnl_eror.Visible = true;
-                        lbl_eror.Text = "Resim Eklemeniz Gerekmektedir";
+                        c.Img = "none.png";
+                        if (dm.CategoryAdd(c))
+                        {
+                            pnl_eror.Visible = false;
+                            pnl_successful.Visible = true;
+                            tb_name.Text = " ";
+                        }
+                        else
+                        {
+                            pnl_eror.Visible = true;
+                            pnl_successful.Visible = false;
+                            lbl_eror.Text = "Yorum Ekleme Başarısız";
+                        }
                     }
                 }
                 else

@@ -75,9 +75,21 @@ namespace FastOutdoors.UserPanel
                 }
                 else
                 {
-                    pnl_eror.Visible = true;
-                    pnl_successful.Visible = false;
-                    lbl_eror.Text = "Resim seçimi yapmalısınız";
+                    c.Img = "none.png";
+                    if (dm.CommentAdd(c))
+                    {
+                        pnl_eror.Visible = false;
+                        pnl_successful.Visible = true;
+                        dll_category.SelectedValue = "0";
+                        tb_content.Text = " ";
+                        tb_title.Text = " ";
+                    }
+                    else
+                    {
+                        pnl_eror.Visible = true;
+                        pnl_successful.Visible = false;
+                        lbl_eror.Text = "Yorum Ekleme Başarısız";
+                    }
                 }
             }
             else

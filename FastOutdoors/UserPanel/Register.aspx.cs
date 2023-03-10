@@ -72,7 +72,7 @@ namespace FastOutdoors.UserPanel
                                         else
                                         {
                                             pnl_eror.Visible = true;
-                                            lbl_eror.Text = "Bu kullanıcı adı daha önce alınmış";
+                                            lbl_eror.Text = "Bu kullanıcı adı daha ön ce alınmış";
                                         }
 
                                     }

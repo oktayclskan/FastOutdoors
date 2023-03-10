@@ -46,6 +46,7 @@ namespace FastOutdoors.UserPanel
                 a.Content = tb_answerAdd.Text;
                 if (dm.AnswerAdd(a))
                 {
+                    tb_answerAdd.Text = " ";
                     pnlEror.Visible = false;
                 }
                 else
